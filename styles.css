@@ -108,10 +108,12 @@ img {
 /* Hero Section */
 .hero {
   padding: 6rem 1.5rem 8rem;
+  align-items: center;
 }
 
 .hero-content {
   max-width: 56rem;
+  align-items: center;
 }
 
 .hero-title {
@@ -119,6 +121,7 @@ img {
   color: var(--text-dark);
   margin-bottom: 1.5rem;
   line-height: 1.1;
+  align-items: center;
 }
 
 .hero-text {
@@ -126,6 +129,7 @@ img {
   color: var(--text-light);
   margin-bottom: 2rem;
   line-height: 1.6;
+  align-items: center;
 }
 
 /* Buttons */
