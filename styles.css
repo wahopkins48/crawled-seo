@@ -22,7 +22,7 @@
 
   /* Spacing */
   --container-max: 1280px;
-  --section-padding: 6rem 1.5rem;
+  --section-padding: 6rem 6rem;
 
   /* Transitions */
   --transition: all 0.3s ease;
