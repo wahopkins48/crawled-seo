@@ -178,9 +178,6 @@ img {
 .services-intro {
   max-width: 56rem;
   margin-bottom: 4rem;
-  text-align: center;
-    line-height: 1.6;
-    max-width: 56rem;
   margin: 0 auto;
   text-align: center;
 }
@@ -189,7 +186,6 @@ img {
   font-size: 2.5rem;
   color: var(--text-dark);
   margin-bottom: 1.5rem;
-    line-height: 1.6;
     max-width: 56rem;
   margin: 0 auto;
   text-align: center;
