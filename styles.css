@@ -594,3 +594,17 @@ html {
   color: #475569;
   margin-bottom: 16px;
 }
+
+.read-more {
+  display: inline-block;
+  margin-top: auto;
+  color: #3b82f6;
+  font-weight: 600;
+  font-size: 0.9rem;
+  font-family: 'Lexend', sans-serif;
+  transition: gap 0.2s;
+}
+
+.feed-card:hover .read-more {
+  text-decoration: underline;
+}
