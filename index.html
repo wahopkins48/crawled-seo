@@ -341,6 +341,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 
+  <div id="rss-feed-container">
+  <p>Loading the latest updates...</p>
+</div>
+
   <script src="script.js"></script>
 
   <!-- Chatbot -->
@@ -374,6 +378,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       })();
     }
   </script>
-  
+  const RSS_URL = `https://crawled.blog/rss.xml`;
+const API_URL = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(RSS_URL)}`;
+
+fetch(API_URL)
+  .then(response => response.json())
+  .then(data => {
+    const container = document.getElementById('rss-feed-container');
+    const items = data.items.slice(0, 3); // Get the 3 latest posts
+    
+    let html = '<div class="feed-grid">';
+    items.forEach(item => {
+      html += `
+        <a href="${item.link}" class="feed-card" target="_blank">
+          <div class="feed-content">
+            <span class="feed-date">${new Date(item.pubDate).toLocaleDateString()}</span>
+            <h3>${item.title}</h3>
+            <p>${item.description.replace(/<[^>]*>/g, '').substring(0, 100)}...</p>
+          </div>
+        </a>
+      `;
+    });
+    html += '</div>';
+    container.innerHTML = html;
+  });
 </body>
 </html>
