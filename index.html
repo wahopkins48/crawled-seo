@@ -374,43 +374,91 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       })();
     }
   </script>
-  <div id="rss-feed-container">
-    <p>Loading the latest updates...</p>
-  </div>
+ <section class="container" style="padding: 40px 0;">
+    <h2 class="section-title center">Latest from the Blog</h2>
+    <div id="rss-feed-container">
+      <p style="text-align: center;">Loading the latest updates...</p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 
   <script>
-    const RSS_URL = `https://crawled.blog/rss.xml`;
-    const API_URL = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(RSS_URL)}`;
-
-    fetch(API_URL)
-      .then(response => response.json())
-      .then(data => {
-        const container = document.getElementById('rss-feed-container');
-        if (data.status === 'ok') {
-          const items = data.items.slice(0, 3); 
-          
-          let html = '<div class="feed-grid">';
-          items.forEach(item => {
-            html += `
-              <a href="${item.link}" class="feed-card" target="_blank">
-                <div class="feed-content">
-                  <span class="feed-date">${new Date(item.pubDate).toLocaleDateString()}</span>
-                  <h3>${item.title}</h3>
-                  <p>${item.description.replace(/<[^>]*>/g, '').substring(0, 100)}...</p>
-                </div>
-              </a>
-            `;
-          });
-          html += '</div>';
-          container.innerHTML = html;
-        } else {
-          container.innerHTML = '<p>Check back later for updates!</p>';
+    if (typeof window !== "undefined") {
+      (function(){
+        if(!window.chatbase||window.chatbase("getState")!=="initialized"){
+          window.chatbase=(...args)=>{
+            if(!window.chatbase.q){window.chatbase.q=[]}
+            window.chatbase.q.push(args)
+          };
+          window.chatbase=new Proxy(window.chatbase,{
+            get(target,prop){
+              if(prop==="q"){return target.q}
+              return(...args)=>target(prop,...args)
+            }
+          })
         }
-      })
-      .catch(err => {
-        console.error('Error fetching feed:', err);
-      });
+        const onLoad=function(){
+          const script=document.createElement("script");
+          script.src="https://www.chatbase.co/embed.min.js";
+          script.id="7bZFaMno1x7aIbXllNERo";
+          script.setAttribute("data-domain", "www.chatbase.co");
+          document.body.appendChild(script)
+        };
+        if(document.readyState==="complete"){
+          onLoad()
+        }else{
+          window.addEventListener("load",onLoad)
+        }
+      })();
+    }
   </script>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const RSS_URL = `https://crawled.blog/rss.xml`;
+      // We add a cache-buster (?v=) to ensure we get fresh results
+      const API_URL = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(RSS_URL)}&api_key=00000000000000000000000000000000`; 
+
+      fetch(API_URL)
+        .then(response => {
+          if (!response.ok) throw new Error('Network response was not ok');
+          return response.json();
+        })
+        .then(data => {
+          const container = document.getElementById('rss-feed-container');
+          if (data.status === 'ok' && data.items.length > 0) {
+            const items = data.items.slice(0, 3); 
+            
+            let html = '<div class="feed-grid">';
+            items.forEach(item => {
+              // Extract a clean snippet of text for the description
+              const cleanSnippet = item.description.replace(/<[^>]*>/g, '').substring(0, 120);
+              
+              html += `
+                <a href="${item.link}" class="feed-card" target="_blank" rel="noopener">
+                  <div class="feed-content">
+                    <span class="feed-date">${new Date(item.pubDate).toLocaleDateString(undefined, {month: 'short', day: 'numeric', year: 'numeric'})}</span>
+                    <h3>${item.title}</h3>
+                    <p>${cleanSnippet}...</p>
+                    <span style="color: #007bff; font-weight: 600; font-size: 0.9rem;">Read More →</span>
+                  </div>
+                </a>
+              `;
+            });
+            html += '</div>';
+            container.innerHTML = html;
+          } else {
+            container.innerHTML = '<p style="text-align: center;">Visit our <a href="https://crawled.blog">blog</a> for the latest news.</p>';
+          }
+        })
+        .catch(err => {
+          console.error('RSS Feed Error:', err);
+          document.getElementById('rss-feed-container').innerHTML = '<p style="text-align: center;">Unable to load feed. <a href="https://crawled.blog">Read our blog here.</a></p>';
+        });
+    });
+  </script>
+</body>
+</html>
 </body>
 </html>
