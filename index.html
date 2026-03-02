@@ -378,7 +378,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 class="section-title center" style="margin-bottom: 40px;">Latest from the Blog</h2>
     <div id="rss-feed-container">
       <p style="text-align: center; color: #64748b; font-family: 'Instrument Sans', sans-serif;">
-        Loading the latest insights...
+        Fetching the latest insights...
       </p>
     </div>
   </section>
@@ -399,27 +399,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      const RSS_URL = `https://crawled.blog/rss.xml`;
-      const API_URL = `https://api.rss2json.com/v1/api.json?rss_url=${https://crawled.blog/rss.xml}`;
+      // THE PRIMARY RSS URL
+      const RSS_URL = "https://crawled.blog/rss.xml";
+      
+      // Using rss2json as a robust parser to handle cross-origin issues
+      const API_URL = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(RSS_URL)}`;
 
       fetch(API_URL)
-        .then(res => res.json())
+        .then(res => {
+          if (!res.ok) throw new Error("Feed request failed");
+          return res.json();
+        })
         .then(data => {
           const container = document.getElementById('rss-feed-container');
           
-          // Check if we actually have posts
           if (data.status === 'ok' && data.items && data.items.length > 0) {
-            const items = data.items.slice(0, 3);
+            const items = data.items.slice(0, 3); // Display the 3 newest posts
             let html = '<div class="feed-grid">';
             
             items.forEach(item => {
-              const cleanSnippet = item.description.replace(/<[^>]*>/g, '').substring(0, 100);
+              // Clean up HTML tags from the description for a nice snippet
+              const cleanSnippet = item.description.replace(/<[^>]*>/g, '').substring(0, 110);
               const pubDate = new Date(item.pubDate).toLocaleDateString(undefined, {
                 month: 'short', day: 'numeric', year: 'numeric'
               });
 
               html += `
-                <a href="${item.link}" class="feed-card" target="_blank">
+                <a href="${item.link}" class="feed-card" target="_blank" rel="noopener">
                   <div class="feed-content">
                     <span class="feed-date">${pubDate}</span>
                     <h3>${item.title}</h3>
@@ -431,18 +437,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             html += '</div>';
             container.innerHTML = html;
           } else {
-            // COOL "EMPTY STATE" if your blog has 0 posts
+            // Fallback if the feed returns empty despite having posts
             container.innerHTML = `
-              <div style="text-align: center; padding: 40px; background: #f8fafc; border-radius: 16px; border: 1px dashed #cbd5e1;">
-                <p style="color: #475569; font-family: 'Lexend', sans-serif; font-weight: 600;">New insights coming soon.</p>
-                <a href="https://crawled.blog" target="_blank" style="color: #3b82f6; text-decoration: none; font-size: 0.9rem;">Visit crawled.blog →</a>
+              <div style="text-align: center; padding: 30px;">
+                <p>Check out our latest posts directly at <a href="https://crawled.blog" target="_blank">crawled.blog</a></p>
               </div>`;
           }
         })
-        .catch(() => {
-          document.getElementById('rss-feed-container').innerHTML = '<p style="text-align: center;">Visit our <a href="https://crawled.blog">blog</a> for the latest news.</p>';
+        .catch(err => {
+          console.error("RSS Load Error:", err);
+          document.getElementById('rss-feed-container').innerHTML = 
+            '<p style="text-align: center;">Unable to load feed. <a href="https://crawled.blog">Read our blog here.</a></p>';
         });
     });
   </script>
-</body>
+
+  </body>
 </html>
