@@ -9,72 +9,67 @@
 <body>
 
   <header class="header">
-    <div class="logo-container" style="padding-top: 40px; margin-bottom: 10px;">
-      <a href="/">
-        <img src="https://cdn.prod.website-files.com/68eb56440fc9cbc7fac5d0c7/699516ccfc7fd439b7d62c97_crawled_logo_main.png" alt="Crawled SEO Logo" class="logo" style="margin: 0 auto;">
-      </a>
-    </div>
-    <nav class="navbar">
-      <div class="nav-links" style="justify-content: center; display: flex; gap: 2rem;">
+    <div class="nav-container">
+      <div class="logo-container">
+        <a href="/">
+          <img src="https://cdn.prod.website-files.com/68eb56440fc9cbc7fac5d0c7/699516ccfc7fd439b7d62c97_crawled_logo_main.png" alt="Crawled SEO Logo" class="logo">
+        </a>
+      </div>
+      <nav class="nav-links">
         <a href="/" class="nav-link">Home</a>
         <a href="https://crawled.blog/" target="_blank" rel="noopener noreferrer" class="nav-link">Blog</a>
         <a href="/packages" class="nav-link">Packages</a>
         <a href="#contact" class="nav-link">Contact</a>
-      </div>
-    </nav>
+        <a href="#audit" class="nav-link">Free Audit</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section class="hero" style="padding: 80px 20px; border-bottom: 1px solid var(--border-gray);">
+    <section class="hero" style="padding-bottom: 100px;">
       <div class="hero-content">
         <h1 class="hero-title">Attract <span style="color: var(--primary);">High-Intent</span> Customers with Search and AI</h1>
         <p class="hero-text">
           Crawled is an SEO + GEO agency that aligns your expertise with how search engines and AI systems 
           decide which brands to surface, cite, and recommend to real buyers at decision time.
         </p>
-        
-        <div class="audit-card" style="max-width: 600px; margin: 40px auto 0; padding: 30px; background: var(--bg-gray); border-radius: 12px; border: 1px solid var(--border-gray);">
-          <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">Get Your Free SEO & AI Visibility Audit</h2>
-          <p style="margin-bottom: 1.5rem; color: var(--text-light);">Identify opportunities to improve visibility across search engines, maps, and AI-driven answers.</p>
-          <form class="audit-form">
-            <div class="form-group">
-              <input type="url" placeholder="Your Website URL" class="form-input" required>
-            </div>
-            <div class="form-group" style="margin-top: 10px;">
-              <input type="email" placeholder="Your Email Address" class="form-input" required>
-            </div>
-            <button type="submit" class="btn btn-primary btn-full" style="margin-top: 15px;">Get Your Free Audit</button>
-          </form>
+        <div style="display: flex; justify-content: center; gap: 1rem;">
+          <a href="#services" class="btn btn-primary">Explore Our Services</a>
         </div>
       </div>
     </section>
 
-    <section class="services" style="padding-top: 100px; padding-bottom: 100px;">
+    <section id="services" class="services" style="padding-top: 120px;">
       <div class="container">
         <div class="services-intro">
           <h2 class="section-title">Build <span style="color: var(--primary);">Authority</span> Across Search and AI</h2>
           <p class="section-text">
-            Search visibility today requires more than rankings alone. Brands earn trust by demonstrating expertise 
-            in traditional search results and across AI-driven answers.
+            Search visibility today requires more than rankings alone. Brands earn trust by demonstrating expertise in traditional search results and across AI-driven answers.
           </p>
         </div>
         
         <div class="services-grid">
           <div class="service-card">
-            <div class="service-image"><img src="https://images.unsplash.com/photo-1432888622747-4eb9a8f2c1d9?auto=format&fit=crop&q=80&w=800" alt="SEO"></div>
             <h3 class="service-title">Search Engine Optimization (SEO)</h3>
-            <p class="service-description">Optimize your website to rank clearly and consistently in traditional search results.</p>
+            <p class="service-description">We optimize your website to rank clearly and consistently in traditional search results.</p>
           </div>
           <div class="service-card">
-            <div class="service-image"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800" alt="GEO"></div>
             <h3 class="service-title">Generative Engine Optimization (GEO)</h3>
-            <p class="service-description">Optimize your brand to be cited and recommended by AI systems like ChatGPT and Perplexity.</p>
+            <p class="service-description">We optimize your brand to be cited and recommended by AI systems like ChatGPT and Perplexity.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="contact-section">
+    <section id="audit" class="audit-section" style="padding-top: 120px;">
+      <div class="audit-content">
+        <h2 class="section-title">Get Your Free SEO & AI Visibility Audit</h2>
+        <p class="section-text">Identify opportunities to improve visibility across search engines, maps, and AI-driven answers.</p>
+        <a href="#contact" class="btn btn-primary">Get Your Free Audit</a>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section" style="padding-top: 120px;">
       <div class="container">
         <div class="center">
           <h2 class="section-title">Let's Work Together</h2>
