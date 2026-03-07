@@ -720,51 +720,67 @@ li {
 }
 
 /* Blog Feed Grid Layout */
+/* ==========================================================================
+   BLOG FEED GRID (Single Source of Truth)
+   ========================================================================== */
+
 .feed-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: grid !important; /* Forces the grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
   max-width: var(--container-max);
-  margin: 0 auto;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
 }
 
-/* Individual Post Card Styling */
 .feed-card {
   background-color: var(--white);
-  padding: 1.5rem;
-  border-radius: 0.5rem;
+  padding: 2rem;
+  border-radius: 12px;
   border: 1px solid var(--border-gray);
-  transition: var(--transition);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
   text-decoration: none;
   color: inherit;
+  text-align: left;
+  height: 100%;
 }
 
 .feed-card:hover {
   border-color: var(--primary);
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
 .feed-date {
-  font-size: 0.875rem;
+  font-size: 0.85rem;
   color: var(--text-light);
-  font-weight: 600;
-  margin-bottom: 0.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
   display: block;
 }
 
 .feed-card h3 {
   margin-bottom: 1rem;
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   color: var(--text-dark);
+  line-height: 1.3;
 }
 
 .feed-card p {
-  color: var(--text-light);
+  color: var(--text-gray);
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.6;
   margin-bottom: 1.5rem;
   flex-grow: 1;
+}
+
+.read-more {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-top: auto;
 }
