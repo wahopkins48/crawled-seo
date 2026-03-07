@@ -225,16 +225,18 @@ img {
 
 .service-image {
   width: 100%;
-  height: 12rem;
+  aspect-ratio: 16 / 9; /* This keeps a consistent shape regardless of screen size */
   border-radius: 0.5rem;
   margin-bottom: 1.5rem;
   overflow: hidden;
+  background-color: var(--bg-gray); /* Fills gaps if the image doesn't touch the edges */
 }
 
 .service-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* Shows the whole image instead of cropping it */
+  padding: 10px;       /* Adds a little breathing room so it doesn't touch the card border */
 }
 
 .service-title {
