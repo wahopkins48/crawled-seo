@@ -20,55 +20,58 @@
     <nav class="navbar">
       <div class="nav-links" style="justify-content: center; display: flex; gap: 2rem;">
         <a href="/" class="nav-link">Home</a>
-        <a href="https://crawled.blog/" target="_blank" rel="noopener noreferrer" class="nav-link">Blog</a>
+        <a href="https://crawled.blog/" target="_blank" class="nav-link">Blog</a>
         <a href="/packages" class="nav-link">Packages</a>
         <a href="/#contact" class="nav-link">Contact</a>
       </div>
     </nav>
   </header>
 
-  <main style="padding: 80px 20px;">
-    <div id="rss-feed-container">
-      <h2 class="section-title">Latest from the <span style="color: var(--primary);">Field Manual</span></h2>
-      <p class="section-text" style="margin-bottom: 40px;">Insights on SEO, GEO, and the future of search visibility.</p>
-      
-      <div id="blog-posts" class="feed-grid">
-        </div>
+  <main style="padding: 80px 20px; text-align: center;">
+    <h1 class="section-title">Latest from the <span style="color: var(--primary);">Field Manual</span></h1>
+    <p class="section-text" style="margin-bottom: 40px;">Insights on SEO, GEO, and the future of search visibility.</p>
+    
+    <div id="blog-posts" class="feed-grid">
+      <p>Loading the latest insights...</p>
     </div>
   </main>
 
-  <footer class="footer">
-    <div class="footer-content">
-      <p class="footer-text">© 2026 Crawled SEO. All rights reserved.</p>
-    </div>
-  </footer>
-
   <script>
-    const RSS_URL = `https://crawled.blog/rss.xml`;
-    // Using rss2json API to parse the XML feed you provided
-    fetch(`https://api.rss2json.com/v1/api.json?rss_url=${RSS_URL}`)
-      .then(response => response.json())
+    // Using a CORS proxy to bypass Hashnode's security block
+    const RSS_URL = encodeURIComponent(`https://crawled.blog/rss.xml`);
+    const API_URL = `https://api.rss2json.com/v1/api.json?rss_url=${RSS_URL}`;
+
+    fetch(API_URL)
+      .then(res => res.json())
       .then(data => {
         const container = document.getElementById('blog-posts');
-        data.items.slice(0, 6).forEach(item => {
-          const card = `
-            <a href="${item.link}" target="_blank" class="feed-card">
-              <div class="feed-content">
-                <span class="feed-date">${new Date(item.pubDate).toLocaleDateString()}</span>
-                <h3>${item.title}</h3>
-                <p>${item.description.replace(/<[^>]*>/g, '').substring(0, 150)}...</p>
-                <span class="read-more">Read Full Entry →</span>
-              </div>
-            </a>
-          `;
-          container.innerHTML += card;
-        });
+        if (data.status === 'ok') {
+          container.innerHTML = ''; // Clear loading message
+          data.items.slice(0, 6).forEach(item => {
+            const cleanSnippet = item.description.replace(/<[^>]*>/g, '').substring(0, 150);
+            container.innerHTML += `
+              <a href="${item.link}" target="_blank" class="feed-card">
+                <div class="feed-content" style="text-align: left;">
+                  <span class="feed-date">${new Date(item.pubDate).toLocaleDateString()}</span>
+                  <h3>${item.title}</h3>
+                  <p>${cleanSnippet}...</p>
+                  <span class="read-more" style="color: var(--primary); font-weight: 600;">Read Full Entry →</span>
+                </div>
+              </a>
+            `;
+          });
+        } else {
+          throw new Error('Feed status not OK');
+        }
       })
       .catch(err => {
-        console.error("Error fetching feed:", err);
-        document.getElementById('blog-posts').innerHTML = "<p>Unable to load blog posts at this time.</p>";
+        console.error(err);
+        document.getElementById('blog-posts').innerHTML = "<p>Please visit <a href='https://crawled.blog' style='color: var(--primary);'>crawled.blog</a> directly for the latest updates.</p>";
       });
   </script>
 
+  <footer class="footer" style="margin-top: 60px;">
+    <p class="footer-text">© 2026 Crawled SEO. All rights reserved.</p>
+  </footer>
 </body>
 </html>
