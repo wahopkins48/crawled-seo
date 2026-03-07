@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/book",
+      "destination": "https://calendly.com/wesley-crawled/30min",
+      "permanent": true
+    }
+  ]
+}
