@@ -1,5 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crawled SEO | Visibility Roadmap</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
   <header class="header" style="border-bottom: 1px solid var(--border-gray); padding-bottom: 20px;">
-    
     <div class="logo-container" style="padding-top: 40px; margin-bottom: 10px;">
       <a href="/">
         <img src="/crawled_logo_main.png" 
@@ -18,19 +30,41 @@
       </div>
     </nav>
   </header>
-<!-- Audit CTA  -->
-  <section id="audit" class="audit-section">
+
+  <section id="audit" class="audit-section" style="padding: 100px 20px;">
     <div class="container">
       <div class="audit-content">
-        <h2 class="section-title">
-          Get Your Free SEO & AI Visibility Roadmap
-        </h2>
-        <p class="section-text">
+        <h1 class="section-title" style="font-size: 2.5rem; margin-bottom: 1.5rem;">
+          Get Your Free SEO & AI <span style="color: var(--primary);">Visibility Roadmap</span>
+        </h1>
+        <p class="section-text" style="max-width: 800px; margin: 0 auto 2.5rem;">
           We'll review your existing website to identify opportunities to improve visibility across search engines, maps, and AI-driven answers. You'll get a clear breakdown of what's working, what's holding you back, and where meaningful gains are possible, with no pressure and no obligation.
         </p>
-        <button class="btn btn-primary" id="openAuditModal">
-          Get Your Free SEO Audit
-        </button>
+        
+        <div class="audit-card" style="max-width: 500px; margin: 0 auto; padding: 30px; background: var(--bg-gray); border-radius: 12px; border: 1px solid var(--border-gray); text-align: left;">
+          <form id="auditForm" action="https://formspree.io/f/xrealgwd" method="POST" style="display: flex; flex-direction: column; gap: 1.5rem;">
+            <div class="form-group">
+              <label for="audit-email" class="form-label">Email Address</label>
+              <input type="email" id="audit-email" name="email" required class="form-input" placeholder="you@company.com">
+            </div>
+            <div class="form-group">
+              <label for="audit-url" class="form-label">Website URL</label>
+              <input type="url" id="audit-url" name="website" required class="form-input" placeholder="https://example.com">
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Request My Roadmap</button>
+          </form>
+        </div>
       </div>
     </div>
   </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p class="footer-text">© 2026 Crawled SEO. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+
+</body>
+</html>
