@@ -31,44 +31,41 @@
     <h1 class="section-title">Latest from the <span style="color: var(--primary);">Field Manual</span></h1>
     <p class="section-text" style="margin-bottom: 40px;">Insights on SEO, GEO, and the future of search visibility.</p>
     
-    <div id="blog-posts" class="feed-grid">
-      <p>Loading the latest insights...</p>
+    <div class="feed-grid">
+      
+      <a href="https://crawled.blog/troll-farms-ai-and-the-engineering-of-public-opinion" target="_blank" class="feed-card">
+        <div class="feed-content" style="text-align: left;">
+          <span class="feed-date">Feb 27, 2026</span>
+          <h3>Troll Farms, AI, and the Engineering of Public Opinion</h3>
+          <p>The Manufactured Web is evolving from annoying to existential. Troll farms are no longer just about elections; they are about perception engineering...</p>
+          <span class="read-more" style="color: var(--primary); font-weight: 600;">Read Entry →</span>
+        </div>
+      </a>
+
+      <a href="https://crawled.blog/why-the-february-2026-google-update-feels-like-a-ranking-drop" target="_blank" class="feed-card">
+        <div class="feed-content" style="text-align: left;">
+          <span class="feed-date">Feb 12, 2026</span>
+          <h3>Why the Feb 2026 Update Feels Like a Ranking Drop</h3>
+          <p>Google officially released the Discover Core Update. While it targeted Discover, not traditional search, the traffic loss often feels like a penalty...</p>
+          <span class="read-more" style="color: var(--primary); font-weight: 600;">Read Entry →</span>
+        </div>
+      </a>
+
+      <a href="https://crawled.blog/how-ai-visibility-really-works-and-whats-worth-paying-attention-to" target="_blank" class="feed-card">
+        <div class="feed-content" style="text-align: left;">
+          <span class="feed-date">Feb 3, 2026</span>
+          <h3>How AI Visibility Really Works</h3>
+          <p>If you're paying for tools promising "ChatGPT rankings," it's time for a reality check. Chasing specific positions in AI outputs is statistically meaningless...</p>
+          <span class="read-more" style="color: var(--primary); font-weight: 600;">Read Entry →</span>
+        </div>
+      </a>
+
+    </div>
+
+    <div style="margin-top: 50px;">
+       <a href="https://crawled.blog" target="_blank" class="btn btn-primary">View All Entries on Hashnode</a>
     </div>
   </main>
-
-  <script>
-    // Using a CORS proxy to bypass Hashnode's security block
-    const RSS_URL = encodeURIComponent(`https://crawled.blog/rss.xml`);
-    const API_URL = `https://api.rss2json.com/v1/api.json?rss_url=${RSS_URL}`;
-
-    fetch(API_URL)
-      .then(res => res.json())
-      .then(data => {
-        const container = document.getElementById('blog-posts');
-        if (data.status === 'ok') {
-          container.innerHTML = ''; // Clear loading message
-          data.items.slice(0, 6).forEach(item => {
-            const cleanSnippet = item.description.replace(/<[^>]*>/g, '').substring(0, 150);
-            container.innerHTML += `
-              <a href="${item.link}" target="_blank" class="feed-card">
-                <div class="feed-content" style="text-align: left;">
-                  <span class="feed-date">${new Date(item.pubDate).toLocaleDateString()}</span>
-                  <h3>${item.title}</h3>
-                  <p>${cleanSnippet}...</p>
-                  <span class="read-more" style="color: var(--primary); font-weight: 600;">Read Full Entry →</span>
-                </div>
-              </a>
-            `;
-          });
-        } else {
-          throw new Error('Feed status not OK');
-        }
-      })
-      .catch(err => {
-        console.error(err);
-        document.getElementById('blog-posts').innerHTML = "<p>Please visit <a href='https://crawled.blog' style='color: var(--primary);'>crawled.blog</a> directly for the latest updates.</p>";
-      });
-  </script>
 
   <footer class="footer" style="margin-top: 60px;">
     <p class="footer-text">© 2026 Crawled SEO. All rights reserved.</p>
