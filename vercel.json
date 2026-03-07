@@ -7,3 +7,13 @@
     }
   ]
 }
+
+{
+  "redirects": [
+    {
+      "source": "/blog",
+      "destination": "https://crawled.blog",
+      "permanent": true
+    }
+  ]
+}
