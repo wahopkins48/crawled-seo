@@ -608,3 +608,108 @@ html {
 .feed-card:hover .read-more {
   text-decoration: underline;
 }
+
+/* Crawled SEO color palette */
+:root {
+  --navy: #0b1220;
+  --blue: #1e3a8a;
+  --accent: #3b82f6;
+  --light: #e5e7eb;
+  --muted: #64748b;
+  --white: #ffffff;
+  --card-bg: #eef4ff; /* light blue for boxes */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--white);
+  color: var(--navy);
+}
+
+.header {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+}
+
+.logo {
+  max-width: 220px;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: var(--muted);
+}
+
+.tiers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tier {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid #c7d2fe;
+  display: flex;
+  flex-direction: column;
+}
+
+.tier.featured {
+  border: 2px solid var(--accent);
+}
+
+.tier h2 {
+  margin: 0;
+  color: var(--blue);
+}
+
+.price {
+  font-size: 1.4rem;
+  margin: 1rem 0;
+  color: var(--navy);
+}
+
+.setup {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+ul {
+  padding-left: 1.2rem;
+  flex-grow: 1;
+}
+
+li {
+  margin-bottom: 0.6rem;
+}
+
+.cta {
+  display: inline-block;
+  text-align: center;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.cta:hover {
+  opacity: 0.9;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
