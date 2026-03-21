@@ -1,99 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crawled SEO Blog | Latest SEO, AI Visibility Insights</title>
-  <meta name="description" content="Expert insights on SEO, Google updates, AI search visibility from Crawled SEO. Covering troll farms, core updates, and more.">
-  <link rel="stylesheet" href="../styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <!-- RSS for dynamic feed -->
-  <link rel="alternate" type="application/rss+xml" title="Crawled SEO Blog" href="/blog/rss.xml">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "Crawled SEO Blog",
-    "url": "https://crawledseo.com/blog",
-    "description": "Insights on SEO, GEO, AI visibility, and search future."
-  }
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRAWLED Blog | Practical GEO Strategies & AI Search Insights</title>
+    <meta name="description" content="Get insider industry insights and actionable resources on Generative Engine Optimization (GEO) delivered weekly.">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "CRAWLED Blog",
+      "author": {
+        "@type": "Person",
+        "name": "Wesley Hopkins",
+        "jobTitle": "Founder",
+        "url": "https://crawledseo.com/about"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Crawled SEO",
+        "logo": "https://crawledseo.com/logo.png"
+      },
+      "description": "Strategies for visibility in the age of AI Overviews and LLMs."
+    }
+    </script>
+    <link rel="stylesheet" href="blog-styles.css">
 </head>
 <body>
 
-  <header class="header">
-    <div class="logo-container" style="padding-top: 40px; margin-bottom: 10px;">
-      <a href="/">
-        <img src="/crawled_logo_main.png" alt="Crawled SEO Logo" class="logo" style="margin: 0 auto; max-width: 200px;">
-      </a>
-    </div>
-    <nav class="navbar">
-      <div class="nav-links" style="justify-content: center; display: flex; gap: 2rem;">
-        <a href="/" class="nav-link">Home</a>
-        <a href="/blog" class="nav-link active">Blog</a>  <!-- Now internal -->
-        <a href="/packages" class="nav-link">Packages</a>
-        <a href="/#contact" class="nav-link">Contact</a>
-      </div>
-    </nav>
-  </header>
+    <header class="site-header">
+        <nav>
+            <div class="logo">CRAWLED</div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/audit">Free Visibility Audit</a></li>
+                <li><a href="/blog" class="active">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main style="padding: 80px 20px; text-align: center;">
-    <h1 class="section-title">Latest from the <span style="color: var(--primary);">Blog</span></h1>
-    <p class="section-text" style="margin-bottom: 40px;">Insights on SEO, GEO, and the future of search visibility. Updated automatically from our feed.</p>
-    
-    <div class="feed-grid" id="feed-grid">
-      <!-- Posts populated by JS below; fallback static for now -->
-      <article itemscope itemtype="https://schema.org/BlogPosting" style="display:none;">
-        <!-- Schema template -->
-      </article>
-    </div>
+    <main class="blog-container">
+        <section class="hero-section">
+            <h1>The New Layer of Search</h1>
+            <p>Practical playbooks for an AI-native web. Learn to write for both humans and the models that think like them.</p>
+        </section>
 
-    <div style="margin-top: 50px;">
-       <a href="/blog/archive" class="btn btn-primary">View All Posts</a>  <!-- Future archive page -->
-    </div>
-  </main>
+        <section class="post-grid">
+            <article class="post-card featured">
+                <span class="tag">GEO Playbook</span>
+                <h2>10 Practical Generative Engine Optimization (GEO) Strategies</h2>
+                <p>A step-by-step playbook for designing content that ranks, converts, and satisfies real user intent in generative models.</p>
+                <div class="meta">By Wesley Hopkins • Oct 31, 2025 • 5 min read</div>
+                <a href="/blog/10-practical-geo-strategies" class="read-more">Read Playbook →</a>
+            </article>
 
-  <footer class="footer" style="margin-top: 60px;">
-    <p class="footer-text">© 2026 Crawled SEO. All rights reserved. | <a href="/sitemap.xml">Sitemap</a></p>
-  </footer>
+            <article class="post-card">
+                <h2>A GEO Audit: 12 Key Signals</h2>
+                <p>A practical field guide for SEOs and business owners who need their expertise to show up in generative search results.</p>
+                <div class="meta">By Wesley Hopkins • Nov 22, 2025</div>
+                <a href="/blog/12-key-geo-signals">View Audit →</a>
+            </article>
 
-  <script>
-    // Fetch Hashnode RSS and populate cards (proxy if CORS issue)
-    fetch('https://crawled.blog/rss')
-      .then(r => r.text())
-      .then(data => {
-        const parser = new DOMParser();
-        const xml = parser.parseFromString(data, 'text/xml');
-        const items = xml.querySelectorAll('item');
-        const grid = document.getElementById('feed-grid');
-        items.slice(0,6).forEach((item, i) => {
-          const title = item.querySelector('title').textContent;
-          const link = item.querySelector('link').textContent;
-          const slug = link.split('/').pop();
-          const pubDate = new Date(item.querySelector('pubDate').textContent).toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
-          const desc = item.querySelector('description').textContent.substring(0,150) + '...';
-          const card = document.createElement('a');
-          card.href = `/blog/${slug}`;  // Internal slug page
-          card.className = 'feed-card';
-          card.innerHTML = `
-            <div class="feed-content" style="text-align: left;" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-              <span class="feed-date" itemprop="datePublished">${pubDate}</span>
-              <h3 itemprop="headline">${title}</h3>
-              <p itemprop="description">${desc}</p>
-              <span class="read-more" style="color: var(--primary); font-weight: 600;">Read Full Post →</span>
-              <link itemprop="url" href="https://crawledseo.com/blog/${slug}">
-              <link rel="canonical" href="https://crawledseo.com/blog/${slug}">
-            </div>
-          `;
-          grid.appendChild(card);
-        });
-      })
-      .catch(() => {
-        // Fallback to static posts if RSS fails
-        grid.innerHTML = staticPostsHTML;  // Define static HTML var from your current code
-      });
-  </script>
+            <article class="post-card">
+                <h2>How LLMs Interpret Context</h2>
+                <p>Search is no longer just indexing documents; it is constructing meaning through vector embeddings and knowledge graphs.</p>
+                <div class="meta">By Wesley Hopkins • Nov 14, 2025</div>
+                <a href="/blog/how-llms-interpret-context">Learn More →</a>
+            </article>
+
+            <article class="post-card">
+                <h2>The Impact of ChatGPT Atlas</h2>
+                <p>How the release of AI-native browsers is accelerating the shift from search-based to assistant-based discovery.</p>
+                <div class="meta">By Wesley Hopkins • Nov 9, 2025</div>
+                <a href="/blog/chatgpt-atlas-impact">Read Article →</a>
+            </article>
+        </section>
+
+        <aside class="newsletter-cta">
+            <h3>Get Signal Clarity</h3>
+            <p>Actionable resources delivered weekly for <strong>$1/month</strong>. Cancel anytime.</p>
+            <form action="#">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Subscribe to CRAWLED</button>
+            </form>
+        </aside>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Crawled SEO. Built for the modern search era.</p>
+        <div class="footer-links">
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Service</a>
+        </div>
+    </footer>
+
 </body>
 </html>
