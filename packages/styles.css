@@ -1,56 +1,238 @@
-/* Container for the 3-column grid */
+/* --- Base Variables & Reset --- */
+:root {
+  -[span_2](start_span)-primary: #45ADFF;[span_2](end_span)
+  -[span_3](start_span)-primary-hover: #3399e6;[span_3](end_span)
+  -[span_4](start_span)-text-dark: #1a1a1a;[span_4](end_span)
+  -[span_5](start_span)-text-gray: #4a5568;[span_5](end_span)
+  -[span_6](start_span)-text-light: #718096;[span_6](end_span)
+  -[span_7](start_span)-border-gray: #e2e8f0;[span_7](end_span)
+  -[span_8](start_span)-bg-gray: #f8fafc;[span_8](end_span)
+  -[span_9](start_span)-white: #ffffff;[span_9](end_span)
+  -[span_10](start_span)-font-heading: 'Lexend', sans-serif;[span_10](end_span)
+  -[span_11](start_span)-font-body: 'Instrument Sans', sans-serif;[span_11](end_span)
+  -[span_12](start_span)-container-max: 1280px;[span_12](end_span)
+  -[span_13](start_span)-transition: all 0.3s ease;[span_13](end_span)
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  [span_14](start_span)box-sizing: border-box;[span_14](end_span)
+}
+
+body {
+  [span_15](start_span)font-family: var(--font-body);[span_15](end_span)
+  [span_16](start_span)color: var(--text-dark);[span_16](end_span)
+  [span_17](start_span)background-color: var(--white);[span_17](end_span)
+  [span_18](start_span)line-height: 1.6;[span_18](end_span)
+}
+
+/* --- Header & Navigation Fixes --- */
+.header {
+  [span_19](start_span)position: sticky;[span_19](end_span)
+  [span_20](start_span)top: 0;[span_20](end_span)
+  [span_21](start_span)z-index: 1000;[span_21](end_span)
+  [span_22](start_span)background-color: var(--white);[span_22](end_span)
+  [span_23](start_span)border-bottom: 1px solid var(--border-gray);[span_23](end_span)
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-container {
+  [span_24](start_span)padding: 25px 0 10px;[span_24](end_span)
+  text-align: center;
+}
+
+.logo {
+  [span_25](start_span)height: 2.5rem;[span_25](end_span)
+  [span_26](start_span)width: auto;[span_26](end_span)
+}
+
+.navbar {
+  width: 100%;
+  position: relative; /* Anchor for absolute hamburger */
+  padding-bottom: 15px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  [span_27](start_span)gap: 2rem;[span_27](end_span)
+}
+
+.nav-link {
+  [span_28](start_span)text-decoration: none;[span_28](end_span)
+  [span_29](start_span)color: var(--text-gray);[span_29](end_span)
+  [span_30](start_span)font-weight: 500;[span_30](end_span)
+  [span_31](start_span)transition: var(--transition);[span_31](end_span)
+}
+
+.nav-link:hover {
+  [span_32](start_span)color: var(--primary);[span_32](end_span)
+}
+
+/* Hamburger Icon Positioning */
+.hamburger-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-80%); /* Vertical alignment fix */
+}
+
+.hamburger-icon span {
+  width: 25px;
+  height: 3px;
+  [span_33](start_span)background: var(--primary);[span_33](end_span)
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+/* --- Tier Grid (Top Row) --- */
 .tiers {
   display: grid;
-  grid-template-columns: 1fr; /* Default to 1 column for mobile */
+  grid-template-columns: 1fr; /* Mobile default */
   gap: 2rem;
-  max-width: var(--container-max);
-  margin: 0 auto;
+  [span_34](start_span)max-width: var(--container-max);[span_34](end_span)
+  margin: 40px auto;
   padding: 0 1.5rem 4rem;
 }
 
-/* Individual Tier Cards */
 .tier {
-  background: var(--white);
-  border: 1px solid var(--border-gray);
-  border-radius: 12px;
+  [span_35](start_span)background: var(--white);[span_35](end_span)
+  [span_36](start_span)border: 1px solid var(--border-gray);[span_36](end_span)
+  [span_37](start_span)border-radius: 12px;[span_37](end_span)
   padding: 2.5rem;
   display: flex;
   flex-direction: column;
-  transition: var(--transition);
-  height: 100%; /* Ensures all cards in a row are the same height */
+  text-align: center;
+  [span_38](start_span)transition: var(--transition);[span_38](end_span)
+  height: 100%;
 }
 
+.tier h2 { font-family: var(--font-heading); margin-bottom: 0.5rem; }
+.tier h3 { font-size: 1.1rem; color: var(--text-gray); margin-bottom: 1.5rem; }
+
 .tier.featured {
-  border: 2px solid var(--primary);
+  [span_39](start_span)border: 2px solid var(--primary);[span_39](end_span)
   transform: scale(1.02);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-/* Horizontal Custom Card Container */
+.price {
+  font-size: 2rem;
+  font-weight: 800;
+  [span_40](start_span)color: var(--primary);[span_40](end_span)
+  margin-bottom: 5px;
+}
+
+.setup {
+  font-size: 0.9rem;
+  [span_41](start_span)color: var(--text-light);[span_41](end_span)
+  margin-bottom: 1.5rem;
+}
+
+.tier ul {
+  list-style: none;
+  text-align: left;
+  margin: 1.5rem 0;
+  flex-grow: 1;
+}
+
+.tier li {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+/* --- A La Carte (Bottom Row) --- */
 .a-la-carte-section {
-  max-width: var(--container-max);
+  [span_42](start_span)max-width: var(--container-max);[span_42](end_span)
   margin: 0 auto 6rem;
   padding: 0 1.5rem;
 }
 
-/* Desktop Layout (769px and up) */
+.a-la-carte-card-wrapper {
+  display: flex;
+  flex-direction: column; /* Mobile default */
+  [span_43](start_span)border: 2px solid var(--primary);[span_43](end_span)
+  border-radius: 20px;
+  overflow: hidden;
+  [span_44](start_span)background: var(--white);[span_44](end_span)
+  box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+}
+
+/* --- Shared Components --- */
+.cta {
+  display: block;
+  padding: 1rem;
+  [span_45](start_span)background-color: var(--primary);[span_45](end_span)
+  [span_46](start_span)color: var(--white);[span_46](end_span)
+  border-radius: 8px;
+  [span_47](start_span)text-decoration: none;[span_47](end_span)
+  font-weight: 700;
+  [span_48](start_span)transition: var(--transition);[span_48](end_span)
+}
+
+.cta:hover {
+  [span_49](start_span)background-color: var(--primary-hover);[span_49](end_span)
+  transform: translateY(-2px);
+}
+
+.footer {
+  text-align: center;
+  padding: 3rem 1rem;
+  [span_50](start_span)border-top: 1px solid var(--border-gray);[span_50](end_span)
+  [span_51](start_span)color: var(--text-light);[span_51](end_span)
+  font-size: 0.9rem;
+}
+
+/* --- Responsive Breakpoints --- */
 @media screen and (min-width: 769px) {
   .tiers {
-    grid-template-columns: repeat(3, 1fr); /* 3 side-by-side */
+    grid-template-columns: repeat(3, 1fr); /* 3 side-by-side rectangles */
   }
 
-  /* The horizontal card is already a block, 
-     so it naturally stretches under the grid */
   .a-la-carte-card-wrapper {
-    display: flex;
-    flex-direction: row; /* Horizontal flow for content inside the card */
+    flex-direction: row; /* Horizontal rectangle */
+  }
+
+  .custom-left {
+    flex: 1.2;
+    [span_52](start_span)border-right: 1px solid var(--border-gray);[span_52](end_span)
+  }
+
+  .custom-right {
+    flex: 1;
   }
 }
 
-/* Mobile Adjustments */
 @media screen and (max-width: 768px) {
+  .hamburger-icon {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
   .tier.featured {
-    transform: none; /* Remove scaling on mobile to prevent overlap */
+    transform: none;
     margin: 1rem 0;
   }
 }
