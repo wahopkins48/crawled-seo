@@ -316,6 +316,29 @@ img {
   border-top: 1px solid var(--border-gray);
   text-align: center;
 }
+/* This targets the icon images specifically */
+.social-icon {
+  width: 24px; /* Adjust this size to your preference */
+  height: 24px;
+  object-fit: contain;
+  transition: var(--transition);
+}
+
+/* This ensures the container stays neat */
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+/* Optional: Add a hover effect */
+.social-link:hover .social-icon {
+  transform: scale(1.1);
+  color: var(--primary);
+}
 
 /* Modal */
 .modal {
