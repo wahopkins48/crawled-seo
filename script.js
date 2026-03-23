@@ -1,134 +1,358 @@
-function toggleMenu() {
-  const navbar = document.getElementById('myNavbar');
-  const links = navbar.querySelector('.nav-links');
-  const icon = navbar.querySelector('.hamburger-icon');
-  
-  links.classList.toggle('active');
-  icon.classList.toggle('active');
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-// Close menu when clicking a nav link (mobile)
-document.addEventListener('click', function(e) {
-  if (window.innerWidth <= 768 && e.target.classList.contains('nav-link')) {
-    const navbar = document.getElementById('myNavbar');
-    navbar.querySelector('.nav-links').classList.remove('active');
-    navbar.querySelector('.hamburger-icon').classList.remove('active');
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  /* Colors */
+  --primary: #45ADFF;
+  --primary-hover: #3399e6;
+  --text-dark: #1a1a1a;
+  --text-gray: #4a5568;
+  --text-light: #718096;
+  --border-gray: #e2e8f0;
+  --bg-gray: #f7fafc;
+  --white: #ffffff;
+  --navy: #0b1220;
+  --blue: #1e3a8a;
+  --accent: #3b82f6;
+  --muted: #64748b;
+  --card-bg: #eef4ff;
+
+  /* Fonts */
+  --font-heading: 'Lexend', sans-serif;
+  --font-body: 'Instrument Sans', sans-serif;
+
+  /* Spacing */
+  --container-max: 1280px;
+  --section-padding: 6rem 1.5rem;
+
+  /* Transitions */
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  line-height: 1.6;
+  background-color: var(--white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Container */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* --- Header & Navigation --- */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border-gray);
+  transition: var(--transition);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+  margin-bottom: 10px;
+}
+
+.logo {
+  height: 2.5rem;
+  width: auto;
+}
+
+/* Hamburger Icon (Hidden by default) */
+.hamburger-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001;
+}
+
+.hamburger-icon span {
+  width: 25px;
+  height: 3px;
+  background: var(--primary);
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+/* Hamburger Animation to 'X' */
+.hamburger-icon.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-icon.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Mobile Navigation (Default State) */
+@media screen and (max-width: 768px) {
+  .logo-container {
+    padding-top: 20px;
   }
-});
 
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  });
-});
-
-// Modal functionality
-const modal = document.getElementById('auditModal');
-const openModalBtn = document.getElementById('openAuditModal');
-const closeModalBtn = document.getElementById('closeModal');
-const auditForm = document.getElementById('auditForm');
-
-// Open modal
-openModalBtn.addEventListener('click', () => {
-  modal.classList.add('active');
-  document.body.style.overflow = 'hidden';
-});
-
-// Close modal
-closeModalBtn.addEventListener('click', () => {
-  modal.classList.remove('active');
-  document.body.style.overflow = 'auto';
-});
-
-// Close modal when clicking outside
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) {
-    modal.classList.remove('active');
-    document.body.style.overflow = 'auto';
-  }
-});
-
-// Close modal on escape key
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && modal.classList.contains('active')) {
-    modal.classList.remove('active');
-    document.body.style.overflow = 'auto';
-  }
-});
-
-// Handle audit form submission
-auditForm.addEventListener('submit', (e) => {
-  // Form will submit to Formspree
-  // You can add additional handling here if needed
-  console.log('Audit form submitted');
-});
-
-// Handle contact form submission
-const contactForm = document.getElementById('contactForm');
-contactForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-
-  const formData = new FormData(contactForm);
-  const name = formData.get('name');
-  const email = formData.get('email');
-  const message = formData.get('message');
-
-  // Here you would typically send this to your backend or email service
-  // For now, we'll just log it and show an alert
-  console.log('Contact form submitted:', { name, email, message });
-
-  alert('Thank you for your message! We will get back to you soon.');
-  contactForm.reset();
-});
-
-// Add scroll effect to header
-let lastScroll = 0;
-const header = document.querySelector('.header');
-
-window.addEventListener('scroll', () => {
-  const currentScroll = window.pageYOffset;
-
-  if (currentScroll > 100) {
-    header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-  } else {
-    header.style.boxShadow = 'none';
+  .hamburger-icon {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
-  lastScroll = currentScroll;
-});
+  .nav-links {
+    display: none; /* Hidden until toggled */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    padding: 20px 0;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    gap: 0;
+    z-index: 999;
+  }
 
-// Animate elements on scroll (optional enhancement)
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -100px 0px'
-};
+  .nav-links.active {
+    display: flex !important;
+  }
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-    }
-  });
-}, observerOptions);
+  .nav-link {
+    padding: 15px 20px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+  }
+}
 
-// Observe service cards for animation
-document.querySelectorAll('.service-card').forEach(card => {
-  card.style.opacity = '0';
-  card.style.transform = 'translateY(20px)';
-  card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-  observer.observe(card);
-});
+/* Desktop Navigation */
+@media screen and (min-width: 769px) {
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+  }
 
-// Initialize on page load
-document.addEventListener('DOMContentLoaded', () => {
-  console.log('Crawled SEO website loaded successfully!');
-});
+  .nav-link {
+    color: var(--text-gray);
+    font-weight: 500;
+    transition: var(--transition);
+    font-size: 1rem;
+  }
+
+  .nav-link:hover {
+    color: var(--primary);
+  }
+}
+
+/* --- Hero Section --- */
+.hero {
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-text {
+  font-size: 1.25rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.btn-full {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Services Section */
+.services {
+  background-color: var(--bg-gray);
+  padding: var(--section-padding);
+  border-top: 1px solid var(--border-gray);
+}
+
+.services-intro {
+  max-width: 56rem;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-gray);
+  transition: var(--transition);
+}
+
+.service-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.service-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  background-color: var(--bg-gray);
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 10px;
+}
+
+/* Contact Section */
+.contact-section {
+  background-color: var(--bg-gray);
+  padding: var(--section-padding);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-input, .form-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-gray);
+  border-radius: 0.5rem;
+}
+
+/* Footer */
+.footer {
+  padding: 2rem 1.5rem;
+  border-top: 1px solid var(--border-gray);
+  text-align: center;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 0.75rem;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Animations */
+@media (min-width: 768px) {
+  .hero-title { font-size: 3.75rem; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+}
