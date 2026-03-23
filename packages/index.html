@@ -4,79 +4,67 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Crawled SEO | Service Tiers</title>
-  <link rel="stylesheet" href="/styles.css">
+
   <style>
     :root {
       --primary: #45ADFF;
       --text-dark: #1a1a1a;
       --text-gray: #4a5568;
       --border-gray: #e2e8f0;
+      --bg-gray: #f8fafc;
+      --white: #ffffff;
+      --font-heading: 'Lexend', sans-serif;
     }
-    body { font-family: sans-serif; color: var(--text-dark); line-height: 1.6; }
-    .header { border-bottom: 1px solid var(--border-gray); position: sticky; top: 0; background: white; z-index: 100; }
-    .logo-container { text-align: center; padding: 20px 0; }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Instrument Sans', sans-serif; color: var(--text-dark); background: var(--white); line-height: 1.6; }
+
+    /* Header & Navigation */
+    .header { border-bottom: 1px solid var(--border-gray); position: sticky; top: 0; background: white; z-index: 1000; }
+    .logo-container { text-align: center; padding: 25px 0 10px; }
     .logo { height: 2.5rem; margin: 0 auto; }
-    .navbar { padding-bottom: 15px; }
+    
+    .navbar { position: relative; padding-bottom: 15px; }
     .nav-links { display: flex; justify-content: center; gap: 2rem; }
-    .nav-link { text-decoration: none; color: var(--text-gray); font-weight: 500; font-size: 0.9rem; }
-    
-    /* 3-Column Desktop Grid */
-    .tiers {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    .tier {
-      border: 1px solid var(--border-gray);
-      border-radius: 12px;
-      padding: 30px;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      background: white;
-    }
-    .tier.featured { border: 2px solid var(--primary); box-shadow: 0 10px 20px rgba(0,0,0,0.05); position: relative; }
-    
-    /* Horizontal Custom Card */
-    .a-la-carte-section { max-width: 1200px; margin: 0 auto 60px; padding: 0 20px; }
-    .custom-card {
-      border: 2px solid var(--primary);
-      border-radius: 20px;
-      display: flex;
-      flex-direction: row;
-      overflow: hidden;
-      background: white;
-    }
-    .custom-left { flex: 1; padding: 40px; border-right: 1px solid var(--border-gray); }
-    .custom-right { flex: 1; padding: 40px; background: #fdfdfd; }
+    .nav-link { text-decoration: none; color: var(--text-gray); font-weight: 500; font-size: 1rem; transition: 0.3s; }
+    .nav-link:hover { color: var(--primary); }
 
-    h1 { font-size: 2.5rem; text-align: center; margin-top: 40px; }
-    .subtitle { text-align: center; color: var(--text-gray); margin-bottom: 40px; }
-    .best-for { font-size: 0.85rem; color: #718096; margin-bottom: 10px; font-style: italic; }
-    .price { font-size: 1.8rem; font-weight: bold; margin: 10px 0; color: var(--primary); }
-    .setup { font-size: 0.85rem; color: #94a3b8; margin-bottom: 20px; display: block; }
-    ul { list-style: none; text-align: left; margin: 20px 0; flex-grow: 1; }
-    li { margin-bottom: 10px; font-size: 0.9rem; display: flex; align-items: baseline; }
-    li::before { content: "✅"; margin-right: 10px; font-size: 0.8rem; }
-    
-    .cta { 
-      display: block; 
-      padding: 14px; 
-      background: var(--primary); 
-      color: white; 
-      text-decoration: none; 
-      border-radius: 8px; 
-      font-weight: bold;
-      text-align: center;
-    }
+    /* Mobile Nav Burger */
+    .hamburger-icon { display: none; flex-direction: column; cursor: pointer; padding: 10px; position: absolute; right: 20px; top: -5px; }
+    .hamburger-icon span { width: 25px; height: 3px; background: var(--primary); margin: 3px 0; transition: 0.3s; }
 
+    /* Tiers Grid */
+    .tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+    .tier { border: 1px solid var(--border-gray); border-radius: 12px; padding: 35px; display: flex; flex-direction: column; text-align: center; background: white; }
+    .tier.featured { border: 2px solid var(--primary); box-shadow: 0 12px 24px rgba(0,0,0,0.06); transform: scale(1.02); }
+
+    /* A La Carte (Horizontal Card) */
+    .a-la-carte-section { max-width: 1200px; margin: 0 auto 80px; padding: 0 20px; }
+    .custom-card { border: 2px solid var(--primary); border-radius: 20px; display: flex; flex-direction: row; overflow: hidden; background: white; }
+    .custom-left { flex: 1.2; padding: 50px; border-right: 1px solid var(--border-gray); background: var(--bg-gray); }
+    .custom-right { flex: 1; padding: 50px; }
+
+    /* Typography & Buttons */
+    h1 { font-family: var(--font-heading); font-size: 2.8rem; text-align: center; margin-top: 50px; }
+    .subtitle { text-align: center; color: var(--text-gray); margin-bottom: 30px; font-size: 1.2rem; }
+    .price { font-size: 2rem; font-weight: 800; color: var(--primary); margin: 15px 0 5px; }
+    .setup { font-size: 0.9rem; color: #94a3b8; margin-bottom: 20px; display: block; }
+    
+    ul { list-style: none; text-align: left; margin: 25px 0; flex-grow: 1; }
+    li { margin-bottom: 12px; font-size: 1rem; display: flex; align-items: flex-start; gap: 10px; }
+    
+    .cta { display: block; padding: 15px; background: var(--primary); color: white; text-decoration: none; border-radius: 8px; font-weight: 700; text-align: center; transition: 0.3s; }
+    .cta:hover { background: #3399e6; transform: translateY(-2px); }
+
+    /* Mobile Responsiveness */
     @media (max-width: 768px) {
+      .nav-links { display: none; flex-direction: column; width: 100%; position: absolute; top: 100%; left: 0; background: white; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+      .nav-links.active { display: flex; }
+      .hamburger-icon { display: flex; }
       .tiers { grid-template-columns: 1fr; }
       .custom-card { flex-direction: column; }
       .custom-left { border-right: none; border-bottom: 1px solid var(--border-gray); }
+      .tier.featured { transform: none; margin: 10px 0; }
     }
   </style>
 </head>
@@ -84,70 +72,71 @@
 
   <header class="header">
     <div class="logo-container">
-      <a href="/"><img src="/crawled_logo_main.png" alt="Logo" class="logo"></a>
+      <a href="/">
+        <img src="https://cdn.prod.website-files.com/68eb56440fc9cbc7fac5d0c7/699516ccfc7fd439b7d62c97_crawled_logo_main.png" alt="Crawled SEO Logo" class="logo">
+      </a>
     </div>
-    <nav class="navbar">
+    <nav class="navbar" id="myNavbar">
       <div class="nav-links">
         <a href="/" class="nav-link">Home</a>
         <a href="/FAQs" class="nav-link">FAQ</a>
         <a href="/packages" class="nav-link">Packages</a>
         <a href="/#contact" class="nav-link">Contact</a>
       </div>
+      <a href="javascript:void(0);" class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
     </nav>
   </header>
 
   <h1>Visibility Service Tiers</h1>
-  <p class="subtitle">SEO + GEO for modern local search and AI discovery [cite: 364]</p>
+  <p class="subtitle">Built for modern local discovery and AI reference readiness</p>
 
   <main class="tiers">
     <section class="tier">
       <h2>Tier 1</h2>
-      <h3>Foundation Clarity</h3>
-      <p class="best-for">Best for solo operators and low-competition markets [cite: 212, 383]</p>
+      <h3>Foundation Market Entry</h3>
       <p class="price">$750 / mo</p>
-      <span class="setup">+$450 one-time setup </span>
+      <span class="setup">+$200 one-time setup</span>
       <ul>
-        <li>Local intent mapping (10-15 terms) [cite: 214, 387]</li>
-        <li>GBP audit & category optimization [cite: 221, 222]</li>
-        <li>Citation cleanup (20 directories) [cite: 227, 391]</li>
-        <li>Local business & FAQ schema [cite: 218, 389]</li>
-        <li>Review response framework [cite: 226, 391]</li>
-        <li>1 GEO-aligned authority article / mo [cite: 243, 392]</li>
+        <li>✅ Local keyword mapping (10-15 terms)</li>
+        <li>✅ Google Business Profile optimization</li>
+        <li>✅ Citation cleanup (20+ directories)</li>
+        <li>✅ Core schema & FAQ guidance</li>
+        <li>✅ 1 GEO authority article / month</li>
       </ul>
       <a href="https://buy.stripe.com/9B6fZhctRc6PgYJ2sXdIA00" class="cta">Select Tier 1</a>
     </section>
 
     <section class="tier featured">
-      <div style="background: var(--primary); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; display: inline-block; margin-bottom: 10px; font-weight: bold;">MOST POPULAR</div>
+      <div style="background: var(--primary); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; display: inline-block; margin-bottom: 15px; font-weight: 800;">MOST POPULAR</div>
       <h2>Tier 2</h2>
-      <h3>Competitive Growth</h3>
-      <p class="best-for">For businesses actively investing in brand visibility [cite: 252, 399]</p>
-      <p class="price">$1,350 / mo </p>
-      <span class="setup">+$450 one-time setup </span>
+      <h3>Competitive Market Growth</h3>
+      <p class="price">$1,250 / mo</p>
+      <span class="setup">+$200 one-time setup</span>
       <ul>
-        <li>Expanded intent coverage (15-25 terms) [cite: 255, 404]</li>
-        <li>Full website page optimization guidance [cite: 256, 405]</li>
-        <li>Advanced citation expansion (40+ sites) [cite: 270, 409]</li>
-        <li>Trust asset & editorial creation strategy [cite: 273, 410]</li>
-        <li>Location/Service-area page strategy [cite: 262, 405]</li>
-        <li>2 GEO-aligned authority articles / mo [cite: 292, 410]</li>
+        <li>✅ Expanded keyword coverage (15-25 terms)</li>
+        <li>✅ Full site optimization guidance</li>
+        <li>✅ Advanced GBP posting strategy</li>
+        <li>✅ Editorial trust asset placement</li>
+        <li>✅ Up to 2 GEO authority articles / month</li>
       </ul>
       <a href="https://buy.stripe.com/9B6cN5bpN5IrbEpc3xdIA01" class="cta">Select Tier 2</a>
     </section>
 
     <section class="tier">
       <h2>Tier 3</h2>
-      <h3>Market Authority</h3>
-      <p class="best-for">For aggressive markets and dense metro areas </p>
-      <p class="price">$2,400+ / mo </p>
-      <span class="setup">+$450 one-time setup </span>
+      <h3>Saturated Market Authority</h3>
+      <p class="price">$1,850 / mo</p>
+      <span class="setup">+$200 one-time setup</span>
       <ul>
-        <li>Multi-layer authority deployment [cite: 306, 421]</li>
-        <li>High-trust media & industry distribution [cite: 307, 421]</li>
-        <li>Branded entity reinforcement (News/Features) [cite: 308, 424]</li>
-        <li>Citation expansion (100 directories) [cite: 326]</li>
-        <li>Monthly competitive benchmarking [cite: 315, 427]</li>
-        <li>3 GEO-aligned authority articles / mo [cite: 336, 428]</li>
+        <li>✅ Multi-layer authority deployment</li>
+        <li>✅ High-trust media industry placements</li>
+        <li>✅ Citation cleanup (100 directories)</li>
+        <li>✅ Entity & reputation signal reinforcement</li>
+        <li>✅ Up to 3 GEO authority articles / month</li>
       </ul>
       <a href="https://buy.stripe.com/6oUcN5bpN3AjaAlaZtdIA02" class="cta">Select Tier 3</a>
     </section>
@@ -156,23 +145,29 @@
   <section class="a-la-carte-section">
     <div class="custom-card">
       <div class="custom-left">
-        <h2>A La Carte Visibility Engine</h2>
-        <p class="price">Starts at $200 / mo</p>
-        <p>The "Entity Spine" for new brands. We build confidence in AI models so you aren't invisible in the generative era[cite: 165, 170].</p>
+        <h2 style="font-family: var(--font-heading); margin-bottom: 10px;">A La Carte Visibility Engine</h2>
+        <p class="price" style="margin-top: 0;">Starts at $200 / mo</p>
+        <p style="color: var(--text-gray);">Prove to AI models that your brand is real, verifiable, and consistent. This engine builds your "Entity Spine" so you aren't invisible in the generative era.</p>
       </div>
       <div class="custom-right">
-        <h4 style="margin-bottom: 10px; font-weight: bold; text-transform: uppercase; font-size: 0.8rem;">Included Foundation:</h4>
+        <h4 style="margin-bottom: 15px; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;">Included Foundation:</h4>
         <ul style="margin: 0;">
-          <li>Entity Identity Alignment [cite: 170, 186]</li>
-          <li>Home Entity Anchor Optimization [cite: 170, 187]</li>
-          <li>Machine-Readable JSON-LD Schema [cite: 170, 188]</li>
-          <li>Monthly Visibility & AI Tracking [cite: 170, 188]</li>
+          <li>✅ Entity Identity Alignment</li>
+          <li>✅ Home Entity Anchor</li>
+          <li>✅ Machine-Readable JSON-LD Schema</li>
+          <li>✅ Monthly Visibility Tracking</li>
         </ul>
         <a href="/#contact" class="cta" style="margin-top: 20px;">Consult with Wesley</a>
       </div>
     </div>
   </section>
 
-  <script src="/script.js"></script>
+  <script>
+    function toggleMenu() {
+      const links = document.querySelector('.nav-links');
+      links.classList.toggle('active');
+    }
+  </script>
+
 </body>
 </html>
