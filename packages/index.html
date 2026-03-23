@@ -1,48 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<header class="header">
-  <div class="logo-container">
-    <a href="/">
-      <img src="https://cdn.prod.website-files.com/68eb56440fc9cbc7fac5d0c7/699516ccfc7fd439b7d62c97_crawled_logo_main.png" alt="Crawled SEO Logo" class="logo">
-    </a>
-  </div>
-  <nav class="navbar" id="myNavbar">
-    <div class="nav-links">
-      <a href="/" class="nav-link">Home</a>
-      <a href="/FAQs" class="nav-link">FAQ</a>
-      <a href="https://wesleyhopkins.digital" class="nav-link" target="_blank">Founder</a>
-      <a href="https://crawled.blog" class="nav-link" target="_blank">Blog</a>
-      <a href="/packages" class="nav-link">Packages</a>
-      <a href="/#contact" class="nav-link">Contact</a>
-    </div>
-    <a href="javascript:void(0);" class="hamburger-icon" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </a>
-  </nav>
-</header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crawled SEO | Service Tiers</title>
 
+  <style>
+    /* --- Base Variables & Reset --- */
+    :root {
+      --primary: #45ADFF;
+      --primary-hover: #3399e6;
+      --text-dark: #1a1a1a;
+      --text-gray: #4a5568;
+      --text-light: #718096;
+      --border-gray: #e2e8f0;
+      --bg-gray: #f8fafc;
+      --white: #ffffff;
+      --font-heading: 'Lexend', sans-serif;
+      --font-body: 'Instrument Sans', sans-serif;
+      --container-max: 1280px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: var(--font-body); color: var(--text-dark); background-color: var(--white); line-height: 1.6; }
+
+    /* --- Header & Navigation --- */
+    .header { position: sticky; top: 0; z-index: 1000; background: white; border-bottom: 1px solid var(--border-gray); width: 100%; display: flex; flex-direction: column; align-items: center; }
+    .logo-container { padding: 25px 0 10px; text-align: center; }
+    .logo { height: 2.5rem; width: auto; }
+    .navbar { width: 100%; position: relative; padding-bottom: 15px; }
+    .nav-links { display: flex; justify-content: center; gap: 2rem; }
+    .nav-link { text-decoration: none; color: var(--text-gray); font-weight: 500; transition: 0.3s; }
+    .nav-link:hover { color: var(--primary); }
+
+    .hamburger-icon { display: none; flex-direction: column; cursor: pointer; padding: 10px; position: absolute; right: 20px; top: 50%; transform: translateY(-80%); }
+    .hamburger-icon span { width: 25px; height: 3px; background: var(--primary); margin: 3px 0; }
+
+    /* --- Tiers Grid --- */
+    h1 { font-family: var(--font-heading); font-size: 2.5rem; text-align: center; margin-top: 40px; }
+    .subtitle { text-align: center; color: var(--text-gray); margin-bottom: 20px; }
+
+    .tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: var(--container-max); margin: 40px auto; padding: 0 1.5rem; }
+    .tier { background: var(--white); border: 1px solid var(--border-gray); border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column; text-align: center; transition: 0.3s; height: 100%; }
+    .tier.featured { border: 2px solid var(--primary); transform: scale(1.02); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); }
+
+    .price { font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 5px; }
+    .setup { font-size: 0.9rem; color: var(--text-light); margin-bottom: 1.5rem; }
+    ul { list-style: none; text-align: left; margin: 1.5rem 0; flex-grow: 1; }
+    li { margin-bottom: 0.75rem; font-size: 0.95rem; }
+
+    /* --- Horizontal A La Carte --- */
+    .a-la-carte-section { max-width: var(--container-max); margin: 40px auto 6rem; padding: 0 1.5rem; }
+    .custom-card-wrapper { display: flex; flex-direction: row; border: 2px solid var(--primary); border-radius: 20px; overflow: hidden; background: white; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+    .custom-left { flex: 1.2; padding: 40px; border-right: 1px solid var(--border-gray); background: var(--bg-gray); }
+    .custom-right { flex: 1; padding: 40px; }
+
+    .cta { display: block; padding: 1rem; background: var(--primary); color: white; border-radius: 8px; text-decoration: none; font-weight: 700; text-align: center; transition: 0.3s; }
+    .cta:hover { background: var(--primary-hover); transform: translateY(-2px); }
+
+    /* --- Mobile Fixes --- */
+    @media (max-width: 768px) {
+      .nav-links { display: none; flex-direction: column; width: 100%; position: absolute; top: 100%; left: 0; background: white; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; }
+      .nav-links.active { display: flex; }
+      .hamburger-icon { display: flex; }
+      .tiers { grid-template-columns: 1fr; }
+      .tier.featured { transform: none; margin: 10px 0; }
+      .custom-card-wrapper { flex-direction: column; }
+      .custom-left { border-right: none; border-bottom: 1px solid var(--border-gray); }
+    }
+  </style>
+</head>
 <body>
 
   <header class="header">
     <div class="logo-container">
-      <a href="/">
-        <img src="https://cdn.prod.website-files.com/68eb56440fc9cbc7fac5d0c7/699516ccfc7fd439b7d62c97_crawled_logo_main.png" alt="Crawled SEO Logo" class="logo">
-      </a>
+      <a href="/"><img src="https://cdn.prod.website-files.com/68eb56440fc9cbc7fac5d0c7/699516ccfc7fd439b7d62c97_crawled_logo_main.png" alt="Logo" class="logo"></a>
     </div>
-    <nav class="navbar" id="myNavbar">
+    <nav class="navbar">
       <div class="nav-links">
         <a href="/" class="nav-link">Home</a>
         <a href="/FAQs" class="nav-link">FAQ</a>
+        <a href="https://wesleyhopkins.digital" class="nav-link" target="_blank">Founder</a>
+        <a href="https://crawled.blog" class="nav-link" target="_blank">Blog</a>
         <a href="/packages" class="nav-link">Packages</a>
         <a href="/#contact" class="nav-link">Contact</a>
       </div>
-      <a href="javascript:void(0);" class="hamburger-icon" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </a>
+      <div class="hamburger-icon" onclick="toggleMenu()"><span></span><span></span><span></span></div>
     </nav>
   </header>
 
@@ -54,29 +97,29 @@
       <h2>Tier 1</h2>
       <h3>Foundation Market Entry</h3>
       <p class="price">$750 / mo</p>
-      <span class="setup">+$200 one-time setup</span>
+      <p class="setup">+$200 setup</p>
       <ul>
-        <li>✅ Local keyword mapping (10-15 terms)</li>
-        <li>✅ Google Business Profile optimization</li>
+        <li>✅ Local keyword mapping</li>
+        <li>✅ GBP optimization</li>
         <li>✅ Citation cleanup (20+ directories)</li>
         <li>✅ Core schema & FAQ guidance</li>
-        <li>✅ 1 GEO authority article / month</li>
+        <li>✅ 1 GEO authority article / mo</li>
       </ul>
       <a href="https://buy.stripe.com/9B6fZhctRc6PgYJ2sXdIA00" class="cta">Select Tier 1</a>
     </section>
 
     <section class="tier featured">
-      <div style="background: var(--primary); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; display: inline-block; margin-bottom: 15px; font-weight: 800;">MOST POPULAR</div>
+      <div style="background: var(--primary); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; display: inline-block; margin-bottom: 10px; font-weight: 800;">MOST POPULAR</div>
       <h2>Tier 2</h2>
       <h3>Competitive Market Growth</h3>
       <p class="price">$1,250 / mo</p>
-      <span class="setup">+$200 one-time setup</span>
+      <p class="setup">+$200 setup</p>
       <ul>
-        <li>✅ Expanded keyword coverage (15-25 terms)</li>
+        <li>✅ Expanded keyword coverage</li>
         <li>✅ Full site optimization guidance</li>
-        <li>✅ Advanced GBP posting strategy</li>
-        <li>✅ Editorial trust asset placement</li>
-        <li>✅ Up to 2 GEO authority articles / month</li>
+        <li>✅ Advanced GBP strategy</li>
+        <li>✅ Editorial trust assets</li>
+        <li>✅ Up to 2 GEO authority articles / mo</li>
       </ul>
       <a href="https://buy.stripe.com/9B6cN5bpN5IrbEpc3xdIA01" class="cta">Select Tier 2</a>
     </section>
@@ -85,31 +128,31 @@
       <h2>Tier 3</h2>
       <h3>Saturated Market Authority</h3>
       <p class="price">$1,850 / mo</p>
-      <span class="setup">+$200 one-time setup</span>
+      <p class="setup">+$200 setup</p>
       <ul>
         <li>✅ Multi-layer authority deployment</li>
-        <li>✅ High-trust media industry placements</li>
+        <li>✅ Media industry placements</li>
         <li>✅ Citation cleanup (100 directories)</li>
-        <li>✅ Entity & reputation signal reinforcement</li>
-        <li>✅ Up to 3 GEO authority articles / month</li>
+        <li>✅ Entity reputation reinforcement</li>
+        <li>✅ Up to 3 GEO authority articles / mo</li>
       </ul>
       <a href="https://buy.stripe.com/6oUcN5bpN3AjaAlaZtdIA02" class="cta">Select Tier 3</a>
     </section>
   </main>
 
   <section class="a-la-carte-section">
-    <div class="custom-card">
+    <div class="custom-card-wrapper">
       <div class="custom-left">
-        <h2 style="font-family: var(--font-heading); margin-bottom: 10px;">A La Carte Visibility Engine</h2>
+        <h2>A La Carte Visibility Engine</h2>
         <p class="price" style="margin-top: 0;">Starts at $200 / mo</p>
-        <p style="color: var(--text-gray);">Prove to AI models that your brand is real, verifiable, and consistent. This engine builds your "Entity Spine" so you aren't invisible in the generative era.</p>
+        <p>Before you scale, you must prove to AI models that your brand is real, verifiable, and consistent.</p>
       </div>
       <div class="custom-right">
-        <h4 style="margin-bottom: 15px; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;">Included Foundation:</h4>
-        <ul style="margin: 0;">
+        <h4 style="margin-bottom: 15px;">Included Foundation:</h4>
+        <ul>
           <li>✅ Entity Identity Alignment</li>
           <li>✅ Home Entity Anchor</li>
-          <li>✅ Machine-Readable JSON-LD Schema</li>
+          <li>✅ JSON-LD Schema</li>
           <li>✅ Monthly Visibility Tracking</li>
         </ul>
         <a href="/#contact" class="cta" style="margin-top: 20px;">Consult with Wesley</a>
@@ -119,8 +162,8 @@
 
   <script>
     function toggleMenu() {
-      const links = document.querySelector('.nav-links');
-      links.classList.toggle('active');
+      const nav = document.querySelector('.nav-links');
+      nav.classList.toggle('active');
     }
   </script>
 
