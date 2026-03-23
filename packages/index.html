@@ -1,82 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crawled SEO | Service Tiers</title>
+
+  <style>
+    /* Reset & Variables */
+    :root {
+      --primary: #45ADFF;
+      --text-dark: #1a1a1a;
+      --text-gray: #4a5568;
+      --border-gray: #e2e8f0;
+      --bg-gray: #f8fafc;
+      --white: #ffffff;
+      --font-heading: 'Lexend', sans-serif;
+      --font-body: 'Instrument Sans', sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: sans-serif; color: var(--text-dark); background: var(--white); line-height: 1.6; }
+
+    /* Header & Nav */
+    .header { border-bottom: 1px solid var(--border-gray); position: sticky; top: 0; background: white; z-index: 100; }
+    .logo-container { text-align: center; padding: 20px 0; }
+    .logo { height: 2.5rem; margin: 0 auto; }
+    .navbar { padding-bottom: 15px; }
+    .nav-links { display: flex; justify-content: center; gap: 2rem; }
+    .nav-link { text-decoration: none; color: var(--text-gray); font-weight: 500; font-size: 0.9rem; }
+
+    /* Desktop Grid (3 Columns) */
+    .tiers {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .tier {
+      border: 1px solid var(--border-gray);
+      border-radius: 12px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .tier.featured { border: 2px solid var(--primary); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+
+    /* Horizontal Card */
+    .a-la-carte-section { max-width: 1200px; margin: 0 auto 60px; padding: 0 20px; }
+    .custom-card {
+      border: 2px solid var(--primary);
+      border-radius: 20px;
+      display: flex;
+      flex-direction: row; /* Horizontal on desktop */
+      overflow: hidden;
+    }
+
+    .custom-left { flex: 1; padding: 40px; border-right: 1px solid var(--border-gray); }
+    .custom-right { flex: 1; padding: 40px; background: #fdfdfd; }
+
+    /* Text Styles */
+    h1 { font-size: 2.5rem; text-align: center; margin-top: 40px; }
+    .subtitle { text-align: center; color: var(--text-gray); margin-bottom: 20px; }
+    .price { font-size: 1.5rem; font-weight: bold; margin: 15px 0; color: var(--primary); }
+    .setup { font-size: 0.8rem; color: #94a3b8; font-weight: normal; }
+    ul { list-style: none; text-align: left; margin: 20px 0; flex-grow: 1; }
+    li { margin-bottom: 10px; font-size: 0.9rem; }
+    .cta { 
+      display: block; 
+      padding: 12px; 
+      background: var(--primary); 
+      color: white; 
+      text-decoration: none; 
+      border-radius: 8px; 
+      font-weight: bold; 
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .tiers { grid-template-columns: 1fr; }
+      .custom-card { flex-direction: column; }
+      .custom-left { border-right: none; border-bottom: 1px solid var(--border-gray); }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo-container">
+      <a href="/">
+        <img src="https://cdn.prod.website-files.com/68eb56440fc9cbc7fac5d0c7/699516ccfc7fd439b7d62c97_crawled_logo_main.png" alt="Logo" class="logo">
+      </a>
+    </div>
+    <nav class="navbar">
+      <div class="nav-links">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/FAQs" class="nav-link">FAQ</a>
+        <a href="/packages" class="nav-link">Packages</a>
+        <a href="/#contact" class="nav-link">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <h1>Visibility Service Tiers</h1>
+  [span_8](start_span)<p class="subtitle">Built for modern local discovery[span_8](end_span)</p>
+
   <main class="tiers">
     <section class="tier">
       <h2>Tier 1</h2>
-      <h3>Foundation Market Entry</h3>
-      [span_0](start_span)<p class="price">$750 / month[span_0](end_span)<br><span class="setup">+$200 one-time setup</span></p>
+      [span_9](start_span)[span_10](start_span)<p class="price">$750 / mo[span_9](end_span)[span_10](end_span)</p>
+      [span_11](start_span)<p class="setup">+$200 setup[span_11](end_span)</p>
       <ul>
-        [span_1](start_span)<li>Local keyword mapping[span_1](end_span)</li>
-        [span_2](start_span)<li>GBP audit & optimization[span_2](end_span)</li>
-        [span_3](start_span)<li>Citation cleanup (20+ directories)[span_3](end_span)</li>
-        [span_4](start_span)<li>Core schema & FAQ guidance[span_4](end_span)</li>
-        [span_5](start_span)<li>1 GEO authority article / month[span_5](end_span)</li>
+        [span_12](start_span)<li>✅ Local keyword mapping[span_12](end_span)</li>
+        [span_13](start_span)<li>✅ GBP audit & optimization[span_13](end_span)</li>
+        [span_14](start_span)<li>✅ Citation cleanup[span_14](end_span)</li>
+        [span_15](start_span)<li>✅ Core schema guidance[span_15](end_span)</li>
+        [span_16](start_span)<li>✅ 1 GEO authority article / mo[span_16](end_span)</li>
       </ul>
-      <a class="cta" href="https://buy.stripe.com/9B6fZhctRc6PgYJ2sXdIA00" target="_blank">Select Tier 1</a>
+      <a href="#" class="cta">Select Tier 1</a>
     </section>
 
     <section class="tier featured">
-      <div style="background: var(--primary); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; display: inline-block; margin-bottom: 10px; font-weight: bold;">MOST POPULAR</div>
       <h2>Tier 2</h2>
-      <h3>Competitive Market Growth</h3>
-      [span_6](start_span)<p class="price">$1,250 / month[span_6](end_span)<br><span class="setup">+$200 one-time setup</span></p>
+      [span_17](start_span)[span_18](start_span)<p class="price">$1,250 / mo[span_17](end_span)[span_18](end_span)</p>
+      [span_19](start_span)<p class="setup">+$200 setup[span_19](end_span)</p>
       <ul>
-        [span_7](start_span)<li>Expanded keyword coverage[span_7](end_span)</li>
-        [span_8](start_span)<li>Full site optimization guidance[span_8](end_span)</li>
-        [span_9](start_span)<li>Editorial trust asset placement[span_9](end_span)</li>
-        [span_10](start_span)<li>Up to 2 GEO authority articles / month[span_10](end_span)</li>
+        [span_20](start_span)<li>✅ Expanded keyword coverage[span_20](end_span)</li>
+        [span_21](start_span)<li>✅ Full site optimization[span_21](end_span)</li>
+        [span_22](start_span)<li>✅ Editorial trust assets[span_22](end_span)</li>
+        [span_23](start_span)<li>✅ Up to 2 GEO articles / mo[span_23](end_span)</li>
       </ul>
-      <a class="cta" href="https://buy.stripe.com/9B6cN5bpN5IrbEpc3xdIA01" target="_blank">Select Tier 2</a>
+      <a href="#" class="cta">Select Tier 2</a>
     </section>
 
     <section class="tier">
       <h2>Tier 3</h2>
-      <h3>Saturated Market Authority</h3>
-      [span_11](start_span)<p class="price">$1,850 / month[span_11](end_span)<br><span class="setup">+$200 one-time setup</span></p>
+      [span_24](start_span)[span_25](start_span)<p class="price">$1,850 / mo[span_24](end_span)[span_25](end_span)</p>
+      [span_26](start_span)<p class="setup">+$200 setup[span_26](end_span)</p>
       <ul>
-        [span_12](start_span)<li>Multi-layer authority deployment[span_12](end_span)</li>
-        [span_13](start_span)<li>High-trust media placements[span_13](end_span)</li>
-        [span_14](start_span)<li>Citation cleanup (100 directories)[span_14](end_span)</li>
-        [span_15](start_span)<li>Entity & reputation signal reinforcement[span_15](end_span)</li>
-        [span_16](start_span)<li>Up to 3 GEO authority articles / month[span_16](end_span)</li>
+        [span_27](start_span)<li>✅ Multi-layer deployment[span_27](end_span)</li>
+        [span_28](start_span)<li>✅ High-trust media placements[span_28](end_span)</li>
+        [span_29](start_span)<li>✅ Reputation reinforcement[span_29](end_span)</li>
+        [span_30](start_span)<li>✅ Up to 3 GEO articles / mo[span_30](end_span)</li>
       </ul>
-      <a class="cta" href="https://buy.stripe.com/6oUcN5bpN3AjaAlaZtdIA02" target="_blank">Select Tier 3</a>
+      <a href="#" class="cta">Select Tier 3</a>
     </section>
   </main>
 
   <section class="a-la-carte-section">
-    <div style="border: 2px solid var(--primary); border-radius: 20px; background: #ffffff; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);">
-      
-      <div style="background: #f8fafc; padding: 40px; text-align: center; border-bottom: 1px solid #e2e8f0;">
-        [span_17](start_span)<h2 style="margin: 0; color: #1e293b; font-size: 2.2rem; font-family: var(--font-heading);">A La Carte Visibility Engine[span_17](end_span)</h2>
-        [span_18](start_span)<p style="font-size: 1.3rem; font-weight: bold; color: var(--primary); margin: 15px 0;">Starts at $200 / month[span_18](end_span)</p>
-        <p style="color: #475569; line-height: 1.6; max-width: 800px; margin: 0 auto;">
-          Modular foundation for new brands. [span_19](start_span)Prove to AI models that your brand is real, verifiable, and consistent.[span_19](end_span)
-        </p>
+    <div class="custom-card">
+      <div class="custom-left">
+        [span_31](start_span)<h2>A La Carte Visibility Engine[span_31](end_span)</h2>
+        [span_32](start_span)[span_33](start_span)<p class="price">Starts at $200 / mo[span_32](end_span)[span_33](end_span)</p>
+        [span_34](start_span)<p>Proving to AI models that your brand is real and verifiable[span_34](end_span).</p>
       </div>
-
-      <div class="a-la-carte-card-wrapper">
-        <div style="flex: 1; padding: 40px; border-right: 1px solid #e2e8f0;">
-          [span_20](start_span)<h4 style="color: #1e293b; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; margin-bottom: 20px; font-weight: 700;">Included Foundation ($200/mo)[span_20](end_span)</h4>
-          <ul style="list-style: none; padding: 0; margin: 0; color: #475569; line-height: 1.8;">
-            [span_21](start_span)<li>✅ Entity Identity Alignment[span_21](end_span)</li>
-            [span_22](start_span)<li>✅ Home Entity Anchor[span_22](end_span)</li>
-            [span_23](start_span)<li>✅ Machine-Readable Schema[span_23](end_span)</li>
-            [span_24](start_span)<li>✅ Visibility Tracking[span_24](end_span)</li>
-          </ul>
-        </div>
-
-        <div style="flex: 1; padding: 40px; background: #fdfdfd;">
-          [span_25](start_span)<h4 style="color: #1e293b; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; margin-bottom: 20px; font-weight: 700;">Authority Multipliers (Optional)[span_25](end_span)</h4>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-            [span_26](start_span)<div><strong>Niche Inserts</strong>[span_26](end_span)</div>
-            [span_27](start_span)<div><strong>GEO Blog Posts</strong>[span_27](end_span)</div>
-            [span_28](start_span)<div><strong>Guest Posts</strong>[span_28](end_span)</div>
-            [span_29](start_span)<div><strong>FAQ Expansion</strong>[span_29](end_span)</div>
-          </div>
-        </div>
-      </div>
-
-      <div style="padding: 30px; text-align: center; background: #f8fafc; border-top: 1px solid #e2e8f0;">
-        [span_30](start_span)<a class="cta" href="/#contact">Consult with Wesley[span_30](end_span)</a>
+      <div class="custom-right">
+        <h4 style="margin-bottom: 10px;">Included Foundation:</h4>
+        <ul style="margin: 0;">
+          [span_35](start_span)<li>✅ Entity Identity Alignment[span_35](end_span)</li>
+          [span_36](start_span)<li>✅ Home Entity Anchor[span_36](end_span)</li>
+          [span_37](start_span)<li>✅ JSON-LD Schema[span_37](end_span)</li>
+          [span_38](start_span)<li>✅ Visibility Tracking[span_38](end_span)</li>
+        </ul>
+        [span_39](start_span)<a href="/#contact" class="cta" style="margin-top: 20px; text-align: center;">Consult with Wesley[span_39](end_span)</a>
       </div>
     </div>
   </section>
+
+</body>
+</html>
