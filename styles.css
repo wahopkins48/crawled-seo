@@ -63,6 +63,83 @@ img {
 }
 
 /* Header */
+
+/* Desktop nav (existing styles keep this visible) */
+.navbar {
+  position: relative;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.hamburger-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.hamburger-icon span {
+  width: 25px;
+  height: 3px;
+  background: var(--primary, #000); /* Use your CSS var or fallback */
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+.hamburger-icon.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-icon.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    gap: 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-link {
+    padding: 15px 20px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+  }
+
+  .hamburger-icon {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .logo-container {
+    padding-top: 20px; /* Reduce padding on mobile */
+  }
+}
+
 .header {
   position: sticky;
   top: 0;
