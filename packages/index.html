@@ -4,29 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Crawled SEO | Service Tiers</title>
-
   <link rel="stylesheet" href="/styles.css">
-
   <style>
-    /* Adding local overrides to ensure the 3+1 grid works perfectly */
     :root {
       --primary: #45ADFF;
       --text-dark: #1a1a1a;
       --text-gray: #4a5568;
       --border-gray: #e2e8f0;
     }
-
     body { font-family: sans-serif; color: var(--text-dark); line-height: 1.6; }
-
-    /* Header Fixes */
     .header { border-bottom: 1px solid var(--border-gray); position: sticky; top: 0; background: white; z-index: 100; }
     .logo-container { text-align: center; padding: 20px 0; }
     .logo { height: 2.5rem; margin: 0 auto; }
     .navbar { padding-bottom: 15px; }
     .nav-links { display: flex; justify-content: center; gap: 2rem; }
     .nav-link { text-decoration: none; color: var(--text-gray); font-weight: 500; font-size: 0.9rem; }
-
-    /* Desktop Grid (3 Columns) */
+    
+    /* 3-Column Desktop Grid */
     .tiers {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -35,7 +29,6 @@
       margin: 40px auto;
       padding: 0 20px;
     }
-
     .tier {
       border: 1px solid var(--border-gray);
       border-radius: 12px;
@@ -45,10 +38,9 @@
       text-align: center;
       background: white;
     }
-
-    .tier.featured { border: 2px solid var(--primary); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-
-    /* Horizontal Card Logic */
+    .tier.featured { border: 2px solid var(--primary); box-shadow: 0 10px 20px rgba(0,0,0,0.05); position: relative; }
+    
+    /* Horizontal Custom Card */
     .a-la-carte-section { max-width: 1200px; margin: 0 auto 60px; padding: 0 20px; }
     .custom-card {
       border: 2px solid var(--primary);
@@ -58,17 +50,17 @@
       overflow: hidden;
       background: white;
     }
-
     .custom-left { flex: 1; padding: 40px; border-right: 1px solid var(--border-gray); }
     .custom-right { flex: 1; padding: 40px; background: #fdfdfd; }
 
-    /* General Styling */
     h1 { font-size: 2.5rem; text-align: center; margin-top: 40px; }
-    .subtitle { text-align: center; color: var(--text-gray); margin-bottom: 20px; }
+    .subtitle { text-align: center; color: var(--text-gray); margin-bottom: 40px; }
+    .best-for { font-size: 0.85rem; color: #718096; margin-bottom: 10px; font-style: italic; }
     .price { font-size: 1.8rem; font-weight: bold; margin: 10px 0; color: var(--primary); }
-    .setup { font-size: 0.85rem; color: #94a3b8; }
+    .setup { font-size: 0.85rem; color: #94a3b8; margin-bottom: 20px; display: block; }
     ul { list-style: none; text-align: left; margin: 20px 0; flex-grow: 1; }
-    li { margin-bottom: 10px; font-size: 0.95rem; }
+    li { margin-bottom: 10px; font-size: 0.9rem; display: flex; align-items: baseline; }
+    li::before { content: "✅"; margin-right: 10px; font-size: 0.8rem; }
     
     .cta { 
       display: block; 
@@ -79,11 +71,8 @@
       border-radius: 8px; 
       font-weight: bold;
       text-align: center;
-      transition: opacity 0.2s;
     }
-    .cta:hover { opacity: 0.8; }
 
-    /* Mobile Responsive */
     @media (max-width: 768px) {
       .tiers { grid-template-columns: 1fr; }
       .custom-card { flex-direction: column; }
@@ -95,9 +84,7 @@
 
   <header class="header">
     <div class="logo-container">
-      <a href="/">
-        <img src="/crawled_logo_main.png" alt="Crawled Logo" class="logo">
-      </a>
+      <a href="/"><img src="/crawled_logo_main.png" alt="Logo" class="logo"></a>
     </div>
     <nav class="navbar">
       <div class="nav-links">
@@ -110,19 +97,22 @@
   </header>
 
   <h1>Visibility Service Tiers</h1>
-  <p class="subtitle">Built for modern local discovery</p>
+  <p class="subtitle">SEO + GEO for modern local search and AI discovery [cite: 364]</p>
 
   <main class="tiers">
     <section class="tier">
       <h2>Tier 1</h2>
+      <h3>Foundation Clarity</h3>
+      <p class="best-for">Best for solo operators and low-competition markets [cite: 212, 383]</p>
       <p class="price">$750 / mo</p>
-      <p class="setup">+$200 setup</p>
+      <span class="setup">+$450 one-time setup </span>
       <ul>
-        <li>✅ Local keyword mapping</li>
-        <li>✅ GBP audit & optimization</li>
-        <li>✅ Citation cleanup</li>
-        <li>✅ Core schema guidance</li>
-        <li>✅ 1 GEO authority article / mo</li>
+        <li>Local intent mapping (10-15 terms) [cite: 214, 387]</li>
+        <li>GBP audit & category optimization [cite: 221, 222]</li>
+        <li>Citation cleanup (20 directories) [cite: 227, 391]</li>
+        <li>Local business & FAQ schema [cite: 218, 389]</li>
+        <li>Review response framework [cite: 226, 391]</li>
+        <li>1 GEO-aligned authority article / mo [cite: 243, 392]</li>
       </ul>
       <a href="https://buy.stripe.com/9B6fZhctRc6PgYJ2sXdIA00" class="cta">Select Tier 1</a>
     </section>
@@ -130,26 +120,34 @@
     <section class="tier featured">
       <div style="background: var(--primary); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; display: inline-block; margin-bottom: 10px; font-weight: bold;">MOST POPULAR</div>
       <h2>Tier 2</h2>
-      <p class="price">$1,250 / mo</p>
-      <p class="setup">+$200 setup</p>
+      <h3>Competitive Growth</h3>
+      <p class="best-for">For businesses actively investing in brand visibility [cite: 252, 399]</p>
+      <p class="price">$1,350 / mo </p>
+      <span class="setup">+$450 one-time setup </span>
       <ul>
-        <li>✅ Expanded keyword coverage</li>
-        <li>✅ Full site optimization</li>
-        <li>✅ Editorial trust assets</li>
-        <li>✅ Up to 2 GEO articles / mo</li>
+        <li>Expanded intent coverage (15-25 terms) [cite: 255, 404]</li>
+        <li>Full website page optimization guidance [cite: 256, 405]</li>
+        <li>Advanced citation expansion (40+ sites) [cite: 270, 409]</li>
+        <li>Trust asset & editorial creation strategy [cite: 273, 410]</li>
+        <li>Location/Service-area page strategy [cite: 262, 405]</li>
+        <li>2 GEO-aligned authority articles / mo [cite: 292, 410]</li>
       </ul>
       <a href="https://buy.stripe.com/9B6cN5bpN5IrbEpc3xdIA01" class="cta">Select Tier 2</a>
     </section>
 
     <section class="tier">
       <h2>Tier 3</h2>
-      <p class="price">$1,850 / mo</p>
-      <p class="setup">+$200 setup</p>
+      <h3>Market Authority</h3>
+      <p class="best-for">For aggressive markets and dense metro areas </p>
+      <p class="price">$2,400+ / mo </p>
+      <span class="setup">+$450 one-time setup </span>
       <ul>
-        <li>✅ Multi-layer deployment</li>
-        <li>✅ High-trust media placements</li>
-        <li>✅ Reputation reinforcement</li>
-        <li>✅ Up to 3 GEO articles / mo</li>
+        <li>Multi-layer authority deployment [cite: 306, 421]</li>
+        <li>High-trust media & industry distribution [cite: 307, 421]</li>
+        <li>Branded entity reinforcement (News/Features) [cite: 308, 424]</li>
+        <li>Citation expansion (100 directories) [cite: 326]</li>
+        <li>Monthly competitive benchmarking [cite: 315, 427]</li>
+        <li>3 GEO-aligned authority articles / mo [cite: 336, 428]</li>
       </ul>
       <a href="https://buy.stripe.com/6oUcN5bpN3AjaAlaZtdIA02" class="cta">Select Tier 3</a>
     </section>
@@ -160,22 +158,21 @@
       <div class="custom-left">
         <h2>A La Carte Visibility Engine</h2>
         <p class="price">Starts at $200 / mo</p>
-        <p>Proving to AI models that your brand is real, verifiable, and consistent.</p>
+        <p>The "Entity Spine" for new brands. We build confidence in AI models so you aren't invisible in the generative era[cite: 165, 170].</p>
       </div>
       <div class="custom-right">
-        <h4 style="margin-bottom: 15px; font-weight: bold; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">Included Foundation:</h4>
+        <h4 style="margin-bottom: 10px; font-weight: bold; text-transform: uppercase; font-size: 0.8rem;">Included Foundation:</h4>
         <ul style="margin: 0;">
-          <li>✅ Entity Identity Alignment</li>
-          <li>✅ Home Entity Anchor</li>
-          <li>✅ JSON-LD Schema</li>
-          <li>✅ Visibility Tracking</li>
+          <li>Entity Identity Alignment [cite: 170, 186]</li>
+          <li>Home Entity Anchor Optimization [cite: 170, 187]</li>
+          <li>Machine-Readable JSON-LD Schema [cite: 170, 188]</li>
+          <li>Monthly Visibility & AI Tracking [cite: 170, 188]</li>
         </ul>
-        <a href="/#contact" class="cta" style="margin-top: 25px;">Consult with Wesley</a>
+        <a href="/#contact" class="cta" style="margin-top: 20px;">Consult with Wesley</a>
       </div>
     </div>
   </section>
 
   <script src="/script.js"></script>
-
 </body>
 </html>
