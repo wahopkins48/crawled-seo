@@ -1,3 +1,21 @@
+function toggleMenu() {
+  const navbar = document.getElementById('myNavbar');
+  const links = navbar.querySelector('.nav-links');
+  const icon = navbar.querySelector('.hamburger-icon');
+  
+  links.classList.toggle('active');
+  icon.classList.toggle('active');
+}
+
+// Close menu when clicking a nav link (mobile)
+document.addEventListener('click', function(e) {
+  if (window.innerWidth <= 768 && e.target.classList.contains('nav-link')) {
+    const navbar = document.getElementById('myNavbar');
+    navbar.querySelector('.nav-links').classList.remove('active');
+    navbar.querySelector('.hamburger-icon').classList.remove('active');
+  }
+});
+
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
