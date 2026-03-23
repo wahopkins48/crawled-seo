@@ -4,9 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Crawled SEO | Service Tiers</title>
-
   <style>
-    /* --- Base Variables & Reset --- */
     :root {
       --primary: #45ADFF;
       --primary-hover: #3399e6;
@@ -18,13 +16,9 @@
       --white: #ffffff;
       --font-heading: 'Lexend', sans-serif;
       --font-body: 'Instrument Sans', sans-serif;
-      --container-max: 1280px;
     }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: var(--font-body); color: var(--text-dark); background-color: var(--white); line-height: 1.6; }
-
-    /* --- Header & Navigation --- */
     .header { position: sticky; top: 0; z-index: 1000; background: white; border-bottom: 1px solid var(--border-gray); width: 100%; display: flex; flex-direction: column; align-items: center; }
     .logo-container { padding: 25px 0 10px; text-align: center; }
     .logo { height: 2.5rem; width: auto; }
@@ -32,33 +26,23 @@
     .nav-links { display: flex; justify-content: center; gap: 2rem; }
     .nav-link { text-decoration: none; color: var(--text-gray); font-weight: 500; transition: 0.3s; }
     .nav-link:hover { color: var(--primary); }
-
     .hamburger-icon { display: none; flex-direction: column; cursor: pointer; padding: 10px; position: absolute; right: 20px; top: 50%; transform: translateY(-80%); }
     .hamburger-icon span { width: 25px; height: 3px; background: var(--primary); margin: 3px 0; }
-
-    /* --- Tiers Grid --- */
     h1 { font-family: var(--font-heading); font-size: 2.5rem; text-align: center; margin-top: 40px; }
     .subtitle { text-align: center; color: var(--text-gray); margin-bottom: 20px; }
-
-    .tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: var(--container-max); margin: 40px auto; padding: 0 1.5rem; }
-    .tier { background: var(--white); border: 1px solid var(--border-gray); border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column; text-align: center; transition: 0.3s; height: 100%; }
+    .tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1280px; margin: 40px auto; padding: 0 1.5rem; }
+    .tier { background: var(--white); border: 1px solid var(--border-gray); border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column; text-align: center; height: 100%; }
     .tier.featured { border: 2px solid var(--primary); transform: scale(1.02); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); }
-
     .price { font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 5px; }
     .setup { font-size: 0.9rem; color: var(--text-light); margin-bottom: 1.5rem; }
     ul { list-style: none; text-align: left; margin: 1.5rem 0; flex-grow: 1; }
     li { margin-bottom: 0.75rem; font-size: 0.95rem; }
-
-    /* --- Horizontal A La Carte --- */
-    .a-la-carte-section { max-width: var(--container-max); margin: 40px auto 6rem; padding: 0 1.5rem; }
+    .a-la-carte-section { max-width: 1280px; margin: 40px auto 6rem; padding: 0 1.5rem; }
     .custom-card-wrapper { display: flex; flex-direction: row; border: 2px solid var(--primary); border-radius: 20px; overflow: hidden; background: white; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
     .custom-left { flex: 1.2; padding: 40px; border-right: 1px solid var(--border-gray); background: var(--bg-gray); }
     .custom-right { flex: 1; padding: 40px; }
-
     .cta { display: block; padding: 1rem; background: var(--primary); color: white; border-radius: 8px; text-decoration: none; font-weight: 700; text-align: center; transition: 0.3s; }
     .cta:hover { background: var(--primary-hover); transform: translateY(-2px); }
-
-    /* --- Mobile Fixes --- */
     @media (max-width: 768px) {
       .nav-links { display: none; flex-direction: column; width: 100%; position: absolute; top: 100%; left: 0; background: white; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; }
       .nav-links.active { display: flex; }
@@ -71,7 +55,6 @@
   </style>
 </head>
 <body>
-
   <header class="header">
     <div class="logo-container">
       <a href="/"><img src="https://cdn.prod.website-files.com/68eb56440fc9cbc7fac5d0c7/699516ccfc7fd439b7d62c97_crawled_logo_main.png" alt="Logo" class="logo"></a>
@@ -99,11 +82,11 @@
       <p class="price">$750 / mo</p>
       <p class="setup">+$200 setup</p>
       <ul>
-        [span_3](start_span)<li>✅ Local keyword mapping[span_3](end_span)</li>
-        [span_4](start_span)<li>✅ GBP optimization[span_4](end_span)</li>
-        [span_5](start_span)<li>✅ Citation cleanup (20+ directories)[span_5](end_span)</li>
-        [span_6](start_span)<li>✅ Core schema & FAQ guidance[span_6](end_span)</li>
-        [span_7](start_span)<li>✅ 1 GEO authority article / mo[span_7](end_span)</li>
+        <li>✅ Local keyword mapping (10-15 terms)</li>
+        <li>✅ Google Business Profile optimization</li>
+        <li>✅ Citation cleanup (20+ directories)</li>
+        <li>✅ Core schema & FAQ guidance</li>
+        <li>✅ 1 GEO authority article / month</li>
       </ul>
       <a href="https://buy.stripe.com/9B6fZhctRc6PgYJ2sXdIA00" class="cta">Select Tier 1</a>
     </section>
@@ -115,11 +98,12 @@
       <p class="price">$1,250 / mo</p>
       <p class="setup">+$200 setup</p>
       <ul>
-        [span_8](start_span)<li>✅ Expanded keyword coverage[span_8](end_span)</li>
-        [span_9](start_span)<li>✅ Full site optimization guidance[span_9](end_span)</li>
-        [span_10](start_span)<li>✅ Advanced GBP strategy[span_10](end_span)</li>
-        [span_11](start_span)<li>✅ Citation cleanup (50+ platforms)[span_11](end_span)[span_12](start_span)</li> <li>✅ Editorial trust assets[span_12](end_span)</li>
-        [span_13](start_span)<li>✅ Up to 2 GEO authority articles / mo[span_13](end_span)</li>
+        <li>✅ Expanded keyword coverage (15-25 terms)</li>
+        <li>✅ Full site optimization guidance</li>
+        <li>✅ Advanced GBP strategy</li>
+        <li>✅ Citation cleanup (50+ platforms)</li>
+        <li>✅ Editorial trust assets</li>
+        <li>✅ Up to 2 GEO authority articles / month</li>
       </ul>
       <a href="https://buy.stripe.com/9B6cN5bpN5IrbEpc3xdIA01" class="cta">Select Tier 2</a>
     </section>
@@ -130,16 +114,16 @@
       <p class="price">$1,850 / mo</p>
       <p class="setup">+$200 setup</p>
       <ul>
-        [span_14](start_span)<li>✅ Multi-layer authority deployment[span_14](end_span)</li>
-        [span_15](start_span)<li>✅ High-trust media industry placements[span_15](end_span)</li>
-        [span_16](start_span)<li>✅ Citation cleanup (100 directories)[span_16](end_span)</li>
-        [span_17](start_span)<li>✅ Entity reputation reinforcement[span_17](end_span)</li>
-        [span_18](start_span)[span_19](start_span)<li>✅ Recursive Entity Reinforcement (Advanced Thought Leadership)[span_18](end_span)[span_19](end_span)[span_20](start_span)</li> <li>✅ Up to 3 GEO authority articles / mo[span_20](end_span)</li>
+        <li>✅ Multi-layer authority deployment</li>
+        <li>✅ High-trust media industry placements</li>
+        <li>✅ Citation cleanup (100 directories)</li>
+        <li>✅ Recursive Entity Reinforcement (Advanced Thought Leadership)</li>
+        <li>✅ Entity & reputation signal reinforcement</li>
+        <li>✅ Up to 3 GEO authority articles / month</li>
       </ul>
       <a href="https://buy.stripe.com/6oUcN5bpN3AjaAlaZtdIA02" class="cta">Select Tier 3</a>
     </section>
-</main>
-
+  </main>
 
   <section class="a-la-carte-section">
     <div class="custom-card-wrapper">
@@ -167,6 +151,5 @@
       nav.classList.toggle('active');
     }
   </script>
-
 </body>
 </html>
