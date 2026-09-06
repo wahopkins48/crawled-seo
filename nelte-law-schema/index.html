@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Structured data for Nelte Law</title>
+<style>
+  :root { --ink:#1a2027; --soft:#4d5862; --paper:#f4f5f2; --rule:#c6c9c0; --link:#2c4c7c; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink);
+         font:17px/1.6 "Source Serif 4",Georgia,serif; }
+  main { max-width:52rem; margin:0 auto; padding:2.5rem 1.5rem 4rem; background:#fdfdfc;
+          min-height:100vh; border-left:1px solid var(--rule); border-right:1px solid var(--rule); }
+  h1 { font:600 1.6rem/1.2 Archivo,Helvetica,Arial,sans-serif; letter-spacing:-.02em; margin:0 0 .4rem; }
+  .from { font:0.9rem/1.4 Archivo,Helvetica,Arial,sans-serif; color:var(--soft);
+           border-bottom:2px solid var(--ink); padding-bottom:.9rem; margin-bottom:1.6rem; }
+  p { max-width:62ch; }
+  h2 { font:600 1.05rem/1.3 Archivo,Helvetica,Arial,sans-serif; margin:2rem 0 .5rem; }
+  ol { max-width:62ch; padding-left:1.2rem; }
+  li { margin-bottom:.5rem; }
+  pre { background:#f2f3ef; border:1px solid var(--rule); padding:1rem; overflow-x:auto;
+         font:13px/1.5 "IBM Plex Mono",ui-monospace,Menlo,monospace; white-space:pre; }
+  button { font:600 .95rem Archivo,Helvetica,Arial,sans-serif; background:var(--ink); color:#fdfdfc;
+            border:0; border-radius:2px; padding:.6rem 1.2rem; cursor:pointer; margin-bottom:.8rem; }
+  button:hover { background:#2c353e; }
+  a { color:var(--link); }
+  footer { margin-top:2.5rem; padding-top:1.2rem; border-top:1px solid var(--rule);
+            color:var(--soft); font-size:.95rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Structured data for Nelte Law</h1>
+  <div class="from">Prepared by Wesley Hopkins, Crawled &middot; nothing here is tracked, and there is nothing to download</div>
+
+  <p>Every fact below already appears on neltelaw.com. Nothing has been invented or
+  guessed. This markup only restates that information in the format search engines
+  read directly, instead of leaving them to infer it from the page text.</p>
+
+  <h2>The code</h2>
+  <button id="copy" type="button">Copy to clipboard</button>
+  <pre id="code">&lt;script type=&quot;application/ld+json&quot;&gt;
+{
+  &quot;@context&quot;: &quot;https://schema.org&quot;,
+  &quot;@graph&quot;: [
+    {
+      &quot;@type&quot;: &quot;LegalService&quot;,
+      &quot;@id&quot;: &quot;https://www.neltelaw.com/#firm&quot;,
+      &quot;name&quot;: &quot;Nelte Law&quot;,
+      &quot;url&quot;: &quot;https://www.neltelaw.com/&quot;,
+      &quot;description&quot;: &quot;Estate planning and advance care planning for individuals and families in San Diego and throughout California.&quot;,
+      &quot;telephone&quot;: &quot;+1-858-203-5115&quot;,
+      &quot;email&quot;: &quot;linda@neltelaw.com&quot;,
+      &quot;address&quot;: {
+        &quot;@type&quot;: &quot;PostalAddress&quot;,
+        &quot;streetAddress&quot;: &quot;9920 Pacific Heights Blvd., Suite 150&quot;,
+        &quot;addressLocality&quot;: &quot;San Diego&quot;,
+        &quot;addressRegion&quot;: &quot;CA&quot;,
+        &quot;postalCode&quot;: &quot;92121&quot;,
+        &quot;addressCountry&quot;: &quot;US&quot;
+      },
+      &quot;openingHoursSpecification&quot;: [{
+        &quot;@type&quot;: &quot;OpeningHoursSpecification&quot;,
+        &quot;dayOfWeek&quot;: [&quot;Monday&quot;,&quot;Tuesday&quot;,&quot;Wednesday&quot;,&quot;Thursday&quot;,&quot;Friday&quot;],
+        &quot;opens&quot;: &quot;09:00&quot;,
+        &quot;closes&quot;: &quot;17:00&quot;
+      }],
+      &quot;areaServed&quot;: { &quot;@type&quot;: &quot;State&quot;, &quot;name&quot;: &quot;California&quot; },
+      &quot;founder&quot;: { &quot;@id&quot;: &quot;https://www.neltelaw.com/#linda&quot; },
+      &quot;hasOfferCatalog&quot;: {
+        &quot;@type&quot;: &quot;OfferCatalog&quot;,
+        &quot;name&quot;: &quot;Practice areas&quot;,
+        &quot;itemListElement&quot;: [
+          { &quot;@type&quot;: &quot;Offer&quot;, &quot;itemOffered&quot;: { &quot;@type&quot;: &quot;Service&quot;, &quot;name&quot;: &quot;Estate Planning&quot; } },
+          { &quot;@type&quot;: &quot;Offer&quot;, &quot;itemOffered&quot;: { &quot;@type&quot;: &quot;Service&quot;, &quot;name&quot;: &quot;Advance Care Planning&quot; } }
+        ]
+      }
+    },
+    {
+      &quot;@type&quot;: &quot;Person&quot;,
+      &quot;@id&quot;: &quot;https://www.neltelaw.com/#linda&quot;,
+      &quot;name&quot;: &quot;Linda Nelte&quot;,
+      &quot;jobTitle&quot;: &quot;Attorney&quot;,
+      &quot;worksFor&quot;: { &quot;@id&quot;: &quot;https://www.neltelaw.com/#firm&quot; },
+      &quot;alumniOf&quot;: [
+        { &quot;@type&quot;: &quot;CollegeOrUniversity&quot;, &quot;name&quot;: &quot;University of San Diego School of Law&quot; },
+        { &quot;@type&quot;: &quot;CollegeOrUniversity&quot;, &quot;name&quot;: &quot;University of California, Los Angeles&quot; }
+      ],
+      &quot;memberOf&quot;: [
+        { &quot;@type&quot;: &quot;Organization&quot;, &quot;name&quot;: &quot;Probate Attorneys of San Diego&quot; },
+        { &quot;@type&quot;: &quot;Organization&quot;, &quot;name&quot;: &quot;Estate Planning Council of San Diego&quot; }
+      ]
+    }
+  ]
+}
+&lt;/script&gt;</pre>
+
+  <h2>Where it goes</h2>
+  <ol>
+    <li>In Strikingly, open <strong>Settings</strong>, then <strong>Advanced</strong>, then
+        <strong>Custom Code</strong> (some accounts label it Head Code).</li>
+    <li>Paste the block above into the head section and publish.</li>
+    <li>Check it with Google's
+        <a href="https://search.google.com/test/rich-results">Rich Results Test</a>. Paste in
+        your homepage URL and confirm it detects the law firm and the attorney.</li>
+  </ol>
+
+  <h2>One thing to confirm first</h2>
+  <p>The address, phone number, and hours need to match your Google Business Profile
+  exactly, character for character. If the two disagree, correct whichever is out of date
+  before publishing this, because a mismatch weakens the connection rather than
+  strengthening it.</p>
+
+  <footer>
+    Questions, or want the rest of the audit? Wesley Hopkins, Crawled &mdash;
+    <a href="mailto:hello@crawledseo.com">hello@crawledseo.com</a>
+  </footer>
+</main>
+<script>
+document.getElementById('copy').addEventListener('click', function () {
+  var text = `<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LegalService",
+      "@id": "https://www.neltelaw.com/#firm",
+      "name": "Nelte Law",
+      "url": "https://www.neltelaw.com/",
+      "description": "Estate planning and advance care planning for individuals and families in San Diego and throughout California.",
+      "telephone": "+1-858-203-5115",
+      "email": "linda@neltelaw.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "9920 Pacific Heights Blvd., Suite 150",
+        "addressLocality": "San Diego",
+        "addressRegion": "CA",
+        "postalCode": "92121",
+        "addressCountry": "US"
+      },
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "09:00",
+        "closes": "17:00"
+      }],
+      "areaServed": { "@type": "State", "name": "California" },
+      "founder": { "@id": "https://www.neltelaw.com/#linda" },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Practice areas",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Estate Planning" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Advance Care Planning" } }
+        ]
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.neltelaw.com/#linda",
+      "name": "Linda Nelte",
+      "jobTitle": "Attorney",
+      "worksFor": { "@id": "https://www.neltelaw.com/#firm" },
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "University of San Diego School of Law" },
+        { "@type": "CollegeOrUniversity", "name": "University of California, Los Angeles" }
+      ],
+      "memberOf": [
+        { "@type": "Organization", "name": "Probate Attorneys of San Diego" },
+        { "@type": "Organization", "name": "Estate Planning Council of San Diego" }
+      ]
+    }
+  ]
+}
+<\/script>`;
+  navigator.clipboard.writeText(text).then(function () {
+    var b = document.getElementById('copy');
+    b.textContent = 'Copied';
+    setTimeout(function () { b.textContent = 'Copy to clipboard'; }, 2000);
+  });
+});
+</script>
+</body>
+</html>
