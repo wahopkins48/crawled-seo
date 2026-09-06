@@ -1,0 +1,6 @@
+# https://crawledseo.com/robots.txt
+
+User-agent: *
+Allow: /
+
+Sitemap: https://crawledseo.com/sitemap.xml
