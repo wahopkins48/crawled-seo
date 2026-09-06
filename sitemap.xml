@@ -1,28 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <url>
-    <loc>https://crawledseo.com/</loc>
-  </url>
-
-  <url>
-    <loc>https://crawledseo.com/blog/</loc>
-  </url>
-
-  <url>
-    <loc>https://crawledseo.com/packages/</loc>
-  </url>
-
-  <url>
-    <loc>https://crawledseo.com/audit/</loc>
-  </url>
-
-  <!-- This entry assumes the FAQs/ directory has been renamed to faqs/.
-       Until that rename happens the live URL is /FAQs/ and this line will 404. -->
-  <url>
-    <loc>https://crawledseo.com/faqs/</loc>
-  </url>
-
-  <!-- /nelte-law-schema/ is deliberately excluded. It carries a noindex tag. -->
-
+  <url><loc>https://crawledseo.com/</loc></url>
+  <url><loc>https://crawledseo.com/blog/</loc></url>
+  <url><loc>https://crawledseo.com/packages/</loc></url>
+  <url><loc>https://crawledseo.com/audit/</loc></url>
+  <url><loc>https://crawledseo.com/faqs/</loc></url>
 </urlset>
