@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="apple-touch-icon" href="/favicon.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HVAC/R AI Pro Case Study | Crawled SEO</title>
+  <meta name="description" content="How Crawled built the search visibility architecture for HVAC/R AI Pro (hvacrai.com) from a domain with no history to page-one rankings and a first-place mention in Google's AI Overview, in five months.">
+  <link rel="canonical" href="https://crawledseo.com/case-studies/hvacrai/" />
+  <meta property="og:title" content="HVAC/R AI Pro Case Study | Crawled SEO">
+  <meta property="og:description" content="From zero domain history to page one and Google's AI Overview in five months: the content architecture and SEO behind hvacrai.com.">
+  <meta property="og:image" content="/crawled_logo_main.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #45ADFF;
+      --primary-hover: #3399e6;
+      --text-dark: #1a1a1a;
+      --text-gray: #4a5568;
+      --text-light: #718096;
+      --border-gray: #e2e8f0;
+      --bg-gray: #f8fafc;
+      --white: #ffffff;
+    }
+    .cs-wrap { max-width: 880px; margin: 0 auto; padding: 0 24px 96px; }
+    .cs-hero { padding: 56px 0 40px; }
+    .cs-kicker { font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #1e3a8a; margin: 0 0 20px; }
+    .cs-title { font-family: var(--font-heading); font-weight: 700; font-size: 44px; line-height: 1.14; letter-spacing: -0.02em; margin: 0 0 28px; text-wrap: pretty; }
+    .cs-meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px 32px; margin: 0; padding: 24px; background: var(--bg-gray); border: 1px solid var(--border-gray); border-radius: 8px; }
+    .cs-meta dt { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-light); margin-bottom: 4px; }
+    .cs-meta dd { margin: 0; font-size: 15px; }
+    .cs-stats { padding: 0 0 48px; }
+    .cs-stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: var(--border-gray); border: 1px solid var(--border-gray); border-radius: 8px; overflow: hidden; }
+    .cs-stat { background: #fff; padding: 22px 20px; }
+    .cs-stat-num { font-family: var(--font-heading); font-weight: 700; font-size: 30px; line-height: 1.1; color: #1e3a8a; }
+    .cs-stat-num.accent { color: var(--primary); }
+    .cs-stat-label { font-size: 13px; color: var(--text-light); margin-top: 6px; }
+    .cs-note { font-size: 13px; color: var(--text-light); margin: 12px 0 0; }
+    .cs-section { padding: 16px 0 40px; }
+    .cs-section h2 { font-family: var(--font-heading); font-weight: 700; font-size: 28px; line-height: 1.25; margin: 0 0 20px; }
+    .cs-section h3 { font-family: var(--font-heading); font-weight: 600; font-size: 20px; margin: 0 0 16px; }
+    .cs-section h4 { font-family: var(--font-heading); font-weight: 600; font-size: 17px; margin: 0 0 8px; }
+    .cs-section p { font-size: 17px; color: var(--text-gray); margin: 0 0 18px; text-wrap: pretty; }
+    .cs-pullquote { font-size: 18px; font-weight: 600; color: var(--text-dark); margin: 0; border-left: 3px solid var(--primary); padding-left: 18px; }
+    .cs-code { font-family: ui-monospace, Menlo, monospace; font-size: 14px; background: #eef4ff; padding: 2px 6px; border-radius: 4px; color: #1e3a8a; }
+    .cs-list { list-style: none; margin: 0 0 28px; padding: 0; display: grid; gap: 12px; }
+    .cs-list li { display: grid; grid-template-columns: 6px 1fr; gap: 16px; align-items: baseline; font-size: 16px; color: var(--text-gray); }
+    .cs-list li .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--primary); display: block; }
+    .cs-list li strong { color: var(--text-dark); font-weight: 600; }
+    .cs-figure { margin: 0 0 40px; }
+    .cs-figure img { width: 100%; display: block; border: 1px solid var(--border-gray); border-radius: 8px; }
+    .cs-figure figcaption { font-size: 14px; color: var(--text-light); margin-top: 12px; }
+    .cs-figure figcaption strong { color: var(--text-dark); font-weight: 600; }
+    .cs-crop { height: 230px; overflow: hidden; border: 1px solid var(--border-gray); border-radius: 6px; background: #fff; }
+    .cs-crop img { width: 100%; display: block; }
+    .cs-crop-tall { height: 430px; overflow: hidden; border: 1px solid var(--border-gray); border-radius: 8px; background: #fff; }
+    .cs-crop-tall img { width: 100%; display: block; }
+    .cs-collage { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; padding: 16px; background: var(--bg-gray); border: 1px solid var(--border-gray); border-radius: 8px; }
+    .cs-table { width: 100%; border-collapse: collapse; margin: 0 0 28px; font-size: 16px; }
+    .cs-table th { text-align: left; font-family: var(--font-heading); font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-light); padding: 0 0 10px; border-bottom: 1px solid var(--border-gray); }
+    .cs-table th:last-child, .cs-table td:last-child { text-align: right; }
+    .cs-table td { padding: 12px 0; border-bottom: 1px solid var(--border-gray); color: var(--text-gray); }
+    .cs-table td:last-child { font-weight: 600; color: var(--text-dark); }
+    .cs-findings { display: grid; gap: 16px; }
+    .cs-finding { display: grid; grid-template-columns: 40px 1fr; gap: 18px; padding: 22px; background: var(--bg-gray); border: 1px solid var(--border-gray); border-radius: 8px; }
+    .cs-finding-num { font-family: var(--font-heading); font-weight: 700; font-size: 20px; color: var(--primary); }
+    .cs-finding p { font-size: 16px; margin: 0; }
+    .cs-roadmap { list-style: none; counter-reset: r; margin: 0; padding: 0; display: grid; gap: 14px; }
+    .cs-roadmap li { display: grid; grid-template-columns: 28px 1fr; gap: 16px; align-items: start; font-size: 16px; color: var(--text-gray); }
+    .cs-roadmap li .num { font-family: var(--font-heading); font-weight: 600; font-size: 14px; color: #fff; background: var(--primary); width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .cs-roadmap li span:last-child { padding-top: 2px; }
+    .cs-byline { padding: 32px 0; border-top: 1px solid var(--border-gray); border-bottom: 1px solid var(--border-gray); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 40px; }
+    .cs-byline .name { font-family: var(--font-heading); font-weight: 700; font-size: 18px; }
+    .cs-byline .role { font-size: 15px; color: var(--text-light); margin-top: 4px; }
+    .cs-byline a { font-size: 15px; font-weight: 600; color: #1e3a8a; text-decoration: none; }
+    .cs-appendix { padding: 40px 0 0; }
+    .cs-cta { text-align: center; padding: 48px 0 0; }
+    .cs-cta a { display: inline-block; padding: 1rem 2rem; background: var(--primary); color: white; border-radius: 8px; text-decoration: none; font-weight: 700; transition: 0.3s; }
+    .cs-cta a:hover { background: var(--primary-hover); }
+    @media (max-width: 600px) {
+      .cs-title { font-size: 32px; }
+      .cs-byline { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo-container">
+      <a href="/"><img src="https://cdn.prod.website-files.com/68eb56440fc9cbc7fac5d0c7/699516ccfc7fd439b7d62c97_crawled_logo_main.png" alt="Logo" class="logo"></a>
+    </div>
+    <nav class="navbar">
+      <div class="nav-links">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/faqs" class="nav-link">FAQ</a>
+        <a href="https://wesleyhopkins.digital" class="nav-link" target="_blank">Founder</a>
+        <a href="https://crawled.blog" class="nav-link" target="_blank">Blog</a>
+        <a href="/packages" class="nav-link">Packages</a>
+        <a href="/#contact" class="nav-link">Contact</a>
+      </div>
+      <div class="hamburger-icon" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+    </nav>
+  </header>
+
+  <main class="cs-wrap">
+
+    <section class="cs-hero">
+      <p class="cs-kicker">Case Study</p>
+      <h1 class="cs-title">Building Search Visibility for a Product That Didn't Exist Yet</h1>
+      <dl class="cs-meta">
+        <div>
+          <dt>Client</dt>
+          <dd>HVAC/R AI Pro (<a href="https://hvacrai.com">hvacrai.com</a>), Cowboy G Industries LLC</dd>
+        </div>
+        <div>
+          <dt>Engagement</dt>
+          <dd>Content architecture and SEO, pre-launch through month five</dd>
+        </div>
+        <div>
+          <dt>Period</dt>
+          <dd>April 2026 to present</dd>
+        </div>
+        <div>
+          <dt>By</dt>
+          <dd>Wesley Hopkins, Digital Visibility Architect, Crawled</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="cs-stats">
+      <div class="cs-stats-grid">
+        <div class="cs-stat"><div class="cs-stat-num">3,841</div><div class="cs-stat-label">Impressions</div></div>
+        <div class="cs-stat"><div class="cs-stat-num">93</div><div class="cs-stat-label">Clicks</div></div>
+        <div class="cs-stat"><div class="cs-stat-num">75</div><div class="cs-stat-label">Queries ranking</div></div>
+        <div class="cs-stat"><div class="cs-stat-num">6th</div><div class="cs-stat-label">Head term, organic</div></div>
+        <div class="cs-stat"><div class="cs-stat-num accent">1st</div><div class="cs-stat-label">In Google's AI Overview</div></div>
+      </div>
+      <p class="cs-note">Google Search Console, five months from launch. Captured September 13, 2026.</p>
+    </section>
+
+    <section class="cs-section">
+      <h2>The situation</h2>
+      <p>HVAC/R AI Pro is an AI diagnostic tool for HVAC and refrigeration technicians. Point a phone at an equipment nameplate, get the unit identified, then work the problem with structured troubleshooting guidance, airflow tools, and estimate support.</p>
+      <p>When I came in, there was no site. No domain history, no links, no authority, no content. I built the content architecture alongside the founder while the product was still being finished.</p>
+      <p>The competitive picture was not favorable. Search results for every relevant term were held by two groups: Apple and Google Play app listings, and "best HVAC apps" roundups published by field service software companies with dedicated content teams. Established technician apps like Bluon and measureQuick had years of authority and large installed user bases.</p>
+      <p class="cs-pullquote">A brand new domain does not usually break into that.</p>
+    </section>
+
+    <section class="cs-section">
+      <h2>What I built</h2>
+      <p>I developed the page architecture and wrote the content for the site's topical cluster, structured as a hub with supporting pages around each of the product's real workflows:</p>
+      <ul class="cs-list">
+        <li><span class="dot"></span><span><strong>Troubleshooting</strong> (<code class="cs-code">/hvac-troubleshooting-app</code>), the primary commercial page</span></li>
+        <li><span class="dot"></span><span><strong>Equipment Scanner</strong> (<code class="cs-code">/equipment-scanner</code>), nameplate capture and equipment identification</span></li>
+        <li><span class="dot"></span><span><strong>Airflow and static pressure</strong> (<code class="cs-code">/hvac-airflow-calculator</code>, <code class="cs-code">/airflow-static-pressure-tools</code>)</span></li>
+        <li><span class="dot"></span><span><strong>Duct sizing</strong> (<code class="cs-code">/duct-sizing-calculator</code>, <code class="cs-code">/duct-sizing-ductulator-app</code>)</span></li>
+        <li><span class="dot"></span><span><strong>Refrigeration</strong> (<code class="cs-code">/refrigeration-tools</code>)</span></li>
+        <li><span class="dot"></span><span><strong>Estimates</strong> (<code class="cs-code">/hvac-estimate-app</code>)</span></li>
+        <li><span class="dot"></span><span><strong>Web dashboard</strong> (<code class="cs-code">/hvac-web-dashboard</code>)</span></li>
+        <li><span class="dot"></span><span><strong>Features overview</strong> (<code class="cs-code">/features</code>)</span></li>
+      </ul>
+      <p>Each page was mapped to a specific query cluster before it was written, with internal linking designed so the pages reinforce each other instead of competing.</p>
+      <p>The editorial rule I set was that the pages had to be honest about what the product does not do. The Equipment Scanner page states plainly where nameplate capture fails: faded plates, bad angles, partial reads. Technicians are a skeptical audience who catch overstatement immediately, and pages that acknowledge limits earn more trust than pages that don't.</p>
+
+      <figure class="cs-figure" style="margin-bottom: 0;">
+        <div class="cs-collage">
+          <div class="cs-crop"><img src="assets/page-troubleshooting.png" alt="Troubleshooting page"></div>
+          <div class="cs-crop"><img src="assets/page-airflow.png" alt="Airflow calculator page"></div>
+          <div class="cs-crop"><img src="assets/page-duct-sizing.png" alt="Duct sizing calculator page"></div>
+          <div class="cs-crop"><img src="assets/page-refrigeration.png" alt="Refrigeration tools page"></div>
+          <div class="cs-crop"><img src="assets/page-estimate.png" alt="Estimate app page"></div>
+        </div>
+        <figcaption><strong>Figure 1.</strong> The topical cluster as built.</figcaption>
+      </figure>
+    </section>
+
+    <section class="cs-section">
+      <h2>Results</h2>
+      <p>All figures are from the client's Google Search Console property, captured September 13, 2026. Nothing is estimated or drawn from third-party tools.</p>
+
+      <h3>Five months from launch</h3>
+      <table class="cs-table">
+        <thead>
+          <tr><th>Metric</th><th>Value</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Total impressions</td><td>3,841</td></tr>
+          <tr><td>Total clicks</td><td>93</td></tr>
+          <tr><td>Average CTR</td><td>2.4%</td></tr>
+          <tr><td>Queries the site now appears for</td><td>75</td></tr>
+          <tr><td>First recorded impression</td><td>April 25, 2026</td></tr>
+        </tbody>
+      </table>
+
+      <figure class="cs-figure">
+        <img src="assets/fig2-sitewide.png" alt="Search Console site-wide performance">
+        <figcaption><strong>Figure 2.</strong> Impressions and average position from launch. The flat line at left is a domain with no search presence at all.</figcaption>
+      </figure>
+
+      <h3>Page-one placement on the head term</h3>
+      <p><code class="cs-code">/hvac-troubleshooting-app</code> now holds page one for "hvac troubleshooting app." In a signed-out, neutral US search it appears <strong>sixth organically</strong>, above measureQuick's App Store listing and above ServiceTitan's "14 Best HVAC Apps" roundup.</p>
+
+      <figure class="cs-figure">
+        <img src="assets/fig3-serp.png" alt="Live Google SERP for hvac troubleshooting app">
+        <figcaption><strong>Figure 3.</strong> Live result, September 13, 2026, signed out, United States. Full page in <a href="#appendix-a">Appendix A</a>.</figcaption>
+      </figure>
+
+      <figure class="cs-figure">
+        <img src="assets/fig4-gsc-troubleshooting.png" alt="Search Console, hvac troubleshooting app filtered to the page">
+        <figcaption><strong>Figure 4.</strong> Search Console, "hvac troubleshooting app" filtered to the page. The climb at the right edge is the move from roughly position 21 to position 9.</figcaption>
+      </figure>
+
+      <h3>The strongest query on the site</h3>
+      <p>"hvac ai app" holds <strong>average position 5.1</strong> with an <strong>8% click-through rate</strong>, the best-converting term the site ranks for.</p>
+
+      <figure class="cs-figure">
+        <img src="assets/fig5-gsc-hvacai.png" alt="Search Console, hvac ai app">
+        <figcaption><strong>Figure 5.</strong> Search Console, "hvac ai app." Average position 5.1 at an 8% click-through rate.</figcaption>
+      </figure>
+
+      <h3>Named first in Google's AI Overview</h3>
+      <p>For "hvac ai app," Google's AI Overview opens by defining HVAC/R AI Pro, cites hvacrai.com as a source, and lists the product <strong>first</strong> under "Top HVAC AI Apps and Tools," ahead of BuildOps and Bluon.</p>
+      <p>This matters more than a blue link. AI Overviews and AI-mode answers are where a growing share of this audience will look, and being the cited source rather than a competitor's mention is the difference between being the answer and being absent from it.</p>
+
+      <figure class="cs-figure">
+        <div class="cs-crop-tall"><img src="assets/appendix-b-serp.png" alt="Google AI Overview for hvac ai app"></div>
+        <figcaption><strong>Figure 6.</strong> Google AI Overview, September 13, 2026. Full page in <a href="#appendix-b">Appendix B</a>.</figcaption>
+      </figure>
+
+      <h3>Cluster performance</h3>
+      <figure class="cs-figure">
+        <img src="assets/fig7-top-pages.png" alt="Search Console top pages">
+        <figcaption><strong>Figure 7.</strong> Eight of the site's top ten pages by impressions are pages from the cluster.</figcaption>
+      </figure>
+      <figure class="cs-figure" style="margin-bottom: 0;">
+        <img src="assets/fig8-top-queries.png" alt="Search Console top queries">
+        <figcaption><strong>Figure 8.</strong> The query footprint the cluster now covers.</figcaption>
+      </figure>
+    </section>
+
+    <section class="cs-section">
+      <h2>What the data told me next</h2>
+      <p>Ranking a page is half the job. The more valuable output has been reading five months of search data and extracting what the site should do next. Four specific gaps:</p>
+      <div class="cs-findings">
+        <div class="cs-finding">
+          <div class="cs-finding-num">1</div>
+          <div>
+            <h4>An unserved comparison market.</h4>
+            <p>Four shopping-intent queries (<code class="cs-code">hvac troubleshooting apps</code>, <code class="cs-code">best hvac troubleshooting app</code>, <code class="cs-code">hvac diagnostic app</code>, <code class="cs-code">hvac fault finder app</code>) generate 935 impressions with zero clicks. These are buyers at decision time and there is no page matching their intent. One rigorous comparison page targets all four.</p>
+          </div>
+        </div>
+        <div class="cs-finding">
+          <div class="cs-finding-num">2</div>
+          <div>
+            <h4>An unanswered pricing question.</h4>
+            <p>"hvac troubleshooting software free" pulls 464 impressions at average position 57. Second-highest impression query on the site, and the answer isn't visible anywhere a searcher can reach it.</p>
+          </div>
+        </div>
+        <div class="cs-finding">
+          <div class="cs-finding-num">3</div>
+          <div>
+            <h4>A conversion problem, not a ranking problem.</h4>
+            <p>The troubleshooting page has the most impressions on the site and the lowest click-through rate. That's a title and meta description issue, fixable without touching rankings.</p>
+          </div>
+        </div>
+        <div class="cs-finding">
+          <div class="cs-finding-num">4</div>
+          <div>
+            <h4>AI search visibility is already working and can be extended.</h4>
+            <p>The AI Overview result above is not an accident. It follows from pages structured around specific, answerable questions. The same approach applied to the comparison and pricing gaps should compound it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section">
+      <h2>The roadmap</h2>
+      <ol class="cs-roadmap">
+        <li><span class="num">1</span><span>Capture the "hvac ai app" position through targeted metadata work</span></li>
+        <li><span class="num">2</span><span>Build the comparison page to serve 935 impressions of unmet buying intent</span></li>
+        <li><span class="num">3</span><span>Answer the free-tier question directly and visibly</span></li>
+        <li><span class="num">4</span><span>Rebuild the troubleshooting page with a real diagnostic walkthrough, product screenshots, competitor comparison, and an FAQ drawn from actual search data</span></li>
+        <li><span class="num">5</span><span><code class="cs-code">SoftwareApplication</code> and <code class="cs-code">FAQPage</code> structured data across commercial pages</span></li>
+        <li><span class="num">6</span><span>Editorial placement in the industry roundups that currently surround the site in results</span></li>
+      </ol>
+    </section>
+
+    <section class="cs-section">
+      <h2>How these numbers were measured</h2>
+      <p>Every figure comes from the client's Google Search Console property, exported September 13, 2026.</p>
+      <p>One note on attribution, because it matters. The troubleshooting page moved from position 21 to position 9 on September 8, 2026, before the optimization work in the roadmap above began. I built the page and the cluster that made that ranking possible. I did not cause that specific jump and I don't claim to. September 13 is the recorded baseline separating what came before from what follows.</p>
+      <p class="cs-pullquote">I would rather give a client an accurate number than a flattering one. It's the same standard I apply to reporting on their campaigns.</p>
+    </section>
+
+    <section class="cs-byline">
+      <div>
+        <div class="name">Wesley Hopkins</div>
+        <div class="role">Digital Visibility Architect, Crawled</div>
+      </div>
+      <a href="/">crawledseo.com</a>
+    </section>
+
+    <section id="appendix-a" class="cs-appendix">
+      <p class="cs-kicker">Appendix A</p>
+      <h2 style="font-family: var(--font-heading); font-weight: 700; font-size: 28px; line-height: 1.25; margin: 0 0 16px;">Full SERP: "hvac troubleshooting app"</h2>
+      <p style="font-size: 17px; color: var(--text-gray); margin: 0 0 28px; text-wrap: pretty;">Complete page one, September 13, 2026, signed out, United States. The <code class="cs-code">hvacrai.com</code> result appears sixth organically.</p>
+      <img src="assets/appendix-a-serp.png" alt="Full Google results page for hvac troubleshooting app" style="width: 100%; display: block; border: 1px solid var(--border-gray); border-radius: 8px;">
+    </section>
+
+    <section id="appendix-b" class="cs-appendix">
+      <p class="cs-kicker">Appendix B</p>
+      <h2 style="font-family: var(--font-heading); font-weight: 700; font-size: 28px; line-height: 1.25; margin: 0 0 16px;">Full SERP: "hvac ai app"</h2>
+      <p style="font-size: 17px; color: var(--text-gray); margin: 0 0 28px; text-wrap: pretty;">Complete page one including the AI Overview, September 13, 2026, signed out, United States. HVAC/R AI Pro is named first under "Top HVAC AI Apps and Tools."</p>
+      <img src="assets/appendix-b-serp.png" alt="Full Google results page for hvac ai app including AI Overview" style="width: 100%; display: block; border: 1px solid var(--border-gray); border-radius: 8px;">
+    </section>
+
+    <section class="cs-cta">
+      <a href="/#contact">Talk to Crawled about your search visibility</a>
+    </section>
+
+  </main>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('.nav-links');
+      nav.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
