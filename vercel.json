@@ -4,6 +4,143 @@
       "source": "/book",
       "destination": "https://calendly.com/wesley-crawled/30min",
       "permanent": true
+    },
+    {
+      "source": "/",
+      "destination": "https://crawledseo.com/blog/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "crawled.blog"
+        }
+      ]
+    },
+    {
+      "source": "/",
+      "destination": "https://crawledseo.com/blog/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.crawled.blog"
+        }
+      ]
+    },
+    {
+      "source": "/10-practical-generative-engine-optimization-geo-strategies-a-step-by-step-playbook",
+      "destination": "https://crawledseo.com/blog/10-practical-generative-engine-optimization-geo-strategies-a-step-by-step-playbook/",
+      "permanent": true
+    },
+    {
+      "source": "/7-reasons-to-add-a-blog-section-to-your-website",
+      "destination": "https://crawledseo.com/blog/7-reasons-to-add-a-blog-section-to-your-website/",
+      "permanent": true
+    },
+    {
+      "source": "/a-geo-audit-12-signals-generative-engines-use-to-decide-whether-youre-worth-showing",
+      "destination": "https://crawledseo.com/blog/a-geo-audit-12-signals-generative-engines-use-to-decide-whether-youre-worth-showing/",
+      "permanent": true
+    },
+    {
+      "source": "/ai-search-optimization-in-2026-why-traditional-seo-alone-no-longer-protects-your-visibility",
+      "destination": "https://crawledseo.com/blog/ai-search-optimization-in-2026-why-traditional-seo-alone-no-longer-protects-your-visibility/",
+      "permanent": true
+    },
+    {
+      "source": "/from-seo-to-geo-how-to-rank-or-get-cited-in-the-age-of-ai-answer-engines",
+      "destination": "https://crawledseo.com/blog/from-seo-to-geo-how-to-rank-or-get-cited-in-the-age-of-ai-answer-engines/",
+      "permanent": true
+    },
+    {
+      "source": "/generative-engine-optimization-geo-what-a-new-academic-study-reveals-about-the-future-of-search",
+      "destination": "https://crawledseo.com/blog/generative-engine-optimization-geo-what-a-new-academic-study-reveals-about-the-future-of-search/",
+      "permanent": true
+    },
+    {
+      "source": "/google-search-cheat-sheet-operators-url-tricks-and-smarter-search-tips",
+      "destination": "https://crawledseo.com/blog/google-search-cheat-sheet-operators-url-tricks-and-smarter-search-tips/",
+      "permanent": true
+    },
+    {
+      "source": "/google-shifts-the-web-shivers-what-this-months-volatility-signals-for-seo-and-geo",
+      "destination": "https://crawledseo.com/blog/google-shifts-the-web-shivers-what-this-months-volatility-signals-for-seo-and-geo/",
+      "permanent": true
+    },
+    {
+      "source": "/how-ai-visibility-really-works-and-whats-worth-paying-attention-to",
+      "destination": "https://crawledseo.com/blog/how-ai-visibility-really-works-and-whats-worth-paying-attention-to/",
+      "permanent": true
+    },
+    {
+      "source": "/how-geo-could-replace-seo-in-an-ai-native-web",
+      "destination": "https://crawledseo.com/blog/how-geo-could-replace-seo-in-an-ai-native-web/",
+      "permanent": true
+    },
+    {
+      "source": "/how-seos-can-engineer-product-demand-inside-googles-ai-overview",
+      "destination": "https://crawledseo.com/blog/how-seos-can-engineer-product-demand-inside-googles-ai-overview/",
+      "permanent": true
+    },
+    {
+      "source": "/inside-the-manufactured-web-how-fake-reviews-are-warping-online-trust",
+      "destination": "https://crawledseo.com/blog/inside-the-manufactured-web-how-fake-reviews-are-warping-online-trust/",
+      "permanent": true
+    },
+    {
+      "source": "/the-geo-lexicon",
+      "destination": "https://crawledseo.com/blog/the-geo-lexicon/",
+      "permanent": true
+    },
+    {
+      "source": "/the-new-layer-of-search-how-llms-interpret-context",
+      "destination": "https://crawledseo.com/blog/the-new-layer-of-search-how-llms-interpret-context/",
+      "permanent": true
+    },
+    {
+      "source": "/troll-farms-ai-and-the-engineering-of-public-opinion",
+      "destination": "https://crawledseo.com/blog/troll-farms-ai-and-the-engineering-of-public-opinion/",
+      "permanent": true
+    },
+    {
+      "source": "/what-is-crawled",
+      "destination": "https://crawledseo.com/blog/what-is-crawled/",
+      "permanent": true
+    },
+    {
+      "source": "/what-is-crawling-in-seo-why-it-is-the-first-signal-in-generative-engine-optimization",
+      "destination": "https://crawledseo.com/blog/what-is-crawling-in-seo-why-it-is-the-first-signal-in-generative-engine-optimization/",
+      "permanent": true
+    },
+    {
+      "source": "/why-seo-matters-more-in-2026-than-ever-before",
+      "destination": "https://crawledseo.com/blog/why-seo-matters-more-in-2026-than-ever-before/",
+      "permanent": true
+    },
+    {
+      "source": "/why-the-february-2026-google-update-feels-like-a-ranking-drop",
+      "destination": "https://crawledseo.com/blog/why-the-february-2026-google-update-feels-like-a-ranking-drop/",
+      "permanent": true
+    },
+    {
+      "source": "/page/:path*",
+      "destination": "https://crawledseo.com/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/series/:path*",
+      "destination": "https://crawledseo.com/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/archive",
+      "destination": "https://crawledseo.com/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/recommendations",
+      "destination": "https://crawledseo.com/blog/",
+      "permanent": true
     }
   ]
 }
