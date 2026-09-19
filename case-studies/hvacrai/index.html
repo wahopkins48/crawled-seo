@@ -6,7 +6,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HVAC/R AI Pro Case Study | Crawled SEO</title>
-  <meta name="robots" content="noindex, nofollow">
   <meta name="description" content="How Crawled built the search visibility architecture for HVAC/R AI Pro (hvacrai.com) from a domain with no history to page-one rankings and a first-place mention in Google's AI Overview, in five months.">
   <link rel="canonical" href="https://crawledseo.com/case-studies/hvacrai/" />
   <meta property="og:title" content="HVAC/R AI Pro Case Study | Crawled SEO">
@@ -89,36 +88,9 @@
       .cs-title { font-size: 32px; }
       .cs-byline { flex-direction: column; align-items: flex-start; }
     }
-    body.cs-locked .header,
-    body.cs-locked main.cs-wrap { display: none; }
-    #cs-gate { display: none; position: fixed; inset: 0; z-index: 9999; background: #0b1220; color: #fff; align-items: center; justify-content: center; padding: 24px; }
-    body.cs-locked #cs-gate { display: flex; }
-    .cs-gate-box { max-width: 380px; width: 100%; text-align: center; }
-    .cs-gate-kicker { font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--primary); margin: 0 0 14px; }
-    .cs-gate-title { font-family: var(--font-heading); font-weight: 700; font-size: 26px; margin: 0 0 12px; }
-    .cs-gate-sub { font-size: 15px; color: #a8b3c7; margin: 0 0 24px; line-height: 1.5; }
-    #cs-gate-form { display: flex; flex-direction: column; gap: 12px; }
-    #cs-gate-pw { padding: 12px 14px; border-radius: 6px; border: 1px solid #2a3548; background: #16213a; color: #fff; font-size: 15px; }
-    #cs-gate-pw:focus { outline: 2px solid var(--primary); }
-    #cs-gate-form button { padding: 12px 14px; border-radius: 6px; border: none; background: var(--primary); color: #fff; font-weight: 700; font-size: 15px; cursor: pointer; }
-    #cs-gate-form button:hover { background: var(--primary-hover); }
-    #cs-gate-error { display: none; color: #f87171; font-size: 14px; margin: 0; }
   </style>
 </head>
-<body class="cs-locked">
-  <div id="cs-gate">
-    <div class="cs-gate-box">
-      <p class="cs-gate-kicker">Case Study</p>
-      <p class="cs-gate-title">Waiting for client approval...</p>
-      <p class="cs-gate-sub">This case study isn't public yet. Enter the password you were given to view it.</p>
-      <form id="cs-gate-form">
-        <input type="password" id="cs-gate-pw" placeholder="Password" autocomplete="off" required>
-        <button type="submit">View case study</button>
-        <p id="cs-gate-error">Incorrect password. Try again.</p>
-      </form>
-    </div>
-  </div>
-
+<body>
   <header class="header">
     <div class="logo-container">
       <a href="/"><img src="/crawled_logo_main.png" alt="Logo" class="logo"></a>
@@ -324,40 +296,5 @@
     }
   </script>
 
-  <script>
-    (function () {
-      var CORRECT_HASH = 'a2f4578d1dd87afd0e62cc409930773318f13ed7803231a2316583e570f89287';
-      var STORAGE_KEY = 'hvacrai-cs-unlocked';
-
-      function unlock() {
-        document.body.classList.remove('cs-locked');
-      }
-
-      if (sessionStorage.getItem(STORAGE_KEY) === '1') {
-        unlock();
-        return;
-      }
-
-      async function sha256Hex(str) {
-        var data = new TextEncoder().encode(str);
-        var digest = await crypto.subtle.digest('SHA-256', data);
-        return Array.prototype.map
-          .call(new Uint8Array(digest), function (b) { return b.toString(16).padStart(2, '0'); })
-          .join('');
-      }
-
-      document.getElementById('cs-gate-form').addEventListener('submit', async function (e) {
-        e.preventDefault();
-        var pw = document.getElementById('cs-gate-pw').value;
-        var hash = await sha256Hex(pw);
-        if (hash === CORRECT_HASH) {
-          sessionStorage.setItem(STORAGE_KEY, '1');
-          unlock();
-        } else {
-          document.getElementById('cs-gate-error').style.display = 'block';
-        }
-      });
-    })();
-  </script>
 </body>
 </html>
