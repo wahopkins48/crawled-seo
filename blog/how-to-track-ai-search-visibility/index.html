@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Track Your Visibility in AI Search | Crawled Blog</title>
+  <meta name="description" content="Search Console, GA4, server logs, and a repeatable prompt test: a practical way to measure whether ChatGPT, Perplexity, and Google&#x27;s AI features are citing your business.">
+  <link rel="canonical" href="https://crawledseo.com/blog/how-to-track-ai-search-visibility/">
+  <meta property="og:title" content="How to Track Your Visibility in AI Search | Crawled Blog">
+  <meta property="og:description" content="Search Console, GA4, server logs, and a repeatable prompt test: a practical way to measure whether ChatGPT, Perplexity, and Google&#x27;s AI features are citing your business.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://crawledseo.com/blog/how-to-track-ai-search-visibility/">
+  <meta property="og:image" content="https://crawledseo.com/blog/images/how-to-track-ai-search-visibility/cover.png">
+  <meta property="og:site_name" content="Crawled SEO">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://crawledseo.com/blog/images/how-to-track-ai-search-visibility/cover.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.png">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/blog/blog-styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XP7L167LNN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XP7L167LNN');
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-158F1ZSV4K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-158F1ZSV4K');
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "How to Track Your Visibility in AI Search",
+      "description": "Search Console, GA4, server logs, and a repeatable prompt test: a practical way to measure whether ChatGPT, Perplexity, and Google's AI features are citing your business.",
+      "url": "https://crawledseo.com/blog/how-to-track-ai-search-visibility/",
+      "datePublished": "2026-09-21",
+      "dateModified": "2026-09-21",
+      "author": {
+        "@type": "Person",
+        "name": "Wesley Hopkins",
+        "url": "https://wesleyhopkins.digital"
+      },
+      "publisher": {
+        "@id": "https://crawledseo.com/#organization",
+        "@type": "Organization",
+        "name": "Crawled SEO"
+      },
+      "mainEntityOfPage": "https://crawledseo.com/blog/how-to-track-ai-search-visibility/",
+      "image": "https://crawledseo.com/blog/images/how-to-track-ai-search-visibility/cover.png",
+      "isPartOf": {
+        "@type": "WebPage",
+        "@id": "https://crawledseo.com/guides/ai-search-visibility/",
+        "name": "AI Search Visibility: The Complete Guide to SEO, GEO, and AEO"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://crawledseo.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://crawledseo.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How to Track Your Visibility in AI Search",
+          "item": "https://crawledseo.com/blog/how-to-track-ai-search-visibility/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <header class="header">
+    <div class="logo-container">
+      <a href="/">
+        <img src="/crawled_logo_main.png" alt="Crawled SEO Logo" class="logo">
+      </a>
+    </div>
+    <nav class="navbar" id="myNavbar">
+      <div class="nav-links">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/faqs" class="nav-link">FAQ</a>
+        <a href="/about" class="nav-link">About</a>
+        <a href="/blog" class="nav-link active">Blog</a>
+        <a href="/packages" class="nav-link">Packages</a>
+        <a href="/case-studies" class="nav-link">Case Studies</a>
+        <a href="/#contact" class="nav-link">Contact</a>
+      </div>
+      <a href="javascript:void(0);" class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </nav>
+  </header>
+<main class="article-wrap">
+  <nav class="breadcrumb">
+    <a href="/">Home</a> / <a href="/blog/">Blog</a> / How to Track Your Visibility in AI Search
+  </nav>
+  <article>
+    <header class="post-header">
+      <img class="post-cover" src="/blog/images/how-to-track-ai-search-visibility/cover.png" alt="How to Track Your Visibility in AI Search" width="1200" height="630">
+      <h1>How to Track Your Visibility in AI Search</h1>
+      <p class="post-meta">Published September 21, 2026 by Wesley Hopkins</p>
+    </header>
+    <div class="blog-post">
+<div class="cluster-note"><strong>Part of a guide</strong>This post is one piece of <a href="/guides/ai-search-visibility/">AI Search Visibility: The Complete Guide to SEO, GEO, and AEO</a>. This one covers the <strong>measurement</strong> layer: how to tell whether any of the other work is paying off.</div>
+<nav class="toc" aria-label="Table of contents"><h2>In this post</h2><ol><li><a href="#why-ai-visibility-is-hard-to-measure">Why AI visibility is hard to measure</a></li><li><a href="#signal-1-google-search-console">Signal 1: Google Search Console</a></li><li><a href="#signal-2-referral-traffic-in-ga4">Signal 2: Referral traffic in GA4</a></li><li><a href="#signal-3-server-and-cdn-logs">Signal 3: Server and CDN logs</a></li><li><a href="#signal-4-a-repeatable-prompt-test">Signal 4: A repeatable prompt test</a></li><li><a href="#signal-5-business-outcomes">Signal 5: Business outcomes</a></li><li><a href="#putting-it-together-a-monthly-report">Putting it together: a monthly report</a></li></ol></nav>
+<p>Rankings are easy to check. Type a query, see your position, or open a rank tracker. AI visibility is slippery: there's no position to report, the answer changes between runs, and the biggest AI surface, Google's, doesn't break itself out for you.</p>
+<p>The good news is that a handful of imperfect signals, read together, give you a workable picture. This post covers each one, what it can and can't tell you, and how to set it up.</p>
+
+<h2 id="why-ai-visibility-is-hard-to-measure">Why AI visibility is hard to measure</h2>
+<ul>
+<li><strong>Answers vary.</strong> The same prompt can produce different responses on different runs, from different accounts, or in different locations. One screenshot is an anecdote.</li>
+<li><strong>Much of the value doesn't produce a click.</strong> Studies of AI Overviews report lower click-through when they appear, though estimates differ widely. One <a href="https://ppc.land/researchers-find-google-ai-overviews-cut-publisher-clicks-39-8/" target="_blank" rel="noopener noreferrer">randomized field experiment</a> put the drop in outbound organic clicks near 40%. A brand can be recommended and never visit your analytics.</li>
+<li><strong>The platforms disclose little.</strong> No assistant gives publishers an impressions report the way Search Console does.</li>
+</ul>
+<p>So the approach is triangulation: several signals, each partial, tracked over time.</p>
+
+<h2 id="signal-1-google-search-console">Signal 1: Google Search Console</h2>
+<p>Google is direct about this one: sites appearing in AI features are included in the overall search traffic in the Performance report, under the Web search type, and there's no separate AI filter. You can't isolate AI Overview impressions. What you can do is watch for patterns:</p>
+<ul>
+<li>Impressions rising while clicks fall for question-style queries, which can indicate an answer being shown above you.</li>
+<li>New long-tail, conversational queries appearing in your query report.</li>
+<li>Pages gaining impressions after you restructure them to answer questions directly.</li>
+</ul>
+<p>Use it as a directional indicator, and pair it with manual checks of Google's own AI features for the queries you care about. For a real example of the numbers this produces and how to read them, see the <a href="/case-studies/hvacrai/">HVAC/R AI Pro case study</a>, which draws entirely from Search Console.</p>
+
+<h2 id="signal-2-referral-traffic-in-ga4">Signal 2: Referral traffic in GA4</h2>
+<p>When someone clicks a link inside an AI assistant, analytics usually records the source. Google Analytics 4 has a built-in <strong>AI Assistant</strong> channel that Google describes as traffic from sources like ChatGPT, Gemini, Deepseek, Copilot, or Grok. It explicitly excludes Google's AI Overviews and AI Mode, so that traffic remains inside Organic Search. You can find it in your Traffic acquisition report by session default channel group.</p>
+<p>The built-in list won't catch everything (Perplexity and Claude, for example, may not be included in your property's channel, so verify). To fill the gaps, filter or group on session source with a regular expression:</p>
+<pre><code>chatgpt\.com|chat\.openai\.com|gemini\.google\.com|perplexity\.ai|claude\.ai|copilot\.microsoft\.com|grok\.com|deepseek\.com|meta\.ai</code></pre>
+<p>Two ways to use it:</p>
+<ol>
+<li><strong>Quick look:</strong> In an Exploration, add a filter where Session source <em>matches regex</em> the pattern above.</li>
+<li><strong>Permanent:</strong> Create a custom channel group (Admin, then Data display, then Channel groups; menu labels shift occasionally) with a channel named "AI assistants" whose condition is Session source matching the regex, and place it above Referral in the ordering.</li>
+</ol>
+<p>Expect a small number compared with Google, and expect undercounting: many AI visits arrive with no referrer, for example from a mobile app or a copied URL, and land in Direct. Treat the numbers as a floor, watch the trend, and pay attention to <em>what these visitors do</em>. In many businesses they convert at a different rate than the average visitor, which is worth knowing.</p>
+
+<h2 id="signal-3-server-and-cdn-logs">Signal 3: Server and CDN logs</h2>
+<p>Your logs show who is fetching your pages, including AI bots that never appear in analytics. Filter for the search and user-triggered agents described in <a href="/blog/ai-crawlers-robots-txt-guide/">the crawler guide</a>:</p>
+<pre><code>grep -E "OAI-SearchBot|ChatGPT-User|Claude-SearchBot|Claude-User|PerplexityBot|Perplexity-User" access.log</code></pre>
+<p>To see the pages and status codes at a glance on a standard combined-format log:</p>
+<pre><code>grep -E "OAI-SearchBot|ChatGPT-User|PerplexityBot" access.log | awk '{print $9, $7}' | sort | uniq -c | sort -rn | head -20</code></pre>
+<p>How to read what you find:</p>
+<ul>
+<li><strong>200 responses</strong> on your key pages mean crawlers can read them.</li>
+<li><strong>403s or 429s</strong> mean a firewall or rate limit is turning them away, which is the problem to fix first.</li>
+<li><strong>ChatGPT-User, Claude-User, and Perplexity-User hits</strong> are interesting: they're fetches triggered by real people asking an assistant about a page. They're a rare direct signal that a live question touched your site.</li>
+<li><strong>Crawling isn't citing.</strong> Frequent bot visits mean you're being read, not necessarily quoted.</li>
+</ul>
+<p>If you're on a managed host or CDN, the same information is usually in its bot analytics dashboard.</p>
+
+<h2 id="signal-4-a-repeatable-prompt-test">Signal 4: A repeatable prompt test</h2>
+<p>This is the closest thing to a rank tracker for AI, and it's just a spreadsheet and some discipline.</p>
+<h3>Build your prompt set</h3>
+<p>Write 20 to 30 prompts covering how real customers ask, in a few categories:</p>
+<ul>
+<li><strong>Category:</strong> "best [service] in [city]," "top [product type] for [use case]"</li>
+<li><strong>Problem:</strong> "why is my [thing] doing [symptom]," "how do I [task]"</li>
+<li><strong>Comparison:</strong> "[you] vs [competitor]," "[option A] or [option B]"</li>
+<li><strong>Brand:</strong> "who is [your business]," "is [your business] reputable"</li>
+</ul>
+<p>Take the wording from real customer emails, calls, and search queries, not from your marketing copy.</p>
+<h3>Run it on a schedule</h3>
+<p>Monthly is enough for most businesses. Use the same set each time so results are comparable. Test the assistants your customers use; a reasonable starting set is ChatGPT, Google (AI Overviews and AI Mode), Perplexity, Gemini, and Claude. Use a clean or logged-out session where possible, note the location, and run each prompt <strong>three times</strong>, since single runs vary.</p>
+<h3>Record consistently</h3>
+<div class="table-wrap"><table>
+<thead><tr><th>Column</th><th>What to log</th></tr></thead>
+<tbody>
+<tr><td>Date, platform, prompt</td><td>So you can compare month to month</td></tr>
+<tr><td>Mentioned?</td><td>Is your business named in the answer (yes / no)</td></tr>
+<tr><td>Cited?</td><td>Is one of your pages linked as a source</td></tr>
+<tr><td>Order</td><td>Where you appear if the answer lists several businesses</td></tr>
+<tr><td>Accuracy</td><td>Are the facts about you correct (address, services, hours)</td></tr>
+<tr><td>Competitors named</td><td>Who shows up instead</td></tr>
+<tr><td>Sources cited</td><td>Which sites the answer drew on, since these are your targets</td></tr>
+</tbody></table></div>
+<h3>Compute a few simple rates</h3>
+<p>Across your prompt set: <strong>mention rate</strong> (share of runs where you're named), <strong>citation rate</strong> (share where you're linked), and <strong>accuracy rate</strong>. Chart them over time. The direction matters more than any single number.</p>
+<h3>A note on paid tools</h3>
+<p>A number of products now automate prompt tracking. They can save time, but evaluate them skeptically. Ask how many times they run each prompt, from where, on which platforms, and how they define a "visibility score." A black-box score you can't trace to real answers isn't measurement. Whatever tool you use, keep a manual sample to sanity-check it.</p>
+
+<h2 id="signal-5-business-outcomes">Signal 5: Business outcomes</h2>
+<p>Traffic and mentions are proxies. What you care about is customers, and several low-tech checks help:</p>
+<ul>
+<li>Add "How did you hear about us?" to forms and intake calls, with options that include <strong>ChatGPT / AI assistant</strong> and <strong>Google AI answer</strong>. Customers will tell you things analytics can't.</li>
+<li>Watch <strong>branded search</strong> in Search Console. If people see your name in an AI answer and then search for you directly, branded queries rise.</li>
+<li>Watch <strong>calls, form fills, and direction requests</strong> in your Business Profile insights.</li>
+</ul>
+
+<h2 id="putting-it-together-a-monthly-report">Putting it together: a monthly report</h2>
+<ol>
+<li><strong>Access:</strong> any 403s or blocks for search bots in the logs?</li>
+<li><strong>Search Console:</strong> impressions, clicks, and new question-style queries for your key pages.</li>
+<li><strong>GA4:</strong> AI assistant sessions and their conversions.</li>
+<li><strong>Prompt test:</strong> mention, citation, and accuracy rates versus last month.</li>
+<li><strong>Outcomes:</strong> leads that named an AI source, branded search trend.</li>
+<li><strong>Actions:</strong> the two or three things you'll fix or publish next month, based on what the sources cited by competitors have that you don't.</li>
+</ol>
+<p>That last step is where measurement pays for itself. If the same site keeps appearing as the cited source, ask what it has that yours lacks: a clearer answer, original data, a listing you're missing. See <a href="/blog/how-to-write-content-ai-search-cites/">How to Write Content AI Search Engines Cite</a> and <a href="/blog/entity-seo-and-brand-authority/">Entity SEO</a> for the fixes.</p>
+<p>AI search will keep changing, and so will the tooling. Keep the method simple, keep the prompt set stable, and keep notes. The overall framework is in the <a href="/guides/ai-search-visibility/">AI Search Visibility guide</a>. If you'd like this set up and monitored for your business, that's exactly what a Crawled SEO visibility audit starts with.</p>
+    </div>
+    <div class="cta-box"><h2>Want this done for your site?</h2><p>Crawled SEO runs a Visibility Audit that checks the things in this guide against your actual site: crawler access, structure, entity signals, content, and how you show up in AI answers today.</p><a class="cta-btn" href="/audit">Request your free audit</a></div>
+    <aside class="related"><h2>Keep reading</h2><ul><li><a href="/blog/ai-crawlers-robots-txt-guide/">Which AI Crawlers Should You Allow? A robots.txt Guide</a></li><li><a href="/blog/how-to-write-content-ai-search-cites/">How to Write Content AI Search Engines Cite</a></li><li><a href="/blog/entity-seo-and-brand-authority/">Entity SEO: How to Become a Brand AI Systems Recognize</a></li><li><a href="/blog/google-shifts-the-web-shivers-what-this-months-volatility-signals-for-seo-and-geo/">Google Shifts, The Web Shivers: What This Month’s Volatility Signals for SEO and GEO</a></li></ul></aside>
+  </article>
+  <nav class="post-nav"><a href="/blog/local-seo-and-ai-search/"><span class="dir">Previous in the guide</span>Local SEO in the Age of AI Search: A Practical Guide</a><a class="next" href="/guides/ai-search-visibility/"><span class="dir">Back to the guide</span>AI Search Visibility: The Complete Guide to SEO, GEO, and AEO</a></nav>
+</main>
+<script src="/script.js"></script>
+</body>
+</html>

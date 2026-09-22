@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Which AI Crawlers Should You Allow? A robots.txt Guide | Crawled Blog</title>
+  <meta name="description" content="GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot, Google-Extended: what each AI crawler does, which to allow, and how to check that your site is actually reachable.">
+  <link rel="canonical" href="https://crawledseo.com/blog/ai-crawlers-robots-txt-guide/">
+  <meta property="og:title" content="Which AI Crawlers Should You Allow? A robots.txt Guide | Crawled Blog">
+  <meta property="og:description" content="GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot, Google-Extended: what each AI crawler does, which to allow, and how to check that your site is actually reachable.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://crawledseo.com/blog/ai-crawlers-robots-txt-guide/">
+  <meta property="og:image" content="https://crawledseo.com/blog/images/ai-crawlers-robots-txt-guide/cover.png">
+  <meta property="og:site_name" content="Crawled SEO">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://crawledseo.com/blog/images/ai-crawlers-robots-txt-guide/cover.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.png">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/blog/blog-styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XP7L167LNN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XP7L167LNN');
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-158F1ZSV4K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-158F1ZSV4K');
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "Which AI Crawlers Should You Allow? A robots.txt Guide",
+      "description": "GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot, Google-Extended: what each AI crawler does, which to allow, and how to check that your site is actually reachable.",
+      "url": "https://crawledseo.com/blog/ai-crawlers-robots-txt-guide/",
+      "datePublished": "2026-09-21",
+      "dateModified": "2026-09-21",
+      "author": {
+        "@type": "Person",
+        "name": "Wesley Hopkins",
+        "url": "https://wesleyhopkins.digital"
+      },
+      "publisher": {
+        "@id": "https://crawledseo.com/#organization",
+        "@type": "Organization",
+        "name": "Crawled SEO"
+      },
+      "mainEntityOfPage": "https://crawledseo.com/blog/ai-crawlers-robots-txt-guide/",
+      "image": "https://crawledseo.com/blog/images/ai-crawlers-robots-txt-guide/cover.png",
+      "isPartOf": {
+        "@type": "WebPage",
+        "@id": "https://crawledseo.com/guides/ai-search-visibility/",
+        "name": "AI Search Visibility: The Complete Guide to SEO, GEO, and AEO"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://crawledseo.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://crawledseo.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Which AI Crawlers Should You Allow? A robots.txt Guide",
+          "item": "https://crawledseo.com/blog/ai-crawlers-robots-txt-guide/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <header class="header">
+    <div class="logo-container">
+      <a href="/">
+        <img src="/crawled_logo_main.png" alt="Crawled SEO Logo" class="logo">
+      </a>
+    </div>
+    <nav class="navbar" id="myNavbar">
+      <div class="nav-links">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/faqs" class="nav-link">FAQ</a>
+        <a href="/about" class="nav-link">About</a>
+        <a href="/blog" class="nav-link active">Blog</a>
+        <a href="/packages" class="nav-link">Packages</a>
+        <a href="/case-studies" class="nav-link">Case Studies</a>
+        <a href="/#contact" class="nav-link">Contact</a>
+      </div>
+      <a href="javascript:void(0);" class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </nav>
+  </header>
+<main class="article-wrap">
+  <nav class="breadcrumb">
+    <a href="/">Home</a> / <a href="/blog/">Blog</a> / Which AI Crawlers Should You Allow? A robots.txt Guide
+  </nav>
+  <article>
+    <header class="post-header">
+      <img class="post-cover" src="/blog/images/ai-crawlers-robots-txt-guide/cover.png" alt="Which AI Crawlers Should You Allow? A robots.txt Guide" width="1200" height="630">
+      <h1>Which AI Crawlers Should You Allow? A robots.txt Guide</h1>
+      <p class="post-meta">Published September 21, 2026 by Wesley Hopkins</p>
+    </header>
+    <div class="blog-post">
+<div class="cluster-note"><strong>Part of a guide</strong>This post is one piece of <a href="/guides/ai-search-visibility/">AI Search Visibility: The Complete Guide to SEO, GEO, and AEO</a>. This one covers the <strong>access</strong> layer: whether AI systems can reach your content at all.</div>
+<nav class="toc" aria-label="Table of contents"><h2>In this post</h2><ol><li><a href="#three-jobs-three-kinds-of-bot">Three jobs, three kinds of bot</a></li><li><a href="#the-crawlers-to-know">The crawlers to know</a></li><li><a href="#so-which-should-you-allow">So which should you allow?</a></li><li><a href="#a-sensible-default-robots-txt">A sensible default robots.txt</a></li><li><a href="#the-hidden-problem-your-firewall-says-no">The hidden problem: your firewall says no</a></li><li><a href="#the-javascript-problem">The JavaScript problem</a></li><li><a href="#how-to-check-that-it-s-working">How to check that it's working</a></li><li><a href="#what-crawler-access-doesn-t-do">What crawler access doesn't do</a></li></ol></nav>
+<p>Before an AI system can cite you, it has to be able to read you. That sounds obvious, and yet "can the bots get in?" is the first thing to check on almost every site that's invisible in AI answers. Sometimes robots.txt is blocking the wrong bot. More often, something upstream like a CDN or firewall is quietly turning the bot away before robots.txt is ever consulted.</p>
+<p>This post explains the crawlers that matter, what each one does, a sensible default robots.txt, and how to verify that it's all working.</p>
+
+<h2 id="three-jobs-three-kinds-of-bot">Three jobs, three kinds of bot</h2>
+<p>The mistake most site owners make is treating "AI crawlers" as one thing. The big AI companies each run separate bots for separate jobs, and blocking the wrong one has very different consequences.</p>
+<ol>
+<li><strong>Training crawlers</strong> collect content to train future models. Blocking them opts your content out of training. It does not remove you from AI search answers.</li>
+<li><strong>Search crawlers</strong> build the index that AI search features retrieve from. Block these and you disappear from that product's answers.</li>
+<li><strong>User-triggered fetchers</strong> visit a page because a person asked the assistant to. Because a human requested the fetch, these often don't follow robots.txt the way crawlers do.</li>
+</ol>
+
+<h2 id="the-crawlers-to-know">The crawlers to know</h2>
+<p>User agent names and behavior change, so treat this table as a snapshot and check each vendor's documentation before you make changes. It's accurate as of September 2026.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Company</th><th>User agent</th><th>Job</th><th>If you block it</th></tr></thead>
+<tbody>
+<tr><td>OpenAI</td><td><code>GPTBot</code></td><td>Training</td><td>Your content isn't used to train OpenAI models</td></tr>
+<tr><td>OpenAI</td><td><code>OAI-SearchBot</code></td><td>ChatGPT search</td><td>You won't be shown in ChatGPT search answers (navigational links may still appear)</td></tr>
+<tr><td>OpenAI</td><td><code>ChatGPT-User</code></td><td>User-requested page visits</td><td>OpenAI notes robots.txt rules may not apply to these</td></tr>
+<tr><td>Anthropic</td><td><code>ClaudeBot</code></td><td>Training</td><td>Your content isn't used to train Claude models</td></tr>
+<tr><td>Anthropic</td><td><code>Claude-SearchBot</code></td><td>Improving search result quality</td><td>Your content isn't indexed for Claude's search</td></tr>
+<tr><td>Anthropic</td><td><code>Claude-User</code></td><td>User-requested page visits</td><td>Claude can't retrieve your page when a user asks about it</td></tr>
+<tr><td>Perplexity</td><td><code>PerplexityBot</code></td><td>Perplexity's search index (not model training, per Perplexity)</td><td>You won't be surfaced in Perplexity results</td></tr>
+<tr><td>Perplexity</td><td><code>Perplexity-User</code></td><td>User-requested page visits</td><td>Perplexity says this fetcher generally ignores robots.txt</td></tr>
+<tr><td>Google</td><td><code>Googlebot</code></td><td>Google Search, including AI Overviews and AI Mode</td><td>You leave Google Search. Don't do this.</td></tr>
+<tr><td>Google</td><td><code>Google-Extended</code></td><td>Control token for Gemini training and grounding</td><td>Does not affect Google Search inclusion or ranking</td></tr>
+</tbody></table></div>
+<p>Sources: <a href="https://developers.openai.com/api/docs/bots" target="_blank" rel="noopener noreferrer">OpenAI's bot documentation</a>, <a href="https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler" target="_blank" rel="noopener noreferrer">Anthropic's crawler help article</a>, <a href="https://docs.perplexity.ai/guides/bots" target="_blank" rel="noopener noreferrer">Perplexity's bot guide</a>, and <a href="https://developers.google.com/search/docs/appearance/ai-features" target="_blank" rel="noopener noreferrer">Google's AI features documentation</a>.</p>
+<p>Two things in that table are worth underlining. First, Google doesn't run a separate crawler for AI Overviews or AI Mode: ordinary Googlebot access, plus being indexed and eligible for a snippet, is the requirement. Second, <code>Google-Extended</code> is a control token, not a ranking lever. Blocking it doesn't help or hurt your search performance.</p>
+
+<h2 id="so-which-should-you-allow">So which should you allow?</h2>
+<p>Split the decision in two.</p>
+<h3>Search and retrieval bots: allow them</h3>
+<p>If you want to be cited in ChatGPT, Claude, or Perplexity, their search crawlers (<code>OAI-SearchBot</code>, <code>Claude-SearchBot</code>, <code>PerplexityBot</code>) need access. For a business that lives on being found, blocking these is like taking your sign down.</p>
+<h3>Training bots: your call</h3>
+<p>Allowing <code>GPTBot</code> and <code>ClaudeBot</code> lets your content inform future models, which may help those models describe your business accurately. Blocking them is a legitimate choice if you're a publisher protecting paid content or you object on principle. The important thing is that it's a separate decision from being findable in search.</p>
+
+<h2 id="a-sensible-default-robots-txt">A sensible default robots.txt</h2>
+<p>If you want maximum visibility, you don't need to list AI bots at all. The standard "allow everything" file already permits them:</p>
+<pre><code>User-agent: *
+Allow: /
+
+Sitemap: https://www.example.com/sitemap.xml</code></pre>
+<p>That's the entire robots.txt for this website. If you want to opt out of training but stay visible in AI search, list the training bots explicitly:</p>
+<pre><code>User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.example.com/sitemap.xml</code></pre>
+<p>Each crawler follows the most specific group that matches its name, so the search bots fall through to the <code>*</code> rule and stay allowed. After you change the file, expect a delay: OpenAI says it can take about 24 hours for its systems to adjust.</p>
+<p>One caution: robots.txt is a request, not a lock. Well-behaved crawlers honor it. It does nothing to stop a scraper that ignores it, and it isn't a privacy tool. Anything truly private belongs behind a login.</p>
+
+<h2 id="the-hidden-problem-your-firewall-says-no">The hidden problem: your firewall says no</h2>
+<p>Here's what catches people. Your robots.txt can say "welcome" while a layer in front of your site says "403 Forbidden." Content delivery networks and security plugins have started treating AI crawlers as a threat category. Cloudflare, for example, <a href="https://blog.cloudflare.com/content-independence-day-ai-options/" target="_blank" rel="noopener noreferrer">has blocked AI crawlers by default</a> on newly added domains since July 2025, and it offers site-wide controls to change that. Managed hosting, WordPress security plugins, and bot-protection features can do the same.</p>
+<p>If you changed CDN or security settings any time in the last couple of years, check the bot settings specifically. Look for a setting named something like "AI bots," "AI scrapers and crawlers," or "bot fight mode," and confirm that the search crawlers you want are allowed.</p>
+
+<h2 id="the-javascript-problem">The JavaScript problem</h2>
+<p>Even a crawler that gets through can come away with nothing. A <a href="https://vercel.com/blog/the-rise-of-the-ai-crawler" target="_blank" rel="noopener noreferrer">study by Vercel and MERJ</a>, published in December 2024, analyzed hundreds of millions of crawler requests and found that none of the major AI crawlers rendered JavaScript. They sometimes downloaded script files but did not run them. Googlebot is the notable exception because it has a full rendering pipeline.</p>
+<p>That study is now nearly two years old, and vendors may have changed things since, so verify against your own logs. But the safe assumption holds: if your key content, headings, links, or schema only appear after JavaScript runs, plan for some crawlers seeing a blank shell. The fix is server-side rendering or static generation for anything you want cited. This site is plain static HTML, which is why it's easy to read.</p>
+
+<h2 id="how-to-check-that-it-s-working">How to check that it's working</h2>
+<ol>
+<li><strong>Read your robots.txt.</strong> Visit <code>yourdomain.com/robots.txt</code>. Look for broad <code>Disallow: /</code> rules under <code>User-agent: *</code> left over from a staging site, and for bots blocked by name.</li>
+<li><strong>View the raw HTML.</strong> Run <code>curl -s https://yourdomain.com/your-page/ | grep -i "your key phrase"</code>. If the phrase isn't in the raw response, non-rendering crawlers can't see it.</li>
+<li><strong>Test your firewall.</strong> Request a page with a crawler's name as the user agent, for example <code>curl -I -A "OAI-SearchBot" https://yourdomain.com/</code>. A 403 or a challenge page is a red flag. Note that this only tests user-agent rules; some firewalls also verify the crawler's IP range, so a passing test isn't proof.</li>
+<li><strong>Check your logs.</strong> The most reliable evidence is your server or CDN log. Search for <code>OAI-SearchBot</code>, <code>ClaudeBot</code>, and <code>PerplexityBot</code>, and confirm they receive 200 responses on real pages.</li>
+<li><strong>Confirm Google can render and index the page.</strong> Use the URL Inspection tool in Search Console. Being indexed and snippet-eligible is Google's stated requirement for showing up in its AI features.</li>
+</ol>
+
+<h2 id="what-crawler-access-doesn-t-do">What crawler access doesn't do</h2>
+<p>Being crawled is necessary and nowhere near sufficient. A crawler visiting your site tells you the door is open, not that anyone was impressed. Whether you get cited depends on everything downstream: whether the content is worth citing, whether the system understands who you are, and whether the wider web backs you up. The rest of the <a href="/guides/ai-search-visibility/">AI Search Visibility guide</a> covers those layers, and <a href="/blog/llms-txt-explained/">the next post</a> tackles the file everyone asks about: llms.txt.</p>
+    </div>
+    <div class="cta-box"><h2>Want this done for your site?</h2><p>Crawled SEO runs a Visibility Audit that checks the things in this guide against your actual site: crawler access, structure, entity signals, content, and how you show up in AI answers today.</p><a class="cta-btn" href="/audit">Request your free audit</a></div>
+    <aside class="related"><h2>Keep reading</h2><ul><li><a href="/blog/llms-txt-explained/">llms.txt Explained: Do You Actually Need One?</a></li><li><a href="/blog/schema-markup-for-ai-search/">Schema Markup for AI Search: What Still Matters</a></li><li><a href="/blog/how-to-track-ai-search-visibility/">How to Track Your Visibility in AI Search</a></li><li><a href="/blog/what-is-crawling-in-seo-why-it-is-the-first-signal-in-generative-engine-optimization/">What Is Crawling in SEO? Why It Is the First Signal in Generative Engine Optimization</a></li></ul></aside>
+  </article>
+  <nav class="post-nav"><a href="/guides/ai-search-visibility/"><span class="dir">Back to the guide</span>AI Search Visibility: The Complete Guide to SEO, GEO, and AEO</a><a class="next" href="/blog/llms-txt-explained/"><span class="dir">Next in the guide</span>llms.txt Explained: Do You Actually Need One?</a></nav>
+</main>
+<script src="/script.js"></script>
+</body>
+</html>
