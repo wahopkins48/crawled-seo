@@ -207,11 +207,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section id="contact" class="contact-section">
     <div class="container">
       <h2 class="section-title center">
-        Let's Work Together
+        Find out where you show up on Google Maps
       </h2>
+      <div class="contact-intro">
+        <p>When someone's heat quits, they search, they call one of the first three companies on the map, and they do not scroll. Most owners have never checked where their own company lands, because checking from your own phone in your own shop shows you a result nobody else sees.</p>
+        <p>Tell me your business name and your town and I will look it up the way a stranger with a cold house sees it. You get a two page PDF: where you rank, who is above you, what is wrong with your Google listing, and what to fix first. No charge, usually the same day.</p>
+      </div>
 
       <div class="contact-grid">
         <!-- Contact Form -->
+        <div class="contact-form-column">
         <form class="contact-form" id="contactForm" action="https://formspree.io/f/mjgeogor" method="POST">
             <div class="form-group">
               <label for="name" class="form-label">Name</label>
@@ -235,13 +240,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             />
           </div>
 
-                    <div class="form-group">
-            <label for="" class="form-label">Website URL</label>
+          <div class="form-group">
+            <label for="business-name" class="form-label">Business name</label>
+            <input
+              type="text"
+              id="business-name"
+              name="business_name"
+              required
+              aria-describedby="business-name-help"
+              class="form-input"
+            />
+            <small id="business-name-help" class="form-help">This is what I look up, so spell it the way it appears on the truck.</small>
+          </div>
+
+          <div class="form-group">
+            <label for="town" class="form-label">Town</label>
+            <input
+              type="text"
+              id="town"
+              name="town"
+              required
+              aria-describedby="town-help"
+              class="form-input"
+            />
+            <small id="town-help" class="form-help">Rankings are local, so this changes the answer.</small>
+          </div>
+
+          <div class="form-group">
+            <label for="url" class="form-label">Website URL</label>
             <input 
               type="url" 
               id="url" 
               name="url" 
-              required
               class="form-input"
             />
           </div>
@@ -252,18 +282,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               id="message" 
               name="message" 
               rows="5"
-              required
               class="form-textarea"
             ></textarea>
           </div>
 
+          <p class="contact-form-note">Free. No contract, and you do not have to get on a call to get it.</p>
           <button 
             type="submit"
             class="btn btn-primary btn-full"
           >
-            Send
+            Send me my ranking
           </button>
         </form>
+        <p class="contact-phone">Would rather just talk? Call or text <a href="tel:+12563353979">256-335-3979</a>.</p>
+        </div>
 
         <!-- Social Links -->
         <div class="social-section">
