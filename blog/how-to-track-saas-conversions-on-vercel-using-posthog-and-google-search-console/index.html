@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Track SaaS Conversions on Vercel Using PostHog and Google Search Console | Crawled Blog</title>
+  <meta name="description" content="Set up PostHog on a Vercel app and link Google Search Console so you can see which queries and pages actually produce signups and paid customers, then join them into one dashboard.">
+  <link rel="canonical" href="https://crawledseo.com/blog/how-to-track-saas-conversions-on-vercel-using-posthog-and-google-search-console/">
+  <meta property="og:title" content="How to Track SaaS Conversions on Vercel Using PostHog and Google Search Console | Crawled Blog">
+  <meta property="og:description" content="Set up PostHog on a Vercel app and link Google Search Console so you can see which queries and pages actually produce signups and paid customers, then join them into one dashboard.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://crawledseo.com/blog/how-to-track-saas-conversions-on-vercel-using-posthog-and-google-search-console/">
+  <meta property="og:image" content="https://crawledseo.com/blog/images/how-to-track-saas-conversions-on-vercel-using-posthog-and-google-search-console/cover.png">
+  <meta property="og:site_name" content="Crawled SEO">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://crawledseo.com/blog/images/how-to-track-saas-conversions-on-vercel-using-posthog-and-google-search-console/cover.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.png">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/blog/blog-styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XP7L167LNN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XP7L167LNN');
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-158F1ZSV4K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-158F1ZSV4K');
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "How to Track SaaS Conversions on Vercel Using PostHog and Google Search Console",
+      "description": "Set up PostHog on a Vercel app and link Google Search Console so you can see which queries and pages actually produce signups and paid customers, then join them into one dashboard.",
+      "url": "https://crawledseo.com/blog/how-to-track-saas-conversions-on-vercel-using-posthog-and-google-search-console/",
+      "datePublished": "2026-09-24",
+      "dateModified": "2026-09-24",
+      "author": {
+        "@type": "Person",
+        "name": "Wesley Hopkins",
+        "url": "https://wesleyhopkins.digital"
+      },
+      "publisher": {
+        "@id": "https://crawledseo.com/#organization",
+        "@type": "Organization",
+        "name": "Crawled SEO"
+      },
+      "mainEntityOfPage": "https://crawledseo.com/blog/how-to-track-saas-conversions-on-vercel-using-posthog-and-google-search-console/",
+      "image": "https://crawledseo.com/blog/images/how-to-track-saas-conversions-on-vercel-using-posthog-and-google-search-console/cover.png",
+      "keywords": "PostHog, Vercel analytics, Google Search Console, SaaS conversion tracking, product analytics, funnel analysis"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://crawledseo.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://crawledseo.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How to Track SaaS Conversions on Vercel Using PostHog and Google Search Console",
+          "item": "https://crawledseo.com/blog/how-to-track-saas-conversions-on-vercel-using-posthog-and-google-search-console/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <header class="header">
+    <div class="logo-container">
+      <a href="/">
+        <img src="/crawled_logo_main.png" alt="Crawled SEO Logo" class="logo">
+      </a>
+    </div>
+    <nav class="navbar" id="myNavbar">
+      <div class="nav-links">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/faqs" class="nav-link">FAQ</a>
+        <a href="/about" class="nav-link">About</a>
+        <a href="/blog" class="nav-link active">Blog</a>
+        <a href="/packages" class="nav-link">Packages</a>
+        <a href="/case-studies" class="nav-link">Case Studies</a>
+        <a href="/#contact" class="nav-link">Contact</a>
+      </div>
+      <a href="javascript:void(0);" class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </nav>
+  </header>
+<main class="article-wrap">
+  <nav class="breadcrumb">
+    <a href="/">Home</a> / <a href="/blog/">Blog</a> / How to Track SaaS Conversions on Vercel Using PostHog and Google Search Console
+  </nav>
+  <article>
+    <header class="post-header">
+      <img class="post-cover" src="/blog/images/how-to-track-saas-conversions-on-vercel-using-posthog-and-google-search-console/cover.png" alt="How to Track SaaS Conversions on Vercel Using PostHog and Google Search Console" width="1200" height="630">
+      <h1>How to Track SaaS Conversions on Vercel Using PostHog and Google Search Console</h1>
+      <p class="post-meta">Published September 24, 2026 by Wesley Hopkins</p>
+    </header>
+    <div class="blog-post">
+<nav class="toc" aria-label="Table of contents"><h2>In this post</h2><ol><li><a href="#why-posthog">Why PostHog instead of GA4 or Vercel Analytics</a></li><li><a href="#marketplace-install">Install via the Vercel Marketplace</a></li><li><a href="#init-sdk">Init the SDK in your app</a></li><li><a href="#conversion-events">Define the conversion events that matter</a></li><li><a href="#search-console-source">Link Google Search Console</a></li><li><a href="#the-dashboard">Build the query to conversion dashboard</a></li><li><a href="#verify">Verify the whole chain</a></li><li><a href="#the-loop">The loop</a></li></ol></nav>
+<p>You built the app in a weekend and shipped it to Vercel. You added a signup link, pasted in a couple of analytics snippets, and called it a day. Now you have three sources of numbers. Vercel Analytics shows visits. One analytics tool shows events. Google Search Console shows queries. None of them agree, and none of them talk to the other two.</p>
+<p>The problem is not that you lack data. You have plenty. The problem is that the data sits in separate silos, so you cannot answer the one question that matters: which search query became a paid customer.</p>
+<p>The fix is not another dashboard. It is making the sources talk. Once search queries, page views, and billing events share one system, you can answer questions like: is my revenue coming from a handful of keywords, and if so which ones? Which landing page converts organic traffic ten times better than the page next to it? That level of sight is what moves an app from traffic pump to actual business.</p>
+<p>This post walks you through wiring PostHog into a Vercel app, linking Google Search Console as a data source, and building one dashboard that connects search impressions to signups to paid customers. No data warehouse required.</p>
+
+<h2 id="why-posthog">Why PostHog instead of GA4 or Vercel Analytics</h2>
+<p>Vercel Analytics is good at exactly one thing, and it is worth keeping for that thing. It takes two minutes to add, costs nothing within your plan, and gives you a traffic baseline: page views, top pages, core web vitals, referrers. For a solo builder it is the easiest zero-config dashboard you can switch on.</p>
+<p>But Vercel Analytics is traffic analytics, not product analytics. It cannot tell you that a visitor from a specific search query signed up, started a trial, and paid. It does not track business events at all.</p>
+<p>That gap is where PostHog fits. PostHog bundles product analytics, session replay, and feature flags in one tool, so you learn what users do inside your app, not just where they came from. It offers a generous free tier, which matters when you are pre-revenue. Its autocapture records clicks and events automatically, so you have useful data from the moment the SDK loads, before you define a single custom event.</p>
+<p>Session replay is the underrated part of that bundle. When a query converts worse than it ranks, the recording shows you why: the user scrolled, hit a confusing form, and left. Feature flags let you test a new CTA on one segment of organic traffic while you wait for the next Search Console sync.</p>
+<p>GA4 is the alternative everyone suggests, and it works. But PostHog stores named, typed events you can query directly, and autocapture gives you more signal than GA4's default setup on a small app. When your goal is tying paid conversions back to search, PostHog is the less tedious road.</p>
+
+<h2 id="marketplace-install">Install via the Vercel Marketplace</h2>
+<p>The cleanest path is the Vercel Marketplace integration. Open your project, go to Settings, then Integrations, search for PostHog, and install it. You get two choices.</p>
+<p>Add creates a brand-new PostHog org and bills you through your Vercel account. Link Existing Account connects an org you already run, which is the right call if PostHog has been collecting events for a while. Linking requires admin access on the existing org, and in that case billing stays with PostHog. As of September 2026 those are still the two ways the integration connects.</p>
+<p>Whichever you pick, the integration pushes two environment variables into your Vercel project: NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN, your project key, and NEXT_PUBLIC_POSTHOG_HOST, the host for your instance, either us.i.posthog.com for the US region or eu.i.posthog.com for the EU region.</p>
+<p>One timing detail: the integration writes the variables, but they only reach your running app on the next build. After you add or link the integration, kick off a fresh deployment, or your app keeps running with no PostHog values attached.</p>
+<p>Check the prefix. The defaults work for Next.js, which inlines NEXT_PUBLIC_ values at build time. Vite and SvelteKit read VITE_ instead, so rename them to VITE_POSTHOG_PROJECT_TOKEN and VITE_POSTHOG_HOST. Nuxt wants NUXT_PUBLIC_. Get this wrong and the browser never sees the values, the page loads fine, and PostHog quietly records nothing.</p>
+
+<h2 id="init-sdk">Init the SDK in your app</h2>
+<p>With the environment variables in place, initialize the SDK once in your app entry point.</p>
+<pre><code>posthog.init(
+  process.env.NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN,
+  {
+    api_host:
+      process.env.NEXT_PUBLIC_POSTHOG_HOST ||
+      "https://us.i.posthog.com",
+  },
+);</code></pre>
+<p>Where it lives depends on your framework. In a Next.js App Router app, put it in the root layout or a provider component that wraps the whole tree. In a Vite SPA, put it at the top of main.ts. The rule is one init per page load, before any component fires a capture call.</p>
+<p>Autocapture and session replay come on by default. Keep autocapture; it is the cheapest way to see what users click. Turn off session replay unless you actually review recordings, because replay inflates your data volume and can push you toward a paid plan sooner than you expect.</p>
+<p>One more thing: ad blockers eat PostHog requests by default. The standard fix is a reverse proxy so the request looks first-party. As of September 2026 PostHog Cloud offers a managed proxy at no extra cost. On Vercel you can do the same with a rewrite in next.config or vercel.json that forwards /ingest to your api_host. Whatever you do, avoid an obvious path like /analytics.</p>
+
+<h2 id="conversion-events">Define the conversion events that matter</h2>
+<p>Autocapture alone will not answer the money question. Define the events that mean revenue:</p>
+<ul>
+<li><strong>signup:</strong> an account was created</li>
+<li><strong>trial_start:</strong> a free trial began</li>
+<li><strong>checkout_initiated:</strong> a user clicked pay</li>
+<li><strong>paid_subscription_created:</strong> money landed</li>
+</ul>
+<p>Each is a capture call at the moment it happens. A checkout confirmation is the classic spot:</p>
+<pre><code>posthog.capture("checkout_completed", {
+  plan: "pro",
+});</code></pre>
+<p>A Stripe webhook is the cleanest feed for the paid event. Map checkout.session.completed to paid_subscription_created, read the plan from the subscription metadata, and pass the user id from a custom field on your checkout session. That way the event carries everything a dashboard needs: who, what plan, and when.</p>
+<p>Fire paid_subscription_created from a server you trust, not from the browser. Anyone can forge a front-end event, and ghost subscribers corrupt every dashboard built on them. Your subscription webhook is the right source.</p>
+<p>If you track from a Vercel serverless function, use the posthog-node SDK with captureImmediate. Serverless functions freeze and shut down after the response returns, and captureImmediate flushes the event before the function disappears, so the webhook that made you money is never lost to a cold shutdown.</p>
+
+<h2 id="search-console-source">Link Google Search Console</h2>
+<p>Now for the joining trick. PostHog can ingest Google Search Console as a data source, which lets you combine the queries people typed into Google with the events they fired once they clicked.</p>
+<p>In PostHog go to Data pipeline, then Sources, then Google Search Console. Sign in with the Google account that has read access to the property, then enter the property. Both forms work: the URL-prefix form for a single exact site, and the sc-domain form for a whole domain, subdomains included.</p>
+<p>Pick the property form deliberately. Choose sc-domain when an app and a marketing site share a domain across separate Vercel projects, because it rolls impressions from every subpage and subdomain into one view. Choose URL-prefix when you only care about a single exact path.</p>
+<p>It syncs daily and gives you these tables: search_analytics_by_date, search_analytics_by_query, search_analytics_by_page, search_analytics_by_country, search_analytics_by_device, search_analytics_by_query_page, and search_analytics_by_search_appearance.</p>
+<p>search_analytics_by_query_page is where you will live. It pairs each query with the exact page it landed on, which is the foundation for the dashboard below.</p>
+<p>One limit worth knowing: the Google API caps the sync at roughly 50,000 rows per day. Very high-traffic properties drop the long tail. For most indie apps, a non-issue.</p>
+
+<h2 id="the-dashboard">Build the query to conversion dashboard</h2>
+<p>The point of all this wiring is correlation. You join GSC query and page data with PostHog $pageview events, either in a PostHog SQL insight or the query builder, then join that to signup and paid events. You end with answers Google will not give you.</p>
+<p>A practical dashboard has four panels:</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Panel</th><th>What it shows</th><th>Why it matters</th></tr></thead>
+<tbody>
+<tr><td>Top queries that convert</td><td>Queries joined to signup and paid events, ranked by conversion rate</td><td>Your list of keywords that actually make money</td></tr>
+<tr><td>Pages with impressions but low signups</td><td>Pages ranking well whose visitors never sign up</td><td>Content mismatched to the query, your fix list</td></tr>
+<tr><td>Funnel: landing page to paid</td><td>Pageview to signup to paid per landing page</td><td>Shows exactly where organic traffic drops off</td></tr>
+<tr><td>Queries with clicks, no conversions</td><td>Queries earning clicks that produce nothing</td><td>The quickest SEO wins hidden in your data</td></tr>
+</tbody>
+</table></div>
+<p>In PostHog this is a SQL insight, and the query is short: select the query and page, count signup events, count paid events, group by query and page, sort by paid events descending. If SQL is not your language, the query builder does the same join with clicks. Save the result as a dashboard and add the weekly email subscription, so the report finds you instead of you hunting for it.</p>
+<p>The workflow is then straightforward. Pick a query that ranks well but converts poorly. Open the page it lands on. Fix the mismatch: move the CTA above the fold, answer the question the query implies, cut friction in the form. Remeasure the same query next week. If conversion does not move, the problem is the promise or the offer, not the page. Iterate.</p>
+<p>If you run generated page sets, the same join tells you which URLs earn their place. That is the logic behind <a href="/blog/programmatic-seo-101-how-solo-builders-generate-high-intent-organic-traffic/">programmatic SEO</a>, measured against revenue instead of rank.</p>
+
+<h2 id="verify">Verify the whole chain</h2>
+<p>How do you know it works? In order:</p>
+<ol>
+<li>Load the app, open DevTools, and filter the Network tab for your PostHog host. You should see requests on page load. None at all means the browser lacks the env vars, the proxy path is wrong, or an extension is blocking.</li>
+<li>Open PostHog Live events, reload the page, and watch the events appear within seconds.</li>
+<li>After the first daily sync, confirm rows exist in the GSC source tables inside PostHog. Give it a full day before you investigate further.</li>
+</ol>
+<p>Gotchas I hit so you skip them:</p>
+<ul>
+<li><strong>Missing public prefix.</strong> Without NEXT_PUBLIC_, VITE_, or NUXT_PUBLIC_, the SDK initializes with an undefined token and fails silently.</li>
+<li><strong>Dev traffic pollution.</strong> Skip the init in development builds, for example by guarding it on your production environment, or local sessions drown the real signal.</li>
+<li><strong>Region mismatch.</strong> If the host is eu.i.posthog.com but the env var or proxy says us, events never arrive.</li>
+<li><strong>Consent.</strong> EU traffic needs consent before tracking under GDPR. GA4 has its own consent mode, and PostHog autocapture has consent-tool considerations too. Pick one banner and wire it to both, or capture EU traffic only after opt-in.</li>
+<li><strong>Anonymous users.</strong> Call posthog.identify with the user id after login, so events before and after signup attach to the same person. Skip it and every session looks like a brand new stranger, which wrecks funnel math.</li>
+</ul>
+
+<h2 id="the-loop">The loop</h2>
+<p>The loop is not faster SEO. It is better SEO. Rank, measure, fix, repeat. You stop guessing which blog posts matter and start knowing, because the revenue column tells you.</p>
+<p>When a query, the page it hit, the trial it started, and the subscription it produced sit in one view, search becomes a sales channel instead of a traffic pump. That is the whole upgrade.</p>
+<p>Pair this setup with the wider picture: how solo builders generate high-intent organic traffic with <a href="/blog/programmatic-seo-101-how-solo-builders-generate-high-intent-organic-traffic/">programmatic SEO</a>, and how to <a href="/blog/how-to-rank-an-ai-app-on-google-with-zero-ad-spend/">rank an AI app on Google with zero ad spend</a>. Then come back and let your own numbers decide what to build next.</p>
+<p>The dashboard does the arguing for you. Set it up once, and every page you ship has a known job.</p>
+    </div>
+    <div class="cta-box"><h2>Want this done for your product?</h2><p>Crawled SEO helps founders and small teams get found, cited, and recommended in Google and AI search. If you have an app with no traffic and want it fixed properly, that is exactly what we do.</p><a class="cta-btn" href="/audit">Request your free audit</a></div>
+    <aside class="related"><h2>Keep reading</h2><ul><li><a href="/blog/programmatic-seo-101-how-solo-builders-generate-high-intent-organic-traffic/">Programmatic SEO 101: How Solo Builders Generate High-Intent Organic Traffic</a></li>
+  <li><a href="/blog/how-to-rank-an-ai-app-on-google-with-zero-ad-spend/">How to Rank an AI App on Google with Zero Ad Spend</a></li>
+  <li><a href="/blog/how-to-track-ai-search-visibility/">How to Track Your Visibility in AI Search</a></li>
+  <li><a href="/blog/how-to-write-content-ai-search-cites/">How to Write Content AI Search Engines Cite</a></li></ul></aside>
+  </article>
+  <nav class="post-nav"><a href="/blog/how-to-rank-an-ai-app-on-google-with-zero-ad-spend/"><span class="dir">Previous</span>How to Rank an AI App on Google with Zero Ad Spend</a><a class="next" href="/blog/how-to-get-your-first-10-paying-users-from-reddit-without-getting-banned/"><span class="dir">Next</span>How to Get Your First 10 Paying Users from Reddit Without Getting Banned</a></nav>
+</main>
+<script src="/script.js"></script>
+</body>
+</html>
