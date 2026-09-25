@@ -141,8 +141,8 @@
 <h2 id="what-your-fees-actually-look-like">What your fees actually look like</h2>
 <p>All fee figures here are approximate and current as of September 2026. Rates move, so treat them as the shape of the numbers, not the fine print.</p>
 <p>Stripe Checkout runs the gateway model. You are the merchant of record, and you pay roughly 2.9% plus $0.30 per successful US card charge. International cards and currency conversion add on top. Use Stripe Billing for subscriptions and you add roughly 0.7%, with discounts as revenue grows. Add Stripe Tax at around 0.5% per transaction for calculation, plus help with filing. Stack the whole thing for an international subscription business and you land at mid single digit percentage of revenue.</p>
-<p>Paddle is a merchant of record at a standard 5% plus $0.50 per transaction. Volume discounts apply, quoted historically as you scale, dropping toward roughly 4.5% and down to about 3.5% or better at higher tiers.</p>
-<p>Lemon Squeezy is also a merchant of record at 5% plus $0.50 per transaction, flat. No tiered volume pricing. That rate includes global VAT and sales tax handling, PCI compliance, and dispute management.</p>
+<p>Paddle is a merchant of record at a standard 5% plus $0.50 per transaction. <a href="https://www.paddle.com/pricing" target="_blank" rel="noopener">Volume discounts apply</a>, quoted historically as you scale, dropping toward roughly 4.5% and down to about 3.5% or better at higher tiers.</p>
+<p>Lemon Squeezy is also a merchant of record at <a href="https://www.lemonsqueezy.com/pricing" target="_blank" rel="noopener">5% plus $0.50 per transaction</a>, flat. No tiered volume pricing. That rate includes global VAT and sales tax handling, PCI compliance, and dispute management.</p>
 <p>Here is the key MoR point you will miss if you only compare fee tables. Neither Paddle nor Lemon Squeezy charges separately for tax. Global tax handling lives inside that 5% plus $0.50. On Stripe it is an add on, and it is still your problem at midnight.</p>
 
 <h2 id="the-fee-comparison-on-real-revenue">The fee comparison on real revenue</h2>
@@ -158,11 +158,11 @@
 </table></div>
 <p>Read the rows, not just the headline rates. Below roughly $10k a month the gap between gateway and MoR is tens to only a few hundred dollars a month. At $1k the difference is $41. At $10k it is $410. That is usually worth the tax and liability you get with a merchant of record.</p>
 <p>Past $50k the difference becomes real money. At $100k you hand the flat MoR model roughly $4,100 a month. That is when the calculation flips toward a gateway plus your own tax setup, and when Paddle's volume tiers start to matter.</p>
-<p>One detail the sticker rates hide. At a $10 average order, Stripe's 2.9% plus $0.30 is effectively about 5.9% of revenue, because the fixed cents hit hard on small tickets. The gateway lead widens as your invoices get bigger and the fixed share shrinks.</p>
+<p>One detail the sticker rates hide. At a $10 average order, <a href="https://stripe.com/pricing" target="_blank" rel="noopener">Stripe's 2.9% plus $0.30</a> is effectively about 5.9% of revenue, because the fixed cents hit hard on small tickets. The gateway lead widens as your invoices get bigger and the fixed share shrinks.</p>
 
 <h2 id="who-handles-tax">Who handles tax</h2>
 <p>Under a merchant of record, the provider registers itself around the world, collects and remits VAT and sales tax, and issues the tax invoices your customers need. Your dashboard shows net revenue. The product's merchant of record is the provider, and when a dispute lands it hits a corporate entity, not your personal name.</p>
-<p>Under Stripe, you are the merchant of record. You track where you have sales, you register where you legally must, you file, and you defend disputes yourself. Stripe Tax can do the calculation and help with filing, but the obligations still sit on you.</p>
+<p>Under Stripe, you are the merchant of record. You track where you have sales, you register where you legally must, you file, and you defend disputes yourself. <a href="https://stripe.com/docs/tax" target="_blank" rel="noopener">Stripe Tax</a> can do the calculation and help with filing, but the obligations still sit on you.</p>
 <blockquote>With a merchant of record, you never see a foreign VAT registration form. With a plain gateway, that form is your homework.</blockquote>
 <p>Here is the scenario that decides it for most solo founders. You ship a $15 a month tool. Eight of your customers are in Germany, six in the UK, four in Australia. Those eighteen people do not justify registering in three jurisdictions, filing multiple times a year, and defending chargebacks in three languages. That is the quiet reason so many indie apps sell through a merchant of record even when the gateway is cheaper per transaction.</p>
 <p>That is not laziness. It is a rational trade of your own hours for an outsourceable problem.</p>

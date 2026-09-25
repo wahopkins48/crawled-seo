@@ -183,7 +183,7 @@ print(revenue)   # roughly 7,500 at 2% churn</code></pre>
 <h2 id="what-a-subscription-really-costs">What a subscription really costs</h2>
 <p>A subscription has costs too, and they are quieter.</p>
 <ul>
-<li><strong>Payment plumbing.</strong> You need recurring billing, dunning emails, and a way to recover failed payments. A merchant of record can outsource most of that, but you still have to design and test the flow.</li>
+<li><strong>Payment plumbing.</strong> You need <a href="https://stripe.com/billing" target="_blank" rel="noopener">recurring billing</a>, dunning emails, and a way to recover failed payments. A <a href="/blog/merchant-of-record-vs-payment-gateway-why-indie-hackers-are-choosing-lemon-squeezy-over-stripe-in-2026/">merchant of record</a> can outsource most of that, but you still have to design and test the flow.</li>
 <li><strong>Failed payment retention.</strong> Cards expire and people change banks. A small share of your users will always sit in a failed-payment loop between your revenue and your attention.</li>
 <li><strong>Slow cash.</strong> Monthly revenue arrives in a trickle. For a pre-revenue founder who needs the first $1,000 to keep going, subscriptions feel like watching interest accrue on money you do not yet have.</li>
 </ul>

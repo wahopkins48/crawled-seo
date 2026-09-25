@@ -125,7 +125,7 @@
 <p>You built the app in a weekend and shipped it to Vercel. You added a signup link, pasted in a couple of analytics snippets, and called it a day. Now you have three sources of numbers. Vercel Analytics shows visits. One analytics tool shows events. Google Search Console shows queries. None of them agree, and none of them talk to the other two.</p>
 <p>The problem is not that you lack data. You have plenty. The problem is that the data sits in separate silos, so you cannot answer the one question that matters: which search query became a paid customer.</p>
 <p>The fix is not another dashboard. It is making the sources talk. Once search queries, page views, and billing events share one system, you can answer questions like: is my revenue coming from a handful of keywords, and if so which ones? Which landing page converts organic traffic ten times better than the page next to it? That level of sight is what moves an app from traffic pump to actual business.</p>
-<p>This post walks you through wiring PostHog into a Vercel app, linking Google Search Console as a data source, and building one dashboard that connects search impressions to signups to paid customers. No data warehouse required.</p>
+<p>This post walks you through wiring <a href="https://posthog.com/docs" target="_blank" rel="noopener">PostHog</a> into a Vercel app, linking Google Search Console as a data source, and building one dashboard that connects search impressions to signups to paid customers. No data warehouse required.</p>
 
 <h2 id="why-posthog">Why PostHog instead of GA4 or Vercel Analytics</h2>
 <p>Vercel Analytics is good at exactly one thing, and it is worth keeping for that thing. It takes two minutes to add, costs nothing within your plan, and gives you a traffic baseline: page views, top pages, core web vitals, referrers. For a solo builder it is the easiest zero-config dashboard you can switch on.</p>
@@ -135,14 +135,14 @@
 <p>GA4 is the alternative everyone suggests, and it works. But PostHog stores named, typed events you can query directly, and autocapture gives you more signal than GA4's default setup on a small app. When your goal is tying paid conversions back to search, PostHog is the less tedious road.</p>
 
 <h2 id="marketplace-install">Install via the Vercel Marketplace</h2>
-<p>The cleanest path is the Vercel Marketplace integration. Open your project, go to Settings, then Integrations, search for PostHog, and install it. You get two choices.</p>
+<p>The cleanest path is the <a href="https://vercel.com/marketplace/posthog" target="_blank" rel="noopener">Vercel Marketplace integration</a>. Open your project, go to Settings, then Integrations, search for PostHog, and install it. You get two choices.</p>
 <p>Add creates a brand-new PostHog org and bills you through your Vercel account. Link Existing Account connects an org you already run, which is the right call if PostHog has been collecting events for a while. Linking requires admin access on the existing org, and in that case billing stays with PostHog. As of September 2026 those are still the two ways the integration connects.</p>
-<p>Whichever you pick, the integration pushes two environment variables into your Vercel project: NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN, your project key, and NEXT_PUBLIC_POSTHOG_HOST, the host for your instance, either us.i.posthog.com for the US region or eu.i.posthog.com for the EU region.</p>
+<p>Whichever you pick, the integration pushes two <a href="https://vercel.com/docs/projects/environment-variables" target="_blank" rel="noopener">environment variables</a> into your Vercel project: NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN, your project key, and NEXT_PUBLIC_POSTHOG_HOST, the host for your instance, either us.i.posthog.com for the US region or eu.i.posthog.com for the EU region.</p>
 <p>One timing detail: the integration writes the variables, but they only reach your running app on the next build. After you add or link the integration, kick off a fresh deployment, or your app keeps running with no PostHog values attached.</p>
 <p>Check the prefix. The defaults work for Next.js, which inlines NEXT_PUBLIC_ values at build time. Vite and SvelteKit read VITE_ instead, so rename them to VITE_POSTHOG_PROJECT_TOKEN and VITE_POSTHOG_HOST. Nuxt wants NUXT_PUBLIC_. Get this wrong and the browser never sees the values, the page loads fine, and PostHog quietly records nothing.</p>
 
 <h2 id="init-sdk">Init the SDK in your app</h2>
-<p>With the environment variables in place, initialize the SDK once in your app entry point.</p>
+<p>With the environment variables in place, initialize <a href="https://posthog.com/docs/libraries/js" target="_blank" rel="noopener">the SDK</a> once in your app entry point.</p>
 <pre><code>posthog.init(
   process.env.NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN,
   {
@@ -172,7 +172,7 @@
 <p>If you track from a Vercel serverless function, use the posthog-node SDK with captureImmediate. Serverless functions freeze and shut down after the response returns, and captureImmediate flushes the event before the function disappears, so the webhook that made you money is never lost to a cold shutdown.</p>
 
 <h2 id="search-console-source">Link Google Search Console</h2>
-<p>Now for the joining trick. PostHog can ingest Google Search Console as a data source, which lets you combine the queries people typed into Google with the events they fired once they clicked.</p>
+<p>Now for the joining trick. PostHog can ingest <a href="https://posthog.com/docs/cdp/sources/google-search-console" target="_blank" rel="noopener">Google Search Console as a data source</a>, which lets you combine the queries people typed into Google with the events they fired once they clicked.</p>
 <p>In PostHog go to Data pipeline, then Sources, then Google Search Console. Sign in with the Google account that has read access to the property, then enter the property. Both forms work: the URL-prefix form for a single exact site, and the sc-domain form for a whole domain, subdomains included.</p>
 <p>Pick the property form deliberately. Choose sc-domain when an app and a marketing site share a domain across separate Vercel projects, because it rolls impressions from every subpage and subdomain into one view. Choose URL-prefix when you only care about a single exact path.</p>
 <p>It syncs daily and gives you these tables: search_analytics_by_date, search_analytics_by_query, search_analytics_by_page, search_analytics_by_country, search_analytics_by_device, search_analytics_by_query_page, and search_analytics_by_search_appearance.</p>

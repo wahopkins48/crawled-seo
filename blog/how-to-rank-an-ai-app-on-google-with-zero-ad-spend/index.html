@@ -149,12 +149,12 @@ Disallow: /
 User-agent: *
 Allow: /</code></pre>
 <ul>
-<li><strong>Check your CDN and security layer.</strong> Since July 2025, Cloudflare has blocked AI crawlers by default on newly added domains unless you toggle the AI bot settings on. Other security providers do the same. If your app signs up during that window, your AI crawlers may be silently 403'd. The most common reason a site is absent from AI answers is not bad content, it's a firewall. Look for a setting named something like "AI bots," "AI scrapers and crawlers," or "bot fight mode."</li>
+<li><strong>Check your CDN and security layer.</strong> Since July 2025, <a href="https://developers.cloudflare.com/bots/" target="_blank" rel="noopener">Cloudflare</a> has blocked AI crawlers by default on newly added domains unless you toggle the AI bot settings on. Other security providers do the same. If your app signs up during that window, your AI crawlers may be silently 403'd. The most common reason a site is absent from AI answers is not bad content, it's a firewall. Look for a setting named something like "AI bots," "AI scrapers and crawlers," or "bot fight mode."</li>
 </ul>
 <p>And a housekeeping fix: read your live robots.txt at <code>your-app.com/robots.txt</code> and make sure it is not blocking everything. A leftover staging rule like <code>Disallow: /</code> for all agents quietly defunds every other ounce of work you do.</p>
 
 <h2 id="answer-first-content">Write answer-first content</h2>
-<p>Search engines now lift pages verbatim into answers. Google's stated requirement for its AI features is that a page is indexed and snippet-eligible. The page that wins the citation is usually the one that states the answer plainly and early. So structure every content page for quoting.</p>
+<p>Search engines now lift pages verbatim into answers. Google's stated requirement for <a href="https://developers.google.com/search/docs/appearance/ai-snapshots" target="_blank" rel="noopener">its AI features</a> is that a page is indexed and snippet-eligible. The page that wins the citation is usually the one that states the answer plainly and early. So structure every content page for quoting.</p>
 <p>Put the exact question people ask in the H1. Then state the direct answer inside the first 100 words or so, before any setup and before any story. Support it after. If someone searches "how does [your app] get access to my data," the H1 is close to that and the first sentence is the honest answer.</p>
 <p>Three structural habits make pages quotable:</p>
 <ul>
@@ -165,7 +165,7 @@ Allow: /</code></pre>
 <p>Keep a key card near the top of each page: what it does, who it is for, price, platforms, limits. That block is what gets lifted into overviews and sidebar answers. The full treatment is in <a href="/blog/how-to-write-content-ai-search-cites/">How to Write Content AI Search Engines Cite</a>.</p>
 
 <h2 id="entity-signals-and-schema">Turn your app into an entity</h2>
-<p>Answer engines do not reason about URLs, they reason about entities: things with consistent names, descriptions, and relationships. Your goal is to make your app a recognizable, single entity everywhere it appears. The consistency checklist:</p>
+<p>Answer engines do not reason about URLs, they reason about entities: things with consistent names, descriptions, and relationships. Your goal is to make your app <a href="/blog/entity-seo-and-brand-authority/">a recognizable, single entity</a> everywhere it appears. The consistency checklist:</p>
 <ul>
 <li><strong>One canonical brand name.</strong> Pick a spelling and casing and use it everywhere: site, docs, social, app stores, directories. Do not alternate.</li>
 <li><strong>One logo and color identity.</strong> Reference the same logo file on the site, social profiles, and any listings.</li>
@@ -173,7 +173,7 @@ Allow: /</code></pre>
 <li><strong>Published authorship.</strong> Real author pages, dated posts, an about page that says who built what. Anonymous sites earn less trust from systems that evaluate authority.</li>
 </ul>
 <p>Then add structured data. JSON-LD <code>SoftwareApplication</code> and <code>Organization</code> schema tell Google you are a software product, not an anonymous page. Add <code>BreadcrumbList</code> for navigation context and keep a self-referencing canonical link on every page so nothing gets split into duplicate entities. I cover the working details in <a href="/blog/schema-markup-for-ai-search/">schema markup for AI search</a>.</p>
-<p>Finally, publish an llms.txt file listing your best pages for AI systems. It exists so machines can orient themselves quickly, and it doubles as a deliberate statement of what you want to be known for. When and how is in <a href="/blog/llms-txt-explained/">llms.txt Explained: Do You Actually Need One?</a></p>
+<p>Finally, publish an <a href="https://llmstxt.org/" target="_blank" rel="noopener">llms.txt file</a> listing your best pages for AI systems. It exists so machines can orient themselves quickly, and it doubles as a deliberate statement of what you want to be known for. When and how is in <a href="/blog/llms-txt-explained/">llms.txt Explained: Do You Actually Need One?</a></p>
 
 <h2 id="internal-links">Link pages like a hub, not a pile</h2>
 <p>Every page should be a spoke connected to a hub. Keep it three clicks deep at most. From the home page, a visitor should reach any page in the site within three clicks, and crawlers should be able to follow the same path in raw HTML.</p>

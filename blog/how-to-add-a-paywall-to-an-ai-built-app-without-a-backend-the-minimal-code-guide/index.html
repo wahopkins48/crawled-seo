@@ -137,7 +137,7 @@
 
 <p>Here is the reframe that makes this tractable. "No backend" does not mean "no money handling." It means you get to choose the paywall that pushes the hard parts onto a provider. Card processing, tax, receipts, disputes: there is a service that does each one for you. Your only job is to pick the layer you need and wire up as little as possible.</p>
 
-<p>This guide walks three options, from zero code to a single serverless function, and tells you honestly what each one does and does not lock down. Read it, pick your stage, and ship.</p>
+<p>This guide walks three options, from zero code to a single <a href="https://vercel.com/docs/functions" target="_blank" rel="noopener">serverless function</a>, and tells you honestly what each one does and does not lock down. Read it, pick your stage, and ship.</p>
 
 <h2 id="the-honest-architecture-picture">The honest architecture picture first</h2>
 <p>Every real paywall has four ingredients:</p>
@@ -152,7 +152,7 @@
 <p>Set expectations early. If your paywall gates a landing page and never opens the real app, the zero-code path is easy and safe. If you gate features inside a real app, you have two honest choices. Either accept one small serverless function, or accept lower security, because a check that runs only in the browser is trivially bypassable. There is no third option that hides that reality. Pick your tradeoff and move on.</p>
 
 <h2 id="stripe-payment-links">Option A: the zero-code path with Stripe Payment Links</h2>
-<p>The fastest thing in the world is a Stripe Payment Link. Log into the Stripe dashboard, create a payment link, attach a one-time price or a subscription, and put that URL behind your CTA button. A customer clicks, pays on Stripe's hosted checkout, and you get the money and an alert.</p>
+<p>The fastest thing in the world is a <a href="https://stripe.com/docs/payments/payment-links" target="_blank" rel="noopener">Stripe Payment Link</a>. Log into the Stripe dashboard, create a payment link, attach a one-time price or a subscription, and put that URL behind your CTA button. A customer clicks, pays on Stripe's hosted checkout, and you get the money and an alert.</p>
 
 <p>That is a complete flow for one kind of product. If you sell a downloadable asset, a prompt library, a Figma file, or a paid report, Stripe takes the payment and you deliver the file however you already handle fulfillment. You can also watch the payments page or wire a webhook to see who paid. That is where the limits start.</p>
 
@@ -163,7 +163,7 @@
 <h2 id="lemon-squeezy-licenses">Option B: the no-backend-on-your-side path with Lemon Squeezy licenses</h2>
 <p>Lemon Squeezy is a merchant of record, which means it absorbs the entire payment stack: checkout, card storage, global tax compliance, receipts, refunds, and disputes. It costs 5% plus $0.50 per transaction. Stripe has owned it since July 2024, so it is not going anywhere. Because it is a merchant of record, you never touch the tax liability yourself.</p>
 
-<p>The part that matters for a no-backend app is the license key system. When a customer buys, Lemon Squeezy issues a license key and delivers it by email or via webhook. Your app asks the buyer to paste the key, then validates it against Lemon Squeezy's license API. It also ships an affiliate system out of the box, which is free marketing leverage for zero extra work.</p>
+<p>The part that matters for a no-backend app is the license key system. When a customer buys, Lemon Squeezy issues a license key and delivers it by email or via webhook. Your app asks the buyer to paste the key, then validates it against Lemon Squeezy's <a href="https://docs.lemonsqueezy.com/api/licenses" target="_blank" rel="noopener">license API</a>. It also ships an affiliate system out of the box, which is free marketing leverage for zero extra work.</p>
 
 <p>The flow looks like this:</p>
 <ol>
