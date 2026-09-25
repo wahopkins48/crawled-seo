@@ -39,7 +39,9 @@
     .tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1280px; margin: 40px auto; padding: 0 1.5rem; }
     .tier { background: var(--white); border: 1px solid var(--border-gray); border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column; text-align: center; height: 100%; }
     .tier.featured { border: 2px solid var(--primary); transform: scale(1.02); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); }
-    .price { font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 5px; }
+    .pricing-note { max-width: 680px; margin: 0 auto; padding: 0 1.5rem; text-align: center; color: var(--text-light); font-size: 0.95rem; }
+    .tier.featured > div:first-child { align-self: center; }
+    .price { font-size: 1.5rem; font-weight: 800; color: var(--primary); margin-bottom: 5px; }
     .setup { font-size: 0.9rem; color: var(--text-light); margin-bottom: 1.5rem; }
     ul { list-style: none; text-align: left; margin: 1.5rem 0; flex-grow: 1; }
     li { margin-bottom: 0.75rem; font-size: 0.95rem; }
@@ -81,13 +83,14 @@
 
   <h1>Visibility Service Tiers</h1>
   <p class="subtitle">Built for modern local discovery and AI reference readiness</p>
+  <p class="pricing-note">Every market is different, so every plan is quoted after we look at where you stand today. The check is free, and you get a straight monthly number the same day. No proposal process, no long contract.</p>
 
   <main class="tiers">
     <section class="tier">
       <h2>Tier 1</h2>
       <h3>Foundation Market Entry</h3>
-      <p class="price">$750 / mo</p>
-      <p class="setup">+$200 setup</p>
+      <p class="price">Custom quote</p>
+      <p class="setup">Priced after a free look at your market</p>
       <ul>
         <li>✅ Local keyword mapping (10-15 terms)</li>
         <li>✅ Google Business Profile optimization</li>
@@ -102,8 +105,8 @@
       <div style="background: var(--primary); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; display: inline-block; margin-bottom: 10px; font-weight: 800;">MOST POPULAR</div>
       <h2>Tier 2</h2>
       <h3>Competitive Market Growth</h3>
-      <p class="price">$1,250 / mo</p>
-      <p class="setup">+$200 setup</p>
+      <p class="price">Custom quote</p>
+      <p class="setup">Priced after a free look at your market</p>
       <ul>
         <li>✅ Expanded keyword coverage (15-25 terms)</li>
         <li>✅ Full site optimization guidance</li>
@@ -118,8 +121,8 @@
     <section class="tier">
       <h2>Tier 3</h2>
       <h3>Saturated Market Authority</h3>
-      <p class="price">$1,850 / mo</p>
-      <p class="setup">+$200 setup</p>
+      <p class="price">Custom quote</p>
+      <p class="setup">Priced after a free look at your market</p>
       <ul>
         <li>✅ Multi-layer authority deployment</li>
         <li>✅ High-trust media industry placements</li>
@@ -136,7 +139,7 @@
     <div class="custom-card-wrapper">
       <div class="custom-left">
         <h2>A La Carte Visibility Engine</h2>
-        <p class="price" style="margin-top: 0;">Starts at $200 / mo</p>
+        <p class="price" style="margin-top: 0;">Custom quote</p>
         <p>Before you scale, you must prove to AI models that your brand is real, verifiable, and consistent.</p>
       </div>
       <div class="custom-right">

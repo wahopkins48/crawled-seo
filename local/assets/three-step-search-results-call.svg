@@ -4,16 +4,16 @@
   <rect width="1200" height="320" rx="28" fill="#F1F8FC"/>
   <path d="M383 146h32m370 0h32" stroke="#45ADFF" stroke-width="8" stroke-linecap="round"/>
   <path d="m404 135 12 11-12 11m402-22 12 11-12 11" fill="none" stroke="#45ADFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-  <g font-family="Arial,Helvetica,sans-serif" fill="#12344A">
+  <g font-family="Instrument Sans,Helvetica,Arial,sans-serif" fill="#12344A">
     <rect x="38" y="28" width="336" height="264" rx="22" fill="#fff" stroke="#C9DEEA" stroke-width="3"/>
-    <circle cx="76" cy="63" r="18" fill="#45ADFF"/><text x="76" y="70" font-size="19" font-weight="700" text-anchor="middle">1</text>
+    <circle cx="76" cy="63" r="18" fill="#45ADFF"/><text x="76" y="70" font-size="19" font-weight="700" text-anchor="middle" fill="#fff">1</text>
     <rect x="118" y="68" width="176" height="84" rx="18" fill="#EAF7FF" stroke="#45ADFF" stroke-width="4"/>
     <circle cx="157" cy="108" r="17" fill="none" stroke="#12344A" stroke-width="7"/><path d="m169 121 18 18" fill="none" stroke="#12344A" stroke-width="7" stroke-linecap="round"/>
     <path d="M213 96h57m-57 23h38" stroke="#12344A" stroke-width="7" stroke-linecap="round"/>
     <text x="206" y="224" font-size="28" font-weight="700" text-anchor="middle">Search</text>
     <text x="206" y="258" font-size="17" text-anchor="middle">Heating repair</text>
     <rect x="432" y="28" width="336" height="264" rx="22" fill="#fff" stroke="#C9DEEA" stroke-width="3"/>
-    <circle cx="470" cy="63" r="18" fill="#45ADFF"/><text x="470" y="70" font-size="19" font-weight="700" text-anchor="middle">2</text>
+    <circle cx="470" cy="63" r="18" fill="#45ADFF"/><text x="470" y="70" font-size="19" font-weight="700" text-anchor="middle" fill="#fff">2</text>
     <rect x="519" y="76" width="164" height="26" rx="8" fill="#EAF7FF"/>
     <rect x="519" y="110" width="164" height="26" rx="8" fill="#EAF7FF"/>
     <rect x="519" y="144" width="164" height="26" rx="8" fill="#EAF7FF"/>
@@ -22,10 +22,10 @@
     <text x="600" y="224" font-size="28" font-weight="700" text-anchor="middle">Top results</text>
     <text x="600" y="258" font-size="17" text-anchor="middle">First names on the map</text>
     <rect x="826" y="28" width="336" height="264" rx="22" fill="#fff" stroke="#C9DEEA" stroke-width="3"/>
-    <circle cx="864" cy="63" r="18" fill="#45ADFF"/><text x="864" y="70" font-size="19" font-weight="700" text-anchor="middle">3</text>
+    <circle cx="864" cy="63" r="18" fill="#45ADFF"/><text x="864" y="70" font-size="19" font-weight="700" text-anchor="middle" fill="#fff">3</text>
     <circle cx="994" cy="122" r="59" fill="#EAF7FF" stroke="#45ADFF" stroke-width="4"/>
     <path d="M964 95c-6 3-10 10-8 17 7 22 24 39 46 46 7 2 14-2 17-8l-14-13-11 7c-11-5-19-13-24-24l7-11z" fill="#12344A"/>
     <text x="994" y="224" font-size="28" font-weight="700" text-anchor="middle">Call</text>
-    <text x="994" y="258" font-size="17" text-anchor="middle">One may get the call</text>
+    <text x="994" y="258" font-size="17" text-anchor="middle">The first one gets it</text>
   </g>
 </svg>
