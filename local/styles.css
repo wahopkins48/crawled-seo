@@ -1,4 +1,4 @@
-:root{--ink:#1a1a1a;--muted:#4a5568;--light:#718096;--blue:#45adff;--blue-hover:#3399e6;--link:#0b6fbf;--navy:#0b1220;--paper:#f7fafc;--tint:#eef7ff;--line:#e2e8f0;--heading:'Lexend',sans-serif;--body:'Instrument Sans',sans-serif}
+:root{--ink:#1a1a1a;--muted:#4a5568;--light:#526579;--blue:#075da8;--blue-hover:#064780;--link:#0b6fbf;--navy:#0b1220;--paper:#f7fafc;--tint:#eef7ff;--line:#e2e8f0;--heading:'Lexend',sans-serif;--body:'Instrument Sans',sans-serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;color:var(--ink);font-family:var(--body);line-height:1.6;background:#fff}
@@ -9,8 +9,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 .wrap{width:min(1180px,calc(100% - 48px));margin-inline:auto}
 
 /* Header */
-.site-header{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:14px max(24px,calc((100% - 1180px)/2));background:#fff;border-bottom:1px solid var(--line)}
-.site-header img{height:40px;width:auto}
 .header-call{font-weight:600;color:var(--ink);text-decoration:none}
 .header-call:hover{color:var(--blue)}
 
@@ -124,8 +122,6 @@ h3{font-size:1.1rem;line-height:1.35;margin:0 0 8px}
 }
 @media(max-width:600px){
   .wrap{width:calc(100% - 32px)}
-  .site-header{padding:10px 16px}
-  .site-header img{height:34px}
   .header-call{font-size:.9rem}
   .hero{padding-block:28px 44px;gap:28px}
   .hero h1{font-size:clamp(1.8rem,7.4vw,2.2rem);margin-bottom:14px}
@@ -147,3 +143,13 @@ h3{font-size:1.1rem;line-height:1.35;margin:0 0 8px}
   .short-phone{display:inline}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}}
+
+/* Shared accessibility and responsive form refinements. */
+.header-call{min-height:44px;display:inline-flex;align-items:center}
+.form-card input,.form-card select{border-color:#718498;min-height:46px}
+.form-card [data-form-status]{color:var(--ink)}
+.form-card [data-form-status][data-state="error"]{color:#7c171b}
+.form-card [data-form-status][data-state="success"]{color:#174722}
+.brand-footer{padding-bottom:110px}
+.sticky-bar{position:sticky;bottom:0}
+@media(max-width:400px){.header-call{font-size:.85rem}}

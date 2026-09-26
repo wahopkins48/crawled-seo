@@ -1,297 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Frequently Asked Questions | Crawled SEO</title>
-  <meta name="description" content="Frequently asked questions about Crawled SEO, visibility audits, SEO, GEO, local search optimization, AI visibility, and modern search strategy.">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SEO Services FAQ | Crawled</title>
+  <meta name="description" content="Answers about software and local SEO, free audits, access, pricing, reporting, and working directly with Wesley Hopkins.">
   <link rel="canonical" href="https://crawledseo.com/faqs/">
-  
-  <link rel="stylesheet" href="/styles.css">
-
-  <style>
-    /* FAQ Page Specific Styles */
-    .faq-container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 60px 20px;
-    }
-
-    .faq-title {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-      text-align: center;
-      font-family: var(--font-heading);
-    }
-
-    .faq-subtitle {
-      font-size: 1.1rem;
-      color: var(--text-light);
-      margin-bottom: 50px;
-      text-align: center;
-    }
-
-    .faq-item {
-      border-bottom: 1px solid var(--border-gray);
-      padding: 20px 0;
-    }
-
-    .faq-question {
-      cursor: pointer;
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin: 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-family: var(--font-heading);
-      color: var(--text-dark);
-    }
-
-    .faq-question::after {
-      content: '+';
-      font-size: 1.5rem;
-      color: var(--primary);
-      transition: transform 0.3s ease;
-    }
-
-    .faq-item.active .faq-question::after {
-      content: '−';
-    }
-
-    .faq-answer {
-      margin-top: 15px;
-      display: none;
-      color: var(--text-gray);
-      line-height: 1.8;
-    }
-
-    .faq-answer ul {
-      margin-top: 10px;
-      padding-left: 20px;
-    }
-
-    .faq-answer li {
-      margin-bottom: 8px;
-    }
-
-    .faq-item.active .faq-answer {
-      display: block;
-      animation: fadeIn 0.3s ease;
-    }
-
-    .faq-cta {
-      margin-top: 60px;
-      padding: 40px;
-      background: var(--bg-gray);
-      border-radius: 12px;
-      text-align: center;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-5px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What does Crawled actually do?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Crawled helps businesses get found online. We improve your visibility in: Google Search & Google Business Profile; AI Overviews; Generative engines like ChatGPT and Perplexity; Local map results & High-intent search queries. We focus on structured visibility, entity clarity, and machine-readable signals so search engines and AI systems understand who you are and when to recommend you."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What’s the difference between SEO and GEO?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "SEO (Search Engine Optimization) helps your website rank in traditional search results. GEO (Generative Engine Optimization) prepares your brand to be referenced inside AI-generated answers. While most agencies still optimize for blue links, Crawled optimizes for AI summaries, entity-based search, knowledge signals, and structured authority."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you guarantee rankings?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No ethical SEO agency can guarantee rankings because Google controls its algorithm and AI systems evolve constantly. We guarantee strategic, white-hat implementation, transparent reporting, and clear monthly deliverables."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does it take and do I need a contract?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "SEO is compounding. Some local improvements appear within 30–60 days, but meaningful growth occurs over 3–6 months. Strong authority often takes 6–12 months. We typically recommend a 3–6 month minimum to allow for consistency, but we believe retention comes from results, not restrictive contracts."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What industries do you specialize in?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We work best with home services (HVAC, renovation, roofing), professional services (law, consulting, accounting), healthcare-adjacent providers, and authority-driven personal brands."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you sell backlinks?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We build links strategically based on relevance, context, and topical reinforcement. We do not sell spammy link packages because links without proper site structure are just noise."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I do SEO myself?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. However, most business owners don't have the time to stay current on algorithm changes or manage the ongoing signals required for entity-based search. We handle the management so you can run your business."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does it cost?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Every plan is quoted individually after a free look at your current rankings and market. Pricing depends on business size, market competitiveness, and geographic scope, and you get a straight monthly figure the same day, with no long proposal process."
-        }
-      }
-    ]
-  }
-  </script>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SEO Services FAQ | Crawled">
+  <meta property="og:description" content="Answers about software and local SEO, free audits, access, pricing, reporting, and working directly with Wesley Hopkins.">
+  <meta property="og:url" content="https://crawledseo.com/faqs/">
+  <meta property="og:image" content="https://crawledseo.com/crawled_logo_main.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600&amp;family=Instrument+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/site.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://crawledseo.com/#organization","name":"Crawled SEO","url":"https://crawledseo.com/","logo":"https://crawledseo.com/crawled_logo_main.png","email":"wesley@crawledseo.com","telephone":"+1-256-335-3979","address":{"@type":"PostalAddress","addressLocality":"Florence","addressRegion":"AL","addressCountry":"US"}}</script>
+  <script src="/site-config.js" defer></script>
+<script src="/measurement.js" defer></script>
+<script src="/script.js" defer></script>
+<script src="/forms.js" defer></script>
 </head>
-
-<body>
-
-  <header class="header">
-    <div class="logo-container">
-      <a href="/">
-        <img src="/crawled_logo_main.png" alt="Crawled SEO Logo" class="logo">
-      </a>
+<body class="commercial" data-audience="general">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="brand-header">
+  <nav class="brand-nav" aria-label="Main navigation">
+    <a class="brand-logo" href="/" aria-label="Crawled home"><img src="/local/assets/crawled-logo-384.png" width="144" height="39" alt="Crawled"></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu">Menu</button>
+    <div class="brand-links" id="main-menu">
+      <a href="/software-seo/">Software SEO</a><a href="/local/">Shoals local SEO</a><a href="/case-studies/">Case studies</a><a href="/about/">About</a><a href="/#contact">Contact</a>
     </div>
-    <nav class="navbar" id="myNavbar">
-      <div class="nav-links">
-        <a href="/" class="nav-link">Home</a>
-        <a href="/faqs" class="nav-link">FAQ</a>
-        <a href="/about" class="nav-link">About</a>
-        <a href="/blog" class="nav-link">Blog</a>
-        <a href="/packages" class="nav-link">Packages</a>
-        <a href="/case-studies" class="nav-link">Case Studies</a>
-        <a href="/#contact" class="nav-link">Contact</a>
-      </div>
-      <a href="javascript:void(0);" class="hamburger-icon" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </a>
-    </nav>
-  </header>
-
-  <main class="faq-container">
-    <h1 class="faq-title">Frequently Asked Questions</h1>
-    <p class="faq-subtitle">Crawled SEO | Visibility for the Modern Search Era</p>
-
-    <section class="faq-item">
-      <h2 class="faq-question">What does Crawled actually do?</h2>
-      <div class="faq-answer">
-        <p>Crawled helps businesses get found online. We improve your visibility in:</p>
-        <ul>
-          <li>Google Search & Google Business Profile</li>
-          <li>AI Overviews</li>
-          <li>Generative engines like ChatGPT and Perplexity</li>
-          <li>Local map results & High-intent search queries</li>
-        </ul>
-        <p>We focus on structured visibility, entity clarity, and machine-readable signals so search engines and AI systems understand who you are and when to recommend you.</p>
-      </div>
-    </section>
-
-    <section class="faq-item">
-      <h2 class="faq-question">What’s the difference between SEO and GEO?</h2>
-      <div class="faq-answer">
-        <p>SEO (Search Engine Optimization) helps your website rank in traditional search results. GEO (Generative Engine Optimization) prepares your brand to be referenced inside AI-generated answers.</p>
-        <p>While most agencies still optimize for blue links, Crawled optimizes for AI summaries, entity-based search, knowledge signals, and structured authority.</p>
-        <p>For the full picture, read our <a href="/guides/ai-search-visibility/">complete guide to AI search visibility</a>.</p>
-      </div>
-    </section>
-
-    <section class="faq-item">
-      <h2 class="faq-question">Do you guarantee rankings?</h2>
-      <div class="faq-answer">
-        <p>No ethical SEO agency can guarantee rankings because Google controls its algorithm and AI systems evolve constantly. We guarantee strategic, white-hat implementation, transparent reporting, and clear monthly deliverables.</p>
-      </div>
-    </section>
-
-    <section class="faq-item">
-      <h2 class="faq-question">How long does it take and do I need a contract?</h2>
-      <div class="faq-answer">
-        <p>SEO is compounding. Some local improvements appear within 30–60 days, but meaningful growth occurs over 3–6 months. Strong authority often takes 6–12 months.</p>
-        <p>We typically recommend a 3–6 month minimum to allow for consistency, but we believe retention comes from results, not restrictive contracts.</p>
-      </div>
-    </section>
-
-    <section class="faq-item">
-      <h2 class="faq-question">What industries do you specialize in?</h2>
-      <div class="faq-answer">
-        <p>We work best with home services (HVAC, renovation, roofing), professional services (law, consulting, accounting), healthcare-adjacent providers, and authority-driven personal brands.</p>
-      </div>
-    </section>
-
-    <section class="faq-item">
-      <h2 class="faq-question">Do you sell backlinks?</h2>
-      <div class="faq-answer">
-        <p>We build links strategically based on relevance, context, and topical reinforcement. We do not sell spammy link packages because links without proper site structure are just noise.</p>
-      </div>
-    </section>
-
-    <section class="faq-item">
-      <h2 class="faq-question">Can I do SEO myself?</h2>
-      <div class="faq-answer">
-        <p>Yes. However, most business owners don't have the time to stay current on algorithm changes or manage the ongoing signals required for entity-based search. We handle the management so you can run your business.</p>
-      </div>
-    </section>
-
-    <section class="faq-item">
-      <h2 class="faq-question">How much does it cost?</h2>
-      <div class="faq-answer">
-        <p>Every plan is <strong>quoted individually after a free look at your current rankings and market</strong>. Pricing depends on business size, market competitiveness, and geographic scope, and you get a straight monthly figure the same day, with no long proposal process.</p>
-      </div>
-    </section>
-
-    <div class="faq-cta">
-      <h2>Start with a Visibility Audit</h2>
-      <p>No pressure. No spam. Just signal clarity.</p>
-      <br>
-      <a href="/audit" class="btn btn-primary">Request Your Free Audit</a>
-    </div>
-  </main>
-
-  <script src="/script.js"></script>
-  
-  <script>
-    // FAQ Accordion Logic
-    document.querySelectorAll('.faq-question').forEach(question => {
-      question.addEventListener('click', () => {
-        const item = question.parentElement;
-        const isActive = item.classList.contains('active');
-        
-        // Close others for a cleaner accordion feel
-        document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
-        
-        if (!isActive) {
-          item.classList.add('active');
-        }
-      });
-    });
-  </script>
-
+  </nav>
+</header>
+<main id="main" tabindex="-1">
+<section class="page-intro"><div class="content-wrap"><p class="kicker">Practical questions</p><h1>Before we work together.</h1><p class="intro-text">Who the work is for, what happens next, and what to expect.</p></div></section><section class="section-block"><div class="content-wrap faq-list"><details><summary>Who does Crawled work with?</summary><p>Software companies nationwide, including apps, SaaS, developer tools, and technical B2B products; and home-service businesses across Florence, Muscle Shoals, Sheffield, and Tuscumbia.</p></details>
+<details><summary>What should I request first?</summary><p>For a product or website, request a <a href="/software-seo/#audit">free visibility audit</a>. It is returned within 24 hours, with no call required. Shoals home-service owners can request a <a href="/local/#ranking-check">free local ranking check</a>.</p></details>
+<details><summary>Can we work together remotely?</summary><p>Yes. Software engagements are remote and available nationwide. Crawled is based in Florence, Alabama.</p></details>
+<details><summary>What access do you need?</summary><p>The initial visibility audit uses your public website. For paid work, any analytics, website, or Business Profile access is agreed separately. Keep ownership of your accounts and do not send passwords through a contact form.</p></details>
+<details><summary>What do SEO and AI search work involve?</summary><p>The work includes useful content, clear page structure, crawlability, internal links, and accurate business or product information. <a href="https://developers.google.com/search/docs/appearance/ai-features">Google says ordinary SEO practices also apply to its AI search features</a>. No special markup guarantees an AI mention.</p></details>
+<details><summary>Do you guarantee results, rankings, or AI mentions?</summary><p>No. Search providers control their results. Visibility, inquiries, and sales are different measures; more impressions alone do not prove more customers.</p></details>
+<details><summary>What does paid work cost?</summary><p>Pricing is a custom quote based on scope. The services page describes existing local options; software work is scoped around the product and website. No paid work begins from simply submitting an inquiry.</p></details>
+<details><summary>How do scope, contracts, and timing work?</summary><p>The written scope sets deliverables, responsibilities, timing, and reporting. Search results do not have a guaranteed deadline. See the <a href="/terms/">existing service terms</a> for billing and cancellation conditions.</p></details>
+<details><summary>What will reporting show?</summary><p>Agree on reporting before work starts. Search impressions, clicks, and positions describe visibility. Submitted inquiries, qualified conversations, and clients need separate records.</p></details>
+<details><summary>Will a request add me to a mailing list?</summary><p>No. The inquiry forms are for replying to your request. See the <a href="/privacy/">privacy details</a> for the form and analytics data flows.</p></details><div class="action-row"><a class="action" href="/#contact">Ask Wesley a question</a></div></div></section>
+</main>
+<footer class="brand-footer">
+  <div class="brand-footer-inner">
+    <div><p><strong>Crawled · Wesley Hopkins</strong></p><p>Based in Florence, Alabama. Working with software companies nationwide and home-service businesses across the Shoals.</p><p><a href="mailto:wesley@crawledseo.com">wesley@crawledseo.com</a><br><a href="tel:+12563353979">256-335-3979</a></p></div>
+    <div><nav aria-label="Footer"><a href="/software-seo/">Software SEO</a><a href="/local/">Local SEO</a><a href="/packages/">Services &amp; pricing</a><a href="/case-studies/">Case studies</a><a href="/about/">About</a><a href="/faqs/">FAQ</a><a href="/blog/">Blog</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav><button type="button" class="analytics-toggle" data-analytics-toggle aria-pressed="false" hidden>Allow optional usage analytics</button><p class="analytics-note">Forms work without analytics. <a href="/privacy/#analytics">Privacy choices</a></p></div>
+  </div>
+</footer>
 </body>
 </html>
