@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://crawledseo.com/</loc></url>
+  <url><loc>https://crawledseo.com/</loc><lastmod>2026-09-26</lastmod></url>
   <url><loc>https://crawledseo.com/local/</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://crawledseo.com/florence-al-seo/</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://crawledseo.com/blog/</loc><lastmod>2026-09-24</lastmod></url>
@@ -44,11 +44,13 @@
   <url><loc>https://crawledseo.com/blog/the-geo-lexicon/</loc><lastmod>2025-10-31</lastmod></url>
   <url><loc>https://crawledseo.com/blog/10-practical-generative-engine-optimization-geo-strategies-a-step-by-step-playbook/</loc><lastmod>2025-10-31</lastmod></url>
   <url><loc>https://crawledseo.com/blog/what-is-crawled/</loc><lastmod>2025-10-30</lastmod></url>
-  <url><loc>https://crawledseo.com/packages/</loc></url>
-  <url><loc>https://crawledseo.com/audit/</loc></url>
-  <url><loc>https://crawledseo.com/faqs/</loc></url>
-  <url><loc>https://crawledseo.com/case-studies/hvacrai/</loc></url>
-  <url><loc>https://crawledseo.com/about/</loc></url>
-  <url><loc>https://crawledseo.com/privacy/</loc></url>
-  <url><loc>https://crawledseo.com/terms/</loc></url>
+  <url><loc>https://crawledseo.com/packages/</loc><lastmod>2026-09-26</lastmod></url>
+  <url><loc>https://crawledseo.com/audit/</loc><lastmod>2026-09-26</lastmod></url>
+  <url><loc>https://crawledseo.com/faqs/</loc><lastmod>2026-09-26</lastmod></url>
+  <url><loc>https://crawledseo.com/case-studies/</loc><lastmod>2026-09-26</lastmod></url>
+  <url><loc>https://crawledseo.com/case-studies/hvacrai/</loc><lastmod>2026-09-26</lastmod></url>
+  <url><loc>https://crawledseo.com/software-seo/</loc><lastmod>2026-09-26</lastmod></url>
+  <url><loc>https://crawledseo.com/about/</loc><lastmod>2026-09-26</lastmod></url>
+  <url><loc>https://crawledseo.com/privacy/</loc><lastmod>2026-09-26</lastmod></url>
+  <url><loc>https://crawledseo.com/terms/</loc><lastmod>2026-09-26</lastmod></url>
 </urlset>

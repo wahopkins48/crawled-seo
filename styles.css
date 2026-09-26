@@ -11,11 +11,11 @@ html {
 
 :root {
   /* Colors */
-  --primary: #45ADFF;
-  --primary-hover: #3399e6;
+  --primary: #075da8;
+  --primary-hover: #064780;
   --text-dark: #1a1a1a;
   --text-gray: #4a5568;
-  --text-light: #718096;
+  --text-light: #526579;
   --border-gray: #e2e8f0;
   --bg-gray: #f7fafc;
   --white: #ffffff;

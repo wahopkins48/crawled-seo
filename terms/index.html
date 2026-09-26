@@ -58,35 +58,23 @@
       margin-bottom: 0.4rem;
     }
   </style>
+<link rel="stylesheet" href="/site.css">
 </head>
 
 <body>
 
-  <header class="header">
-    <div class="logo-container">
-      <a href="/">
-        <img src="/crawled_logo_main.png" alt="Crawled SEO Logo" class="logo">
-      </a>
+  <a class="skip-link" href="#main">Skip to content</a>
+<header class="brand-header">
+  <nav class="brand-nav" aria-label="Main navigation">
+    <a class="brand-logo" href="/" aria-label="Crawled home"><img src="/local/assets/crawled-logo-384.png" width="144" height="39" alt="Crawled"></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu">Menu</button>
+    <div class="brand-links" id="main-menu">
+      <a href="/software-seo/">Software SEO</a><a href="/local/">Shoals local SEO</a><a href="/case-studies/">Case studies</a><a href="/about/">About</a><a href="/#contact">Contact</a>
     </div>
-    <nav class="navbar" id="myNavbar">
-      <div class="nav-links">
-        <a href="/" class="nav-link">Home</a>
-        <a href="/faqs" class="nav-link">FAQ</a>
-        <a href="/about" class="nav-link">About</a>
-        <a href="/blog" class="nav-link">Blog</a>
-        <a href="/packages" class="nav-link">Packages</a>
-        <a href="/case-studies" class="nav-link">Case Studies</a>
-        <a href="/#contact" class="nav-link">Contact</a>
-      </div>
-      <a href="javascript:void(0);" class="hamburger-icon" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </a>
-    </nav>
-  </header>
+  </nav>
+</header>
 
-  <main class="legal-container">
+  <main class="legal-container" id="main" tabindex="-1">
     <h1 class="legal-title">Terms of Service</h1>
     <p class="legal-updated">Last updated December 30th, 2025</p>
 
@@ -140,19 +128,17 @@
     </div>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <p class="footer-text">© Crawled. All rights reserved.</p>
-        <div class="footer-links">
-          <a href="/privacy" class="footer-link">Privacy Policy</a>
-          <a href="/terms" class="footer-link">Terms of Service</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <footer class="brand-footer">
+  <div class="brand-footer-inner">
+    <div><p><strong>Crawled · Wesley Hopkins</strong></p><p>Based in Florence, Alabama. Working with software companies nationwide and home-service businesses across the Shoals.</p><p><a href="mailto:wesley@crawledseo.com">wesley@crawledseo.com</a><br><a href="tel:+12563353979">256-335-3979</a></p></div>
+    <div><nav aria-label="Footer"><a href="/software-seo/">Software SEO</a><a href="/local/">Local SEO</a><a href="/packages/">Services &amp; pricing</a><a href="/case-studies/">Case studies</a><a href="/about/">About</a><a href="/faqs/">FAQ</a><a href="/blog/">Blog</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav><button type="button" class="analytics-toggle" data-analytics-toggle aria-pressed="false" hidden>Allow optional usage analytics</button><p class="analytics-note">Forms work without analytics. <a href="/privacy/#analytics">Privacy choices</a></p></div>
+  </div>
+</footer>
 
-  <script src="/script.js"></script>
+  <script src="/site-config.js" defer></script>
+<script src="/measurement.js" defer></script>
+<script src="/script.js" defer></script>
+<script src="/forms.js" defer></script>
 
 </body>
 </html>
