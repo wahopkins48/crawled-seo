@@ -15,6 +15,12 @@ html { scroll-padding-top: 100px; }
 .brand-header { background: #fff; border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 100; }
 .brand-nav { width: min(var(--content), calc(100% - 40px)); min-height: 82px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .brand-logo img { width: 144px; height: auto; display: block; }
+.brand-logo-row { display: flex; align-items: center; gap: 16px; }
+@media (max-width: 480px) {
+  .brand-logo-row { gap: 10px; }
+  .brand-logo-row img { width: 120px; }
+  .brand-logo-row .header-call { font-size: 14px; }
+}
 .brand-links { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
 .brand-links a { min-height: 44px; display: inline-flex; align-items: center; color: var(--ink); font-size: 15px; font-weight: 600; text-decoration: none; }
 .brand-links a:hover, .brand-links a[aria-current="page"] { color: var(--action); text-decoration: underline; text-underline-offset: 6px; }
