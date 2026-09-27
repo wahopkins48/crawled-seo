@@ -4,7 +4,7 @@ The public source of truth is `packages/index.html`. Prices are per location and
 
 | Plan | Monthly price | One-time setup | Commitment |
 | --- | ---: | ---: | --- |
-| Local Starter | $200 | $400 | 3-month minimum |
+| Local Starter | $400 | $200 | 3-month minimum |
 | Foundation | $750 | $200 | Month to month |
 | Growth | $1,250 | $200 | Month to month |
 | Authority | $1,850 | $200 | Month to month |
