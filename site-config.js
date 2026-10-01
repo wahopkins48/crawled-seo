@@ -7,7 +7,7 @@ window.CrawledConfig = Object.freeze({
   campaigns: {
     utm_source: ['flyer-a', 'flyer-b', 'video', 'business_card', 'flyer_a', 'flyer_b', 'lawrence'],
     utm_medium: ['qr', 'social', 'referral'],
-    utm_campaign: ['local']
+    utm_campaign: ['local', 'software']
   }
 });
 
