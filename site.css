@@ -31,6 +31,8 @@ html { scroll-padding-top: 100px; }
 .brand-footer a { color: #fff; text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
 .brand-footer nav { display: flex; flex-wrap: wrap; align-content: start; gap: 8px 22px; }
 .brand-footer nav a { min-height: 44px; display: inline-flex; align-items: center; }
+.brand-footer .footer-social { margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(229,237,243,.25); gap: 8px 18px; }
+.footer-social-label { min-height: 44px; display: inline-flex; align-items: center; font-weight: 600; }
 .analytics-toggle { background: transparent; color: inherit; border: 1px solid #829bad; border-radius: 5px; padding: 10px 14px; font: inherit; cursor: pointer; min-height: 44px; }
 .analytics-note { font-size: 13px; margin-top: 8px !important; }
 .commercial { margin: 0; color: var(--ink); background: #fff; font: 18px/1.65 var(--font-body); }
@@ -108,4 +110,3 @@ html { scroll-padding-top: 100px; }
   html { scroll-behavior: auto !important; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
-
