@@ -58,7 +58,7 @@
             field.value = url.href;
           } catch { message = 'Enter a website such as example.com, using http or https.'; }
         }
-        if (field.value.trim() && field.hasAttribute('data-contact') && !validContact(field.value.trim())) message = 'Enter an email such as you@example.com or a phone number such as +1 (256) 335-3979.';
+        if (field.value.trim() && field.hasAttribute('data-contact') && !validContact(field.value.trim())) message = 'Enter an email such as you@example.com or a phone number such as 1-256-335-6487.';
         if (!message && !field.validity.valid) message = field.type === 'email' ? 'Enter an email such as you@example.com.' : field.validationMessage;
         if (message) {
           fieldError(field, message);

@@ -76,7 +76,7 @@ Repository: `/home/wesley/crawled-seo`. Source observations below were made agai
 | Local form endpoint | `https://formspree.io/f/xppwlnlb` |
 | General contact endpoint | `https://formspree.io/f/mjgeogor` |
 | Audit/roadmap endpoint | `https://formspree.io/f/xrealgwd` |
-| Phone and business email | 256-335-3979; wesley@crawledseo.com |
+| Phone and business email | 1-256-335-6487; wesley@crawledseo.com |
 | Booking route | `/book`, currently redirecting to Calendly |
 | Deployment configuration | `vercel.json`; retain security headers, cache policy, and existing legacy redirects |
 | QR inventory | `local/assets/qr-destinations.md` plus supplied printed assets |
