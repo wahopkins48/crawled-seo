@@ -22,6 +22,7 @@ Static HTML/CSS/JS. No build step. Deploys as-is on Vercel.
 
 | Form | `data-form-name` | Endpoint |
 | --- | --- | --- |
+| Website design quote | `website_quote` | `https://formspree.io/f/mjgeogor` (shared with homepage; distinct subject and form name) |
 | Homepage contact | `general_contact` | `https://formspree.io/f/mjgeogor` |
 | Audit page | `visibility_audit` | `https://formspree.io/f/xrealgwd` |
 | Local ranking check | `free_ranking_check` | `https://formspree.io/f/xppwlnlb` |

@@ -2,6 +2,7 @@
 (() => {
   'use strict';
   const receipts = {
+    website_quote: 'Your website quote request was received. Wesley will reply to discuss your project and next steps.',
     general_contact: 'Your inquiry was received. Wesley will reply using the contact details you provided.',
     visibility_audit: 'Your visibility audit request was received. Wesley will send your audit within 24 hours. No call is required.',
     software_roadmap: 'Your software visibility audit request was received. Wesley will send your audit within 24 hours. No call is required.',

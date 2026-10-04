@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/website-design",
+      "destination": "/website-design/",
+      "permanent": true
+    },
+    {
       "source": "/local",
       "destination": "/local/",
       "permanent": true

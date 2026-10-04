@@ -1,0 +1,20 @@
+/* Page-specific layout; typography and controls use the shared site system. */
+.website-hero { display: grid; grid-template-columns: 1.25fr 1fr; gap: 56px; align-items: center; }
+.website-design h1 { font-size: clamp(2.2rem, 4.2vw, 3.6rem); }
+.website-blueprint { background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--action); border-radius: var(--radius); padding: 32px; }
+.website-blueprint h2 { font-size: 1.7rem; }
+.website-blueprint ol { list-style: none; padding: 0; margin: 28px 0; }
+.website-blueprint li { display: flex; gap: 18px; padding: 20px 0; border-top: 1px solid var(--line); }
+.website-blueprint li > span { color: var(--action); font: 600 14px var(--font-heading); padding-top: 4px; }
+.website-blueprint li p { margin: 0; font-size: 16px; color: var(--muted); }
+.website-blueprint h3 { font-size: 1.05rem; margin-bottom: 8px; }
+.website-blueprint .blueprint-note { font-size: 14px; margin: 0; color: var(--muted); }
+.website-design .service-options article { background: #fff; }
+.website-design .service-options p { font-size: 16px; margin-bottom: 0; }
+.project-card { padding: 28px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); }
+.project-label { font-size: 14px; color: var(--muted); }
+.quote-factors { padding-left: 22px; }
+.quote-factors li { margin-bottom: 14px; }
+.website-design .form-field small { display: block; font-size: 14px; color: var(--muted); margin-top: 6px; }
+@media (max-width: 850px) { .website-hero { grid-template-columns: 1fr; gap: 28px; } }
+@media (max-width: 400px) { .website-blueprint, .project-card { padding: 22px; } }

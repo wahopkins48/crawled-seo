@@ -44,7 +44,7 @@ html { scroll-padding-top: 100px; }
 .commercial h3 { font-size: 1.2rem; margin: 0 0 12px; }
 .commercial p { margin: 0 0 20px; }
 .commercial a:not(.action):not(.route-choice) { color: var(--action); text-underline-offset: 4px; }
-.commercial .brand-footer a { color: #fff; }
+.commercial .brand-footer a:not(.action):not(.route-choice) { color: #fff; }
 .commercial .brand-links a { color: var(--ink); }
 .content-wrap { width: min(var(--content), calc(100% - 40px)); margin: auto; }
 .reading-width { max-width: var(--reading); }
